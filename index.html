@@ -17,7 +17,12 @@
 <body style="font-family: Arial; text-align:center; background:black; color:white;">
 
 <h1>EVOLIX 2K26</h1>
-<h2 id="countdown"></h2>
+<div id="countdown" style="display:flex; justify-content:center; gap:20px; margin-top:20px;">
+  <div id="days" style="background:#00ffff; color:black; padding:20px; border-radius:10px; min-width:90px;">0d</div>
+  <div id="hours" style="background:#ff00ff; color:white; padding:20px; border-radius:10px; min-width:90px;">0h</div>
+  <div id="minutes" style="background:#ffff00; color:black; padding:20px; border-radius:10px; min-width:90px;">0m</div>
+  <div id="seconds" style="background:#00ff00; color:black; padding:20px; border-radius:10px; min-width:90px;">0s</div>
+</div>
 <h2>EEE Symposium</h2>
 <h3>JJ College of Engineering and Technology</h3>
 
@@ -46,17 +51,18 @@
 var countDownDate = new Date("Apr 1, 2026 09:00:00").getTime();
 
 var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
 
-var now = new Date().getTime();
-var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000*60*60*24));
+  var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+  var seconds = Math.floor((distance % (1000*60)) / 1000);
 
-var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-document.getElementById("countdown").innerHTML =
-days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById("days").innerHTML = days + "d";
+  document.getElementById("hours").innerHTML = hours + "h";
+  document.getElementById("minutes").innerHTML = minutes + "m";
+  document.getElementById("seconds").innerHTML = seconds + "s";
 
 }, 1000);
 </script>
