@@ -1,5 +1,5 @@
-// Set the event date (February 14, 2026 9:00 AM)
-const eventDate = new Date('February 14, 2026 09:00:00').getTime();
+// Set the event date - APRIL 1, 2026 9:00 AM
+const eventDate = new Date('April 1, 2026 09:00:00').getTime();
 
 // Update the countdown every second
 const countdown = setInterval(function() {
@@ -9,7 +9,7 @@ const countdown = setInterval(function() {
     // Calculate the time remaining
     const distance = eventDate - now;
     
-    // Time calculations for days, hours, minutes, and seconds
+    // Time calculations
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -21,12 +21,13 @@ const countdown = setInterval(function() {
     document.getElementById('minutes').innerHTML = String(minutes).padStart(2, '0');
     document.getElementById('seconds').innerHTML = String(seconds).padStart(2, '0');
     
-    // If the countdown is over, display a message
+    // If the countdown is over
     if (distance < 0) {
         clearInterval(countdown);
         document.getElementById('days').innerHTML = '00';
         document.getElementById('hours').innerHTML = '00';
         document.getElementById('minutes').innerHTML = '00';
         document.getElementById('seconds').innerHTML = '00';
+        document.querySelector('.countdown').innerHTML += '<h2 class="event-started">EVENT STARTED!</h2>';
     }
 }, 1000);
