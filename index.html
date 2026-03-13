@@ -7,6 +7,7 @@
 <body style="font-family: Arial; text-align:center; background:black; color:white;">
 
 <h1>EVOLIX 2K26</h1>
+<h2 id="countdown"></h2>
 <h2>EEE Symposium</h2>
 <h3>JJ College of Engineering and Technology</h3>
 
@@ -31,6 +32,23 @@
 
 <h2>Registration</h2>
 <p>Registration link coming soon</p>
+<script>
+var countDownDate = new Date("Apr 1, 2026 09:00:00").getTime();
 
+var x = setInterval(function() {
+
+var now = new Date().getTime();
+var distance = countDownDate - now;
+
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById("countdown").innerHTML =
+days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+}, 1000);
+</script>
 </body>
 </html>
