@@ -64,9 +64,9 @@ body {
     transform: scale(1.05);
 }
 
-/* EVOLIX Logo */
+/* EVOLIX Logo - Made WIDER */
 .evolix-logo {
-    max-width: 500px;
+    max-width: 700px;  /* Increased from 500px to 700px */
     width: 100%;
     height: auto;
     margin: 0 auto 25px;
@@ -76,8 +76,23 @@ body {
     transition: transform 0.3s ease;
 }
 
-.evolix-logo:hover {
-    transform: scale(1.02);
+/* Keep it responsive but wider on all screens */
+@media (max-width: 1024px) {
+    .evolix-logo {
+        max-width: 600px;  /* Wider on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .evolix-logo {
+        max-width: 500px;  /* Wider on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .evolix-logo {
+        max-width: 380px;  /* Still wider on small phones */
+    }
 }
 
 @keyframes glowPulse {
