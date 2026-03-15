@@ -51,17 +51,40 @@ body {
     z-index: 2;
 }
 
-/* College Logo */
+/* College Logo - Made WIDER */
 .college-logo {
-    max-width: 220px;
+    max-width: 400px;  /* Increased from 220px to 400px */
+    width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.4));
     transition: transform 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .college-logo:hover {
     transform: scale(1.05);
+}
+
+/* Responsive - Still wide on all screens */
+@media (max-width: 1024px) {
+    .college-logo {
+        max-width: 350px;  /* Wide on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .college-logo {
+        max-width: 300px;  /* Wide on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .college-logo {
+        max-width: 250px;  /* Still wide on small phones */
+    }
 }
 
 .evolix-logo {
