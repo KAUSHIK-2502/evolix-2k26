@@ -1,5 +1,5 @@
 // ===== COUNTDOWN TIMER =====
-const eventDate = new Date('April 1, 2026 09:00:00').getTime();
+const eventDate = new Date('April 10, 2026 09:00:00').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
