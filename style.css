@@ -1448,3 +1448,180 @@ body {
     margin-bottom: 5px;
     color: #00ffff;
 }
+/* ===== BIGGER COLLEGE LOGO ===== */
+.nav-logo img {
+    height: 60px;  /* Increased from 40px */
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+/* If your logo is in hero section too */
+.hero-college-logo {
+    max-width: 200px;  /* Make it bigger */
+    height: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5));
+}
+
+/* ===== NEON BLUE + NEON RED COLOR SCHEME ===== */
+:root {
+    --neon-blue: #00ffff;
+    --neon-red: #ff3366;
+    --neon-blue-glow: 0 0 20px rgba(0, 255, 255, 0.7);
+    --neon-red-glow: 0 0 20px rgba(255, 51, 102, 0.7);
+}
+
+/* Update existing blue elements to use both colors */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--neon-blue);
+    text-shadow: var(--neon-blue-glow);
+}
+
+/* Alternate colors for different sections */
+.section-subtitle {
+    color: var(--neon-blue);
+}
+
+.section-title .highlight {
+    color: var(--neon-red);  /* Changed from blue to red */
+    text-shadow: var(--neon-red-glow);
+}
+
+/* Countdown timer - alternate colors */
+.countdown-item:nth-child(odd) .countdown-number {
+    color: var(--neon-blue);
+    text-shadow: var(--neon-blue-glow);
+}
+
+.countdown-item:nth-child(even) .countdown-number {
+    color: var(--neon-red);
+    text-shadow: var(--neon-red-glow);
+}
+
+/* Event cards - mix both colors */
+.event-premium-card .card-icon {
+    color: var(--neon-blue);
+}
+
+.event-premium-card:nth-child(even) .card-icon {
+    color: var(--neon-red);
+}
+
+.event-premium-card .card-link {
+    color: var(--neon-blue);
+}
+
+.event-premium-card:nth-child(even) .card-link {
+    color: var(--neon-red);
+}
+
+.card-badge {
+    background: var(--neon-blue);
+}
+
+.event-premium-card:nth-child(even) .card-badge {
+    background: var(--neon-red);
+}
+
+/* Workshop section */
+.workshop-icon i {
+    color: var(--neon-blue);
+    text-shadow: var(--neon-blue-glow);
+}
+
+.workshop-btn {
+    border-color: var(--neon-blue);
+    color: var(--neon-blue);
+}
+
+.workshop-btn:hover {
+    background: var(--neon-blue);
+}
+
+/* Committee section */
+.profile-icon {
+    color: var(--neon-red);
+}
+
+.profile-card:hover .profile-icon {
+    background: var(--neon-red);
+    color: #000000;
+}
+
+.profile-role {
+    color: var(--neon-blue);
+}
+
+/* CTA buttons */
+.cta-primary {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-red));
+    box-shadow: 0 10px 30px rgba(255, 51, 102, 0.4);
+}
+
+.cta-giant-btn {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-red));
+}
+
+/* Floating cards */
+.floating-card i {
+    color: var(--neon-red);
+}
+
+.floating-card:nth-child(even) i {
+    color: var(--neon-blue);
+}
+
+/* Modal styles update */
+.modal-content {
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 30px 60px rgba(255, 51, 102, 0.3);
+}
+
+.modal-content h2 {
+    color: var(--neon-red);
+}
+
+.modal-close {
+    color: var(--neon-blue);
+}
+
+.modal-register-btn {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-red));
+}
+
+/* Navigation register button */
+.nav-register-btn {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-red));
+}
+
+/* Event tabs */
+.tab-btn.active {
+    background: var(--neon-red);
+    border-color: var(--neon-red);
+}
+
+.tab-btn:hover {
+    background: var(--neon-blue);
+    border-color: var(--neon-blue);
+}
+
+/* Footer links */
+.footer-links a:hover {
+    color: var(--neon-red);
+}
+
+.footer-social a:hover {
+    color: var(--neon-blue);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-college-logo {
+        max-width: 160px;  /* Still bigger on mobile */
+    }
+    
+    .nav-logo img {
+        height: 50px;
+    }
+}
