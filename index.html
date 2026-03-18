@@ -3,510 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVOLIX 2K26 | JJ College of Engineering & Technology</title>
+    <title>EVOLIX '26 | EEE Department</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for Premium Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght=300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="gradient-bg">
-        <div class="gradient-sphere"></div>
-        <div class="gradient-sphere-2"></div>
-        <div class="gradient-sphere-3"></div>
-    </div>
+    <!-- Circuit Board Background -->
+    <div class="circuit-overlay"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-          
-<div class="nav-logo">
-    <img src="0.png" alt="JJ College" style="height: 60px; width: auto;">
-</div>
-            <div class="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#events" class="nav-link">Events</a>
-                <a href="#workshop" class="nav-link">Workshop</a>
-                <a href="#committee" class="nav-link">Committee</a>
-                <a href="#contact" class="nav-link">Contact</a>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header with College Info -->
+        <div class="college-header">
+            <div class="logo-container">
+                <img src="0.png" alt="JJ College" class="college-logo-main">
             </div>
-            <a href="#register" class="nav-register-btn">Register Now</a>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="college-title">
+                <h1>J.J COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+                <h2>AUTONOMOUS</h2>
+                <h3>SOWDAMBIKAA GROUP OF INSTITUTIONS</h3>
             </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-left">
-                <div class="hero-badge">JJ College of Engineering & Technology</div>
-                <div class="hero-title">
-                    <span class="title-line">DEPARTMENT OF</span>
-                    <span class="title-line">ELECTRICAL & ELECTRONICS</span>
-                    <span class="title-highlight">ENGINEERING</span>
-                </div>
-                <div class="hero-subtitle">Proudly Presents</div>
-                
-                <!-- Logos Container -->
-                <div class="hero-logos">
-                    <img src="0.png" alt="JJ College" class="hero-college-logo">
-                    <div class="logo-divider">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <img src="evolix-logo.png" alt="EVOLIX 2K26" class="hero-evox-logo">
-                </div>
-                
-                <div class="hero-description">
-                    National Level Technical Symposium
-                </div>
-                
-                <!-- Countdown Timer -->
-                <div class="countdown-wrapper">
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="days">00</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="hours">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="minutes">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="seconds">00</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
-                </div>
-                
-                <!-- Event Details -->
-                <div class="event-details">
-                    <div class="detail-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>April 10, 2026</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>JJCET AUDITORIUM</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-clock"></i>
-                        <span>9:00 AM Onwards</span>
-                    </div>
-                </div>
-                
-                <div class="hero-cta">
-                    <a href="#register" class="cta-primary">Register Now <i class="fas fa-arrow-right"></i></a>
-                    <a href="#events" class="cta-secondary">Explore Events</a>
-                </div>
+        <!-- Department & Symposium Title -->
+        <div class="dept-section">
+            <div class="dept-name">
+                DEPARTMENT OF ELECTRICAL AND ELECTRONICS ENGINEERING
             </div>
+            <div class="presents">EETA PROUDLY PRESENTS</div>
             
-            <div class="hero-right">
-                <div class="floating-card card-1">
-                    <i class="fas fa-microchip"></i>
-                    <span>Workshop</span>
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fas fa-trophy"></i>
-                    <span>Prizes</span>
-                </div>
-                <div class="floating-card card-3">
-                    <i class="fas fa-users"></i>
-                    <span>500+ Participants</span>
-                </div>
+            <!-- EVOLIX Logo Area -->
+            <div class="evolix-container">
+                <img src="evolix-logo.png" alt="EVOLIX '26" class="evolix-logo-main">
+                <div class="evolix-sub">A NATIONAL LEVEL TECHNICAL SYMPOSIUM</div>
             </div>
         </div>
-        
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
 
-    <!-- Workshop Section - Premium Card -->
-    <section id="workshop" class="workshop-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Workshop</span>
-                <h2 class="section-title">Embedded <span class="highlight">&</span> IOT</h2>
+        <!-- Pricing Cards -->
+        <div class="pricing-section">
+            <div class="pricing-card workshop-price">
+                <div class="price-icon"><i class="fas fa-microchip"></i></div>
+                <div class="price-label">WORKSHOP</div>
+                <div class="price-value">₹250</div>
+                <div class="price-per">PER HEAD</div>
             </div>
-            
-            <div class="workshop-premium-card">
-                <div class="workshop-content">
-                    <div class="workshop-left">
-                        <div class="workshop-icon">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                        <h3>Hands-on Experience</h3>
-                        <p>Learn from industry experts and get practical experience with Embedded Systems and Internet of Things. This intensive workshop covers everything from basics to advanced concepts.</p>
-                        <div class="workshop-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Certificate Provided</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Limited Seats</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Hands-on Training</span>
-                            </div>
-                        </div>
-                        <a href="#" class="workshop-btn">Register for Workshop</a>
-                    </div>
-                    <div class="workshop-right">
-                        <div class="workshop-stats">
-                            <div class="stat">
-                                <span class="stat-number">2</span>
-                                <span class="stat-label">Days</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">6+</span>
-                                <span class="stat-label">Projects</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">50</span>
-                                <span class="stat-label">Seats</span>
-                            </div>
-                        </div>
-                        <div class="workshop-image">
-                            <i class="fas fa-robot"></i>
-                            <i class="fas fa-wifi"></i>
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
-                </div>
+            <div class="pricing-card event-price">
+                <div class="price-icon"><i class="fas fa-bolt"></i></div>
+                <div class="price-label">EVENTS</div>
+                <div class="price-value">₹200</div>
+                <div class="price-per">PER HEAD</div>
             </div>
         </div>
-    </section>
 
-    <!-- Events Section - Card Grid Design -->
-    <section id="events" class="events-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Our Events</span>
-                <h2 class="section-title">Technical & <span class="highlight">Non-Technical</span></h2>
+        <!-- Events Grid -->
+        <div class="events-section">
+            <h2 class="section-title">
+                <span class="tech-title">⚡ TECHNICAL ⚡</span>
+            </h2>
+            <div class="events-grid">
+                <div class="event-chip">PAPER VISTA</div>
+                <div class="event-chip">PROJECT EXPO</div>
+                <div class="event-chip">BRAIN CHAIN</div>
+                <div class="event-chip">QUIZ ARENA</div>
             </div>
-            
-            <!-- Category Tabs -->
-            <div class="event-tabs">
-                <button class="tab-btn active" data-category="technical">Technical</button>
-                <button class="tab-btn" data-category="nontech">Non-Technical</button>
-                <button class="tab-btn" data-category="online">Online</button>
+
+            <h2 class="section-title">
+                <span class="nontech-title">🎮 NON-TECHNICAL 🎮</span>
+            </h2>
+            <div class="events-grid">
+                <div class="event-chip">DUMP CHARADES</div>
+                <div class="event-chip">SIGNAL SCRAMBLES</div>
+                <div class="event-chip">FUN ZONE</div>
+                <div class="event-chip">BOX CRICKET</div>
+                <div class="event-chip">CARROM</div>
             </div>
-            
-            <!-- Technical Events Grid -->
-            <div class="events-grid active" id="technical">
-                <div class="event-premium-card">
-                    <div class="card-badge">Technical</div>
-                    <div class="card-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3>Paper Vista</h3>
-                    <p>Present your research papers and innovative ideas. Compete with brightest minds.</p>
-                    <div class="card-footer">
-                        <span>Team: 1-3 members</span>
-                        <a href="#" class="card-link">Know More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="event-premium-card">
-                    <div class="card-badge">Technical</div>
-                    <div class="card-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Project Expo</h3>
-                    <p>Showcase your innovative projects. Get feedback from industry experts.</p>
-                    <div class="card-footer">
-                        <span>Team: 1-4 members</span>
-                        <a href="#" class="card-link">Know More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="event-premium-card">
-                    <div class="card-badge">Technical</div>
-                    <div class="card-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Brain Chain</h3>
-                    <p>Connect the dots! A challenging event that tests your logical thinking.</p>
-                    <div class="card-footer">
-                        <span>Team: 2 members</span>
-                        <a href="#" class="card-link">Know More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="event-premium-card">
-                    <div class="card-badge">Technical</div>
-                    <div class="card-icon">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                    <h3>Quiz Arena</h3>
-                    <p>Test your technical knowledge. Multiple rounds covering various domains.</p>
-                    <div class="card-footer">
-                        <span>Team: 2 members</span>
-                        <a href="#" class="card-link">Know More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Non-Technical Events Grid (hidden by default) -->
-            <div class="events-grid" id="nontech">
-                <div class="event-premium-card">
-                    <div class="card-badge" style="background: #ff6b6b;">Fun</div>
-                    <div class="card-icon" style="color: #ff6b6b;">
-                        <i class="fas fa-theater-masks"></i>
-                    </div>
-                    <h3>Dumb Charades</h3>
-                    <p>Act it out! Fun-filled game of gestures and guessing. Team event that guarantees laughter.</p>
-                    <div class="card-footer">
-                        <span>Team: 4 members</span>
-                        <a href="#" class="card-link">Know More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="event-premium-card">
-                    <div class="card-badge" style="background: #ff6b6b;">Fun</div>
-                    <div class="card-icon" style="color: #ff6b6b;">
-                        <i class="fas fa-signal"></i>
-                    </div>
-                    <h3>Signal Scramble</h3>
-                    <p>Decode the signals! Test your communication skills in this exciting game.</p>
-                    <div class="card-footer">
-                        <span>Team: 2 members</span>
-                        <a href="#" class="card-link">Know More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="event-premium-card">
-                    <div class="card-badge" style="background: #ff6b6b;">Fun</div>
-                    <div class="card-icon" style="color: #ff6b6b;">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3>Fun Zone</h3>
-                    <p>Multiple fun games and activities. Take a break and enjoy with friends.</p>
-                    <div class="card-footer">
-                        <span>Individual</span>
-                        <a href="#" class="card-link">Know More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="event-premium-card">
-                    <div class="card-badge" style="background: #ff6b6b;">Sports</div>
-                    <div class="card-icon" style="color: #ff6b6b;">
-                        <i class="fas fa-table-tennis"></i>
-                    </div>
-                    <h3>Carrom / Box Cricket</h3>
-                    <p>Show your skills in indoor games. Tournaments open for all.</p>
-                    <div class="card-footer">
-                        <span>Team/Various</span>
-                        <a href="#" class="card-link">Know More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Online Events Grid (hidden by default) -->
-            <div class="events-grid" id="online">
-                <div class="event-premium-card online-card">
-                    <div class="card-badge" style="background: #9b59b6;">Online</div>
-                    <div class="card-icon" style="color: #9b59b6;">
-                        <i class="fas fa-futbol"></i>
-                    </div>
-                    <h3>E-Football</h3>
-                    <p>Virtual football tournament. Compete online and show your gaming skills.</p>
-                    <div class="card-footer">
-                        <span>1v1</span>
-                        <a href="#" class="card-link">Register <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="event-premium-card online-card">
-                    <div class="card-badge" style="background: #9b59b6;">Online</div>
-                    <div class="card-icon" style="color: #9b59b6;">
-                        <i class="fas fa-crosshairs"></i>
-                    </div>
-                    <h3>Free Fire</h3>
-                    <p>Battle it out in Free Fire. Solo and squad tournaments with exciting prizes.</p>
-                    <div class="card-footer">
-                        <span>Squad/Solo</span>
-                        <a href="#" class="card-link">Register <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+
+            <h2 class="section-title">
+                <span class="esports-title">🎯 E-SPORTS 🎯</span>
+            </h2>
+            <div class="events-grid">
+                <div class="event-chip">FREE FIRE</div>
+                <div class="event-chip">E-FOOTBALL</div>
             </div>
         </div>
-    </section>
 
-    <!-- Committee Section - Modern Profile Cards -->
-    <section id="committee" class="committee-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Organizing Committee</span>
-                <h2 class="section-title">Meet Our <span class="highlight">Team</span></h2>
-            </div>
-            
-            <div class="committee-grid">
-                <div class="profile-card">
-                    <div class="profile-icon">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <h3>Angals K</h3>
-                    <p class="profile-role">CHAIRMAN</p>
-                    <div class="profile-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                
-                <div class="profile-card">
-                    <div class="profile-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>S. Akalya</h3>
-                    <p class="profile-role">VICE CHAIRMAN</p>
-                    <div class="profile-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                
-                <div class="profile-card">
-                    <div class="profile-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>B. Manoj Kumar</h3>
-                    <p class="profile-role">PRESIDENT</p>
-                    <div class="profile-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
+        <!-- Workshop Coordinators -->
+        <div class="coordinators-section">
+            <h2 class="section-title">
+                <span class="workshop-title">🔧 WORKSHOP COORDINATORS 🔧</span>
+            </h2>
             
             <div class="faculty-grid">
-                <div class="faculty-card">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <div>
-                        <h4>Dr. G. Sundarajan</h4>
-                        <p>Faculty Coordinator - AP/EEE</p>
-                    </div>
+                <div class="coordinator-card faculty">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Dr. G. Sundararajan (AP)</h3>
+                    <a href="tel:9842253235" class="phone-link">
+                        <i class="fas fa-phone"></i> 9842253235
+                    </a>
                 </div>
-                <div class="faculty-card">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <div>
-                        <h4>Mr. P. John Brihno</h4>
-                        <p>Faculty Coordinator - AP/EEE</p>
-                    </div>
+                <div class="coordinator-card faculty">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Mr. P. Jothn Brito (AP)</h3>
+                    <a href="tel:9942770040" class="phone-link">
+                        <i class="fas fa-phone"></i> 9942770040
+                    </a>
+                </div>
+                <div class="coordinator-card faculty">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Mrs. R. Gayathri (AP)</h3>
+                    <a href="tel:9344735899" class="phone-link">
+                        <i class="fas fa-phone"></i> 9344735899
+                    </a>
                 </div>
             </div>
+
+            <h2 class="section-title">
+                <span class="student-title">👥 STUDENT COORDINATORS 👥</span>
+            </h2>
             
-            <div class="student-coordinators">
-                <h3>Student Coordinators</h3>
-                <div class="student-list">
-                    <span><i class="fas fa-user-graduate"></i> S. Aksheetha</span>
-                    <span><i class="fas fa-user-graduate"></i> M. Sanjeev raj</span>
+            <div class="student-grid">
+                <div class="coordinator-card student">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>S. Aksheetha</h3>
+                    <a href="tel:7373373794" class="phone-link">
+                        <i class="fas fa-phone"></i> 7373373794
+                    </a>
+                </div>
+                <div class="coordinator-card student">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>M. Sanjeev Raj</h3>
+                    <a href="tel:9150952958" class="phone-link">
+                        <i class="fas fa-phone"></i> 9150952958
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Registration CTA Section -->
-    <section id="register" class="cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <div class="cta-left">
-                    <h2>Ready to <span class="highlight">Participate?</span></h2>
-                    <p>Join us at EVOLIX 2K26 for an unforgettable experience. Register now and showcase your talents!</p>
-                    <div class="cta-features">
-                        <div><i class="fas fa-trophy"></i> Exciting Prizes</div>
-                        <div><i class="fas fa-certificate"></i> Certificates</div>
-                        <div><i class="fas fa-utensils"></i> Lunch Provided</div>
-                    </div>
-                </div>
-                <div class="cta-right">
-                    <a href="#" class="cta-giant-btn">Register Now <i class="fas fa-arrow-right"></i></a>
-                    <p>Last Date: April 07, 2026</p>
-                </div>
+        <!-- Venue & Contact -->
+        <div class="venue-section">
+            <div class="venue-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>AUDITORIUM</h2>
+                <p>VENUE: JJCET AUDITORIUM</p>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>Have questions? Reach out to our coordinators</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Location</strong>
-                                <span>JJ College of Engineering & Technology, Ammapettai, Tiruchirappalli</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <strong>Registration Queries</strong>
-                                <span>R KARTHIKEYAN--908025129</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Email</strong>
-                                <span>evolix2k26@jjcet.edu.in</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="map-placeholder">
-                    <i class="fas fa-map"></i>
-                    <span>JJCET Auditorium</span>
-                    <p>Ammapettai, Tiruchirappalli</p>
-                </div>
+        <!-- Social & Email -->
+        <div class="contact-footer">
+            <div class="social-links">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i> @EVOLIX_2K26
+                </a>
+                <a href="mailto:evolix_2k26@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i> evolix_2k26@gmail.com
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="0.png" alt="JJ College">
-                    <p>Department of EEE</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#events">Events</a>
-                    <a href="#workshop">Workshop</a>
-                    <a href="#committee">Committee</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Department of Electrical and Electronics Engineering, JJ College of Engineering & Technology. All rights reserved.</p>
-            </div>
+        <!-- Register Button -->
+        <div class="register-fixed">
+            <a href="#" class="register-big-btn">
+                REGISTER NOW <i class="fas fa-bolt"></i>
+            </a>
         </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
