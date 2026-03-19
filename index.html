@@ -3,41 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVOLIX'2K26 - JJCET</title>
+    <title>J.J COLLEGE OF ENGINEERING AND TECHNOLOGY</title>
     <style>
-        /* YOUR EXACT ORIGINAL STYLES - COPY THEM HERE */
-        /* I'll preserve your original CSS exactly */
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
             text-align: center;
         }
         
-        h1 { font-size: 48px; color: gold; }
-        h2 { font-size: 32px; }
-        h3 { font-size: 24px; }
-        h4 { font-size: 20px; }
+        h1 {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+        
+        h2 {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+        
+        h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        
+        h4 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
         
         .countdown {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin: 30px 0;
+            flex-wrap: wrap;
         }
         
         .countdown-item {
-            background: rgba(0,0,0,0.3);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
             padding: 20px;
             border-radius: 10px;
+            min-width: 100px;
         }
         
         .countdown-item span {
             font-size: 48px;
             font-weight: bold;
+            display: block;
             color: gold;
+        }
+        
+        .countdown-item p {
+            font-size: 16px;
+            margin: 5px 0 0;
         }
         
         .fees {
@@ -45,6 +67,7 @@
             justify-content: center;
             gap: 40px;
             margin: 30px 0;
+            flex-wrap: wrap;
         }
         
         .fee-card {
@@ -52,6 +75,24 @@
             color: black;
             padding: 20px 40px;
             border-radius: 10px;
+            text-align: center;
+        }
+        
+        .fee-card h3 {
+            color: black;
+            margin: 0 0 10px;
+        }
+        
+        .fee-card p {
+            margin: 5px 0 0;
+        }
+        
+        .section-title {
+            color: gold;
+            font-size: 36px;
+            margin: 40px 0 20px;
+            border-bottom: 2px solid gold;
+            padding-bottom: 10px;
         }
         
         .events {
@@ -63,10 +104,11 @@
         }
         
         .event-item {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border: 2px solid gold;
             padding: 15px 25px;
             border-radius: 10px;
+            font-size: 18px;
             font-weight: bold;
         }
         
@@ -75,136 +117,54 @@
             justify-content: center;
             gap: 40px;
             margin: 30px 0;
+            flex-wrap: wrap;
         }
         
         .coordinator {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             padding: 20px;
             border-radius: 10px;
+            min-width: 200px;
         }
         
-        .phone {
-            color: gold;
+        .coordinator h3 {
+            margin: 0 0 10px;
+        }
+        
+        .coordinator .phone {
             font-size: 24px;
+            color: gold;
             font-weight: bold;
         }
         
         .venue {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             padding: 30px;
             border-radius: 10px;
             margin: 30px 0;
         }
         
-        /* ONLY NEW STYLES (minimal) */
-        .date-badge {
-            background: gold;
-            color: #333;
-            display: inline-block;
-            padding: 10px 30px;
+        .venue h2 {
+            margin: 0 0 10px;
+        }
+        
+        .contact {
+            margin: 40px 0;
+        }
+        
+        .contact h2 {
+            color: gold;
+        }
+        
+        .contact .phone {
             font-size: 28px;
             font-weight: bold;
-            border-radius: 50px;
-            margin: 20px 0;
-        }
-        
-        .register-btn {
-            margin: 30px 0;
-        }
-        
-        .register-btn a {
-            background: gold;
-            color: #333;
-            padding: 15px 50px;
-            font-size: 32px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            display: inline-block;
-            border: 2px solid white;
-        }
-        
-        .schedule {
-            background: rgba(0,0,0,0.3);
-            border: 2px solid gold;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 40px 0;
-        }
-        
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        
-        .schedule-table th {
-            background: gold;
-            color: #333;
-            padding: 10px;
-        }
-        
-        .schedule-table td {
-            padding: 10px;
-            border-bottom: 1px solid gold;
-        }
-        
-        .registration-form {
-            background: rgba(0,0,0,0.3);
-            border: 2px solid gold;
-            border-radius: 10px;
-            padding: 30px;
-            margin: 40px 0;
-            text-align: left;
-        }
-        
-        .form-group {
-            margin-bottom: 15px;
-        }
-        
-        .form-group label {
             color: gold;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid gold;
-            border-radius: 5px;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        
-        .submit-btn {
-            background: gold;
-            color: #333;
-            padding: 15px;
-            font-size: 24px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-        }
-        
-        @media (max-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <!-- YOUR EXACT ORIGINAL CONTENT - UNCHANGED -->
     <h3>J.J COLLEGE OF ENGINEERING AND TECHNOLOGY</h3>
     <h2>AUTONOMOUS</h2>
     <h3>SOWDAMBIKAA GROUP OF INSTITUTIONS</h3>
@@ -212,12 +172,6 @@
     <h2>EETA PROUDLY PRESENTS</h2>
     <h1>A NATIONAL LEVEL TECHNICAL SYMPOSIUM</h1>
     
-    <!-- NEW: Exact date (you asked for this) -->
-    <div class="date-badge">
-        📅 APRIL 10-11, 2026 📅
-    </div>
-    
-    <!-- YOUR ORIGINAL COUNTDOWN -->
     <div class="countdown">
         <div class="countdown-item">
             <span id="days">21</span>
@@ -237,7 +191,6 @@
         </div>
     </div>
     
-    <!-- YOUR ORIGINAL FEES -->
     <div class="fees">
         <div class="fee-card">
             <h3>WORKSHOP</h3>
@@ -251,13 +204,7 @@
         </div>
     </div>
     
-    <!-- NEW: Register button (you asked for this) -->
-    <div class="register-btn">
-        <a href="#register-form">👉 REGISTER NOW 👈</a>
-    </div>
-    
-    <!-- YOUR ORIGINAL EVENTS -->
-    <h2 style="color: gold; border-bottom: 2px solid gold; padding-bottom: 10px;">⚡ TECHNICAL ⚡</h2>
+    <h2 class="section-title">⚡ TECHNICAL ⚡</h2>
     <div class="events">
         <div class="event-item">PAPER VISTA</div>
         <div class="event-item">PROJECT EXPO</div>
@@ -265,7 +212,7 @@
         <div class="event-item">QUIZ ARENA</div>
     </div>
     
-    <h2 style="color: gold; border-bottom: 2px solid gold; padding-bottom: 10px;">🎮 NON-TECHNICAL 🎮</h2>
+    <h2 class="section-title">🎮 NON-TECHNICAL 🎮</h2>
     <div class="events">
         <div class="event-item">DUMB CHARADES</div>
         <div class="event-item">SIGNAL SCRAMBLES</div>
@@ -274,86 +221,14 @@
         <div class="event-item">CARROM</div>
     </div>
     
-    <h2 style="color: gold; border-bottom: 2px solid gold; padding-bottom: 10px;">🎯 E-SPORTS 🎯</h2>
+    <h2 class="section-title">🎯 E-SPORTS 🎯</h2>
     <div class="events">
         <div class="event-item">FREE FIRE</div>
         <div class="event-item">E-FOOTBALL</div>
     </div>
     
-    <!-- NEW: Schedule (you asked for this) -->
-    <div class="schedule">
-        <h2 style="color: gold;">📋 EVENT SCHEDULE 📋</h2>
-        <table class="schedule-table">
-            <tr><th>Time</th><th>Event</th><th>Venue</th></tr>
-            <tr><td>9:00 AM - 10:00 AM</td><td>Inauguration</td><td>Auditorium</td></tr>
-            <tr><td>10:30 AM - 1:00 PM</td><td>Paper Vista</td><td>Hall 101</td></tr>
-            <tr><td>10:30 AM - 1:00 PM</td><td>Project Expo</td><td>Seminar Hall</td></tr>
-            <tr><td>10:30 AM - 12:00 PM</td><td>Quiz Arena</td><td>Hall 102</td></tr>
-            <tr><td>1:00 PM - 2:00 PM</td><td>Lunch Break</td><td>Cafeteria</td></tr>
-            <tr><td>2:00 PM - 4:00 PM</td><td>Brain Chain</td><td>Hall 103</td></tr>
-            <tr><td>2:00 PM - 5:00 PM</td><td>Non-Tech Events</td><td>Ground Floor</td></tr>
-            <tr><td>4:00 PM - 6:00 PM</td><td>E-Sports Finals</td><td>Lab 201</td></tr>
-            <tr><td>6:00 PM - 7:00 PM</td><td>Prize Distribution</td><td>Auditorium</td></tr>
-        </table>
-    </div>
-    
-    <!-- NEW: Registration Form (you asked for this) -->
-    <div id="register-form" class="registration-form">
-        <h2 style="color: gold; text-align: center;">📝 REGISTRATION FORM 📝</h2>
-        <form onsubmit="event.preventDefault(); alert('Registration submitted! We will contact you.');">
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Full Name *</label>
-                    <input type="text" required>
-                </div>
-                <div class="form-group">
-                    <label>College *</label>
-                    <input type="text" required>
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Email *</label>
-                    <input type="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Phone *</label>
-                    <input type="tel" pattern="[0-9]{10}" required>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label>Select Events *</label>
-                <select multiple size="4" required>
-                    <option>Paper Vista</option>
-                    <option>Project Expo</option>
-                    <option>Brain Chain</option>
-                    <option>Quiz Arena</option>
-                    <option>Dumb Charades</option>
-                    <option>Signal Scrambles</option>
-                    <option>Fun Zone</option>
-                    <option>Box Cricket</option>
-                    <option>Carrom</option>
-                    <option>Free Fire</option>
-                    <option>E-Football</option>
-                </select>
-                <small>Hold Ctrl to select multiple</small>
-            </div>
-            
-            <div class="form-group">
-                <label>Payment Transaction ID *</label>
-                <input type="text" required>
-                <small>Pay to: 9080252129 (Google Pay/PhonePe)</small>
-            </div>
-            
-            <button type="submit" class="submit-btn">SUBMIT</button>
-        </form>
-    </div>
-    
-    <!-- YOUR ORIGINAL COORDINATORS -->
-    <h2 style="color: gold;">🔧 WORKSHOP COORDINATORS 🔧</h2>
-    <h2 style="color: gold;">👥 STUDENT COORDINATORS 👥</h2>
+    <h2 class="section-title">🔧 WORKSHOP COORDINATORS 🔧</h2>
+    <h2 class="section-title">👥 STUDENT COORDINATORS 👥</h2>
     
     <div class="coordinators">
         <div class="coordinator">
@@ -366,31 +241,36 @@
         </div>
     </div>
     
-    <!-- YOUR ORIGINAL VENUE -->
     <div class="venue">
         <h2>VENUE:</h2>
         <h3>JJCET AUDITORIUM</h3>
     </div>
     
-    <!-- YOUR ORIGINAL CONTACT -->
-    <h2 style="color: gold;">📞 FOR QUERIES 📞</h2>
-    <h3>CONTACT</h3>
-    <div class="phone" style="font-size: 32px;">
-        KARTHIKEYAN R 9080252129
+    <div class="contact">
+        <h2>📞 FOR QUERIES 📞</h2>
+        <h3>CONTACT</h3>
+        <div class="phone">
+            KARTHIKEYAN R 9080252129
+        </div>
     </div>
     
     <script>
-        // Countdown timer (your original functionality)
         function updateCountdown() {
             const eventDate = new Date('April 10, 2026 09:00:00').getTime();
             const now = new Date().getTime();
             const distance = eventDate - now;
             
-            document.getElementById('days').innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
-            document.getElementById('hours').innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById('minutes').innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById('seconds').innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
         }
+        
         setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
