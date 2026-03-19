@@ -809,3 +809,259 @@ body {
         align-items: center;
     }
 }
+/* ===== ENHANCED CONTRAST & READABILITY ===== */
+
+/* Make text pop more */
+body {
+    background: #020010; /* Slightly lighter than before */
+}
+
+/* Add stronger contrast to headers */
+.college-title h1 {
+    color: #ffdd00;
+    text-shadow: 0 0 20px #ffdd00, 2px 2px 0 #0a1a4a;
+    letter-spacing: 3px;
+}
+
+.college-title h2 {
+    color: #ffffff;
+    text-shadow: 0 0 15px #ffdd00;
+    font-weight: 600;
+}
+
+.college-title h3 {
+    color: #ffdd00;
+    font-size: 1.6rem;
+    text-shadow: 0 0 10px #0a1a4a;
+}
+
+/* Make EVOLIX logo stand out more */
+.evolix-logo-main {
+    filter: drop-shadow(0 0 40px #ffdd00) drop-shadow(0 0 60px #0a1a4a);
+    border-bottom: 3px solid #ffdd00;
+    border-top: 3px solid #0a1a4a;
+    border-radius: 20px;
+    padding: 10px 0;
+}
+
+/* Add more EEE elements */
+.dept-section {
+    background: linear-gradient(135deg, rgba(255,221,0,0.05), rgba(10,26,74,0.1));
+    border-width: 3px;
+}
+
+.dept-name {
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, #ffdd00, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Make pricing cards pop */
+.pricing-card {
+    background: linear-gradient(145deg, #0a0a2a, #010018);
+    border-width: 3px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.pricing-card:hover {
+    transform: translateY(-15px) rotateX(5deg);
+    box-shadow: 0 20px 40px #ffdd00, 0 20px 60px #0a1a4a;
+}
+
+/* Add voltage text to pricing */
+.pricing-card.workshop-price::after {
+    content: '⏚';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #ffdd00;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.pricing-card.event-price::after {
+    content: '⏚';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #0a1a4a;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+/* Make event chips more exciting */
+.event-chip {
+    background: rgba(10, 26, 74, 0.3);
+    border: 2px solid #ffdd00;
+    font-weight: 700;
+    backdrop-filter: blur(5px);
+}
+
+.event-chip::after {
+    content: '⚡';
+    margin-left: 8px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.event-chip:hover::after {
+    opacity: 1;
+    margin-left: 12px;
+}
+
+/* Add electrical symbols to section titles */
+.section-title span {
+    position: relative;
+    padding: 10px 50px;
+}
+
+.tech-title::before {
+    content: '⏚';
+    position: absolute;
+    left: 10px;
+    color: #ffdd00;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tech-title::after {
+    content: '⏚';
+    position: absolute;
+    right: 10px;
+    color: #0a1a4a;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Make coordinator cards more readable */
+.coordinator-card {
+    background: linear-gradient(145deg, #0a1030, #010018);
+    border-width: 3px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.coordinator-card h3 {
+    color: #ffdd00;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.faculty .phone-link {
+    background: rgba(255,221,0,0.2);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Enhance query card */
+.query-card {
+    background: linear-gradient(145deg, #0a1040, #010020);
+    border-width: 4px;
+    border-color: #ffdd00;
+    box-shadow: 0 0 60px rgba(255,221,0,0.4);
+}
+
+.query-name {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #ffdd00;
+    text-shadow: 0 0 20px #ffdd00;
+}
+
+.query-phone {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    background: rgba(10,26,74,0.5);
+    border-width: 3px;
+}
+
+/* Add voltage meter effect to venue */
+.venue-card {
+    background: linear-gradient(135deg, #0a1a4a, #020010);
+    border-width: 4px;
+}
+
+.venue-card::before {
+    content: '⚡⚡⚡';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffdd00;
+    font-size: 2rem;
+    letter-spacing: 10px;
+    animation: voltageMeter 2s infinite;
+}
+
+@keyframes voltageMeter {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; text-shadow: 0 0 20px #ffdd00; }
+}
+
+/* Make social links stronger */
+.social-icon {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-width: 3px;
+}
+
+/* Enhance register button */
+.register-big-btn {
+    background: linear-gradient(135deg, #ffdd00, #0a1a4a, #ffdd00);
+    background-size: 200% 200%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 20px 45px;
+    border: 2px solid #ffffff;
+    animation: powerFloat 2s infinite, gradientShift 3s infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Add electrical grid lines in background */
+.circuit-overlay {
+    background-image: 
+        linear-gradient(90deg, rgba(255,221,0,0.05) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(10,26,74,0.05) 1px, transparent 1px),
+        radial-gradient(circle at 20% 30%, rgba(255,221,0,0.1) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(10,26,74,0.1) 0%, transparent 20%);
+    background-size: 40px 40px, 40px 40px, 200px 200px, 200px 200px;
+}
+
+/* Add power lines to header */
+.college-header::before {
+    content: '⚡⚡⚡⚡⚡';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #ffdd00;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    opacity: 0.5;
+    animation: powerLine 3s infinite;
+}
+
+@keyframes powerLine {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+/* Add depth to cards */
+.event-chip, .pricing-card, .coordinator-card, .query-card {
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
+
+.event-chip:hover, .pricing-card:hover, .coordinator-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255,221,0,0.4), 0 20px 60px rgba(10,26,74,0.5);
+}
