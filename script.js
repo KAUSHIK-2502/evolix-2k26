@@ -1,147 +1,166 @@
 // ===== EVENT DETAILS DATABASE =====
-const eventDatabase = {
+const eventDetails = {
     'paper-vista': {
-        name: 'PAPER VISTA',
-        description: 'Present your research papers and innovative ideas.',
+        name: 'Paper Vista',
+        description: 'Present your research papers and innovative ideas. Compete with brightest minds from across the country.',
         rules: [
             'Team size: 1-3 members',
-            'Abstract submission required by March 30',
+            'Abstract submission required by March 30, 2026',
             '10 minutes presentation + 5 minutes Q&A',
-            'Original research only'
+            'Original research only',
+            'PPT format: 16:9'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st: ₹10,000\n🥈 2nd: ₹5,000\n🥉 3rd: ₹2,000'
+        prizes: '1st Prize: ₹10,000\n2nd Prize: ₹5,000\n3rd Prize: ₹2,000'
     },
     'project-expo': {
-        name: 'PROJECT EXPO',
-        description: 'Showcase your innovative projects.',
+        name: 'Project Expo',
+        description: 'Showcase your innovative projects. Get feedback from industry experts and compete for recognition.',
         rules: [
             'Team size: 1-4 members',
-            'Working model required',
+            'Working model/prototype required',
             'Project report must be submitted',
-            'Innovation and practicality judged'
+            'Innovation and practicality judged',
+            'A0 size poster optional'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st: ₹15,000\n🥈 2nd: ₹7,000\n🥉 3rd: ₹3,000'
+        prizes: '1st Prize: ₹15,000\n2nd Prize: ₹7,000\n3rd Prize: ₹3,000'
     },
     'brain-chain': {
-        name: 'BRAIN CHAIN',
-        description: 'Connect the dots! A challenging logical thinking event.',
+        name: 'Brain Chain',
+        description: 'Connect the dots! A challenging event that tests your logical thinking and problem-solving skills.',
         rules: [
             'Team size: 2 members',
             'Multiple rounds',
-            'Prelims followed by finals',
-            'No elimination without warning'
-        ],
-        fee: '₹200 per head',
-        prizes: '🥇 1st: ₹8,000\n🥈 2nd: ₹4,000\n🥉 3rd: ₹2,000'
-    },
-    'quiz-arena': {
-        name: 'QUIZ ARENA',
-        description: 'Test your technical knowledge.',
-        rules: [
-            'Team size: 2 members',
             'Prelims - Written test',
             'Finals - Buzzer round',
-            'Topics: Core engineering, GK, Current affairs'
+            'No negative marking'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st: ₹6,000\n🥈 2nd: ₹3,000\n🥉 3rd: ₹1,500'
+        prizes: '1st Prize: ₹8,000\n2nd Prize: ₹4,000\n3rd Prize: ₹2,000'
     },
-    'dumb-charades': {
-        name: 'DUMB CHARADES',
-        description: 'Fun-filled game of gestures and guessing.',
-        rules: [
-            'Team size: 4 members',
-            'No speaking allowed',
-            'Time limit: 2 minutes per team',
-            'Movies, songs, TV shows only'
-        ],
-        fee: '₹200 per head',
-        prizes: '🥇 1st: ₹5,000\n🥈 2nd: ₹2,500'
-    },
-    'signal-scrambles': {
-        name: 'SIGNAL SCRAMBLES',
-        description: 'Decode the signals! Test your communication skills.',
+    'quiz-arena': {
+        name: 'Quiz Arena',
+        description: 'Test your technical knowledge. Multiple rounds covering various domains of engineering.',
         rules: [
             'Team size: 2 members',
-            'Decode signals within time limit',
-            'Multiple difficulty levels',
-            'Communication skills tested'
+            'Topics: Core EEE, Aptitude, Current affairs',
+            'Prelims - Online test',
+            'Finals - Stage round',
+            'Buzzer round for finalists'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st: ₹4,000\n🥈 2nd: ₹2,000'
+        prizes: '1st Prize: ₹6,000\n2nd Prize: ₹3,000\n3rd Prize: ₹1,500'
+    },
+    'dumb-charades': {
+        name: 'Dumb Charades',
+        description: 'Act it out! Fun-filled game of gestures and guessing. Team event that guarantees laughter.',
+        rules: [
+            'Team size: 4 members',
+            'No speaking or lip movement',
+            'Time limit: 2 minutes per team',
+            'Movies, songs, TV shows only',
+            'One pass available per team'
+        ],
+        fee: '₹200 per head',
+        prizes: '1st Prize: ₹5,000\n2nd Prize: ₹2,500'
+    },
+    'signal-scrambles': {
+        name: 'Signal Scrambles',
+        description: 'Decode the signals! Test your communication skills in this exciting and challenging game.',
+        rules: [
+            'Team size: 2 members',
+            'One sender, one receiver',
+            'No verbal communication',
+            'Multiple difficulty levels',
+            'Time bonus for early completion'
+        ],
+        fee: '₹200 per head',
+        prizes: '1st Prize: ₹4,000\n2nd Prize: ₹2,000'
     },
     'fun-zone': {
-        name: 'FUN ZONE',
-        description: 'Multiple fun games and activities.',
+        name: 'Fun Zone',
+        description: 'Multiple fun games and activities. Take a break and enjoy with friends.',
         rules: [
             'Individual event',
             'Multiple mini-games',
             'Score points to win',
-            'Fun guaranteed'
+            'Games: Ring toss, Stack up, Memory test',
+            'Cumulative scoring'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st: ₹3,000\n🥈 2nd: ₹1,500'
+        prizes: '1st Prize: ₹3,000\n2nd Prize: ₹1,500\n3rd Prize: ₹750'
     },
     'box-cricket': {
-        name: 'BOX CRICKET',
-        description: 'Exciting box cricket tournament.',
+        name: 'Box Cricket',
+        description: 'Exciting box cricket tournament. Show your cricketing skills in this indoor format.',
         rules: [
             'Team size: 5-7 members',
             'Tournament format',
             'Knockout rounds',
-            'Bring your own equipment'
+            '5 overs per match',
+            'Tennis ball used'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st: ₹5,000\n🥈 2nd: ₹2,500'
+        prizes: 'Winning Team: ₹5,000\nRunners Up: ₹2,500'
     },
     'carrom': {
-        name: 'CARROM',
-        description: 'Classic carrom tournament.',
+        name: 'Carrom',
+        description: 'Classic carrom tournament. Compete in doubles format.',
         rules: [
             'Team size: 2 members (doubles)',
             'Tournament format',
             'Knockout rounds',
-            'Standard carrom rules apply'
+            'Best of 3 games',
+            'Standard international rules'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st: ₹3,000\n🥈 2nd: ₹1,500'
+        prizes: 'Winning Team: ₹3,000\nRunners Up: ₹1,500'
     },
     'free-fire': {
-        name: 'FREE FIRE',
-        description: 'Battle it out in Free Fire.',
+        name: 'Free Fire',
+        description: 'Battle it out in Free Fire. Solo and squad tournaments with exciting prizes.',
         rules: [
             'Squad: 4 members',
-            'Solo also available',
+            'Solo category also available',
             'Room ID provided on spot',
-            'No hacks/cheats'
+            'No hacks/cheats allowed',
+            'Banned players will be disqualified'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st: ₹6,000\n🥈 2nd: ₹3,000'
+        prizes: 'Squad Winner: ₹6,000\nSquad Runner: ₹3,000\nSolo Winner: ₹3,000'
     },
     'e-football': {
-        name: 'E-FOOTBALL',
-        description: 'Virtual football tournament.',
+        name: 'E-Football',
+        description: 'Virtual football tournament. Show your gaming skills on the virtual pitch.',
         rules: [
             '1v1 matches',
-            'Platform: Console/PC',
+            'Platform: PS5/PC',
+            'Game: eFootball PES',
             'Tournament bracket',
-            'Wired controllers only'
+            '5 minutes per half'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st: ₹4,000\n🥈 2nd: ₹2,000'
+        prizes: 'Winner: ₹4,000\nRunner: ₹2,000'
     }
 };
 
 // ===== GOOGLE FORM LINK =====
-const GOOGLE_FORM_URL = 'https://forms.google.com/your-form-link-here'; // REPLACE THIS
+const GOOGLE_FORM_URL = 'https://forms.google.com/your-form-link-here'; // REPLACE WITH YOUR LINK
 
 // ===== COUNTDOWN TIMER =====
 function updateCountdown() {
     const eventDate = new Date('April 10, 2026 09:00:00').getTime();
     const now = new Date().getTime();
     const distance = eventDate - now;
+    
+    if (distance < 0) {
+        document.getElementById('days').textContent = '00';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+        return;
+    }
     
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -158,28 +177,28 @@ setInterval(updateCountdown, 1000);
 updateCountdown();
 
 // ===== EVENT CLICK HANDLER =====
-document.querySelectorAll('.breaker').forEach(breaker => {
-    breaker.addEventListener('click', function() {
+document.querySelectorAll('.event-card').forEach(card => {
+    card.addEventListener('click', function() {
         const eventKey = this.dataset.event;
-        const event = eventDatabase[eventKey];
+        const event = eventDetails[eventKey];
         
         if (!event) return;
         
         const modalBody = document.getElementById('modalBody');
         modalBody.innerHTML = `
-            <h2>⚡ ${event.name} ⚡</h2>
-            <p style="color: #ffdd00; margin-bottom: 20px;">${event.description}</p>
+            <h2>${event.name}</h2>
+            <p style="color: #475569; margin-bottom: 1.5rem;">${event.description}</p>
             
-            <h3>📋 RULES:</h3>
+            <h3>Rules & Guidelines</h3>
             <ul>
                 ${event.rules.map(rule => `<li>${rule}</li>`).join('')}
             </ul>
             
-            <h3>💰 FEE:</h3>
-            <p style="color: #ffffff;">${event.fee}</p>
+            <h3>Registration Fee</h3>
+            <p style="color: #0f172a; font-weight: 600;">${event.fee}</p>
             
-            <h3>🏆 PRIZES:</h3>
-            <p style="color: #ffdd00; white-space: pre-line;">${event.prizes}</p>
+            <h3>Prizes</h3>
+            <p style="color: #2563eb; white-space: pre-line; font-weight: 500;">${event.prizes}</p>
         `;
         
         document.getElementById('eventModal').classList.add('show');
@@ -201,13 +220,46 @@ document.getElementById('eventModal').addEventListener('click', (e) => {
     }
 });
 
-// ===== REGISTER BUTTON =====
+// ===== REGISTER BUTTONS =====
 document.getElementById('modalRegisterBtn').addEventListener('click', (e) => {
     e.preventDefault();
     window.open(GOOGLE_FORM_URL, '_blank');
 });
 
-document.getElementById('mainRegisterBtn').addEventListener('click', (e) => {
+document.getElementById('navRegisterBtn').addEventListener('click', (e) => {
     e.preventDefault();
     window.open(GOOGLE_FORM_URL, '_blank');
+});
+
+// ===== ACTIVE NAV LINK ON SCROLL =====
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
 });
