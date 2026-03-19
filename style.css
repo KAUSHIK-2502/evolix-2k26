@@ -1137,3 +1137,18 @@ body {
         min-width: calc(50% - 15px);
     }
 }
+
+body {
+    background: #03001a; /* Lighter background */
+    color: #ffffff;
+}
+
+h1, h2, h3, .price-value, .pill-number {
+    color: #ffdd00;
+    text-shadow: 0 0 15px #ffdd00;
+}
+
+.coordinator-card, .pricing-card, .timer-pill {
+    background: #0a1555; /* Much lighter blue */
+    border: 2px solid #ffdd00;
+}
