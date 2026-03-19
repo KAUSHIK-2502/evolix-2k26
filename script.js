@@ -11,7 +11,7 @@ const eventDetails = {
             'PPT format: 16:9'
         ],
         fee: '₹200 per head',
-        prizes: '1st Prize: ₹10,000\n2nd Prize: ₹5,000\n3rd Prize: ₹2,000'
+        prizes: '🥇 1st Prize: ₹10,000\n🥈 2nd Prize: ₹5,000\n🥉 3rd Prize: ₹2,000'
     },
     'project-expo': {
         name: 'Project Expo',
@@ -24,7 +24,7 @@ const eventDetails = {
             'A0 size poster optional'
         ],
         fee: '₹200 per head',
-        prizes: '1st Prize: ₹15,000\n2nd Prize: ₹7,000\n3rd Prize: ₹3,000'
+        prizes: '🥇 1st Prize: ₹15,000\n🥈 2nd Prize: ₹7,000\n🥉 3rd Prize: ₹3,000'
     },
     'brain-chain': {
         name: 'Brain Chain',
@@ -37,7 +37,7 @@ const eventDetails = {
             'No negative marking'
         ],
         fee: '₹200 per head',
-        prizes: '1st Prize: ₹8,000\n2nd Prize: ₹4,000\n3rd Prize: ₹2,000'
+        prizes: '🥇 1st Prize: ₹8,000\n🥈 2nd Prize: ₹4,000\n🥉 3rd Prize: ₹2,000'
     },
     'quiz-arena': {
         name: 'Quiz Arena',
@@ -50,7 +50,7 @@ const eventDetails = {
             'Buzzer round for finalists'
         ],
         fee: '₹200 per head',
-        prizes: '1st Prize: ₹6,000\n2nd Prize: ₹3,000\n3rd Prize: ₹1,500'
+        prizes: '🥇 1st Prize: ₹6,000\n🥈 2nd Prize: ₹3,000\n🥉 3rd Prize: ₹1,500'
     },
     'dumb-charades': {
         name: 'Dumb Charades',
@@ -63,7 +63,7 @@ const eventDetails = {
             'One pass available per team'
         ],
         fee: '₹200 per head',
-        prizes: '1st Prize: ₹5,000\n2nd Prize: ₹2,500'
+        prizes: '🥇 1st Prize: ₹5,000\n🥈 2nd Prize: ₹2,500'
     },
     'signal-scrambles': {
         name: 'Signal Scrambles',
@@ -76,7 +76,7 @@ const eventDetails = {
             'Time bonus for early completion'
         ],
         fee: '₹200 per head',
-        prizes: '1st Prize: ₹4,000\n2nd Prize: ₹2,000'
+        prizes: '🥇 1st Prize: ₹4,000\n🥈 2nd Prize: ₹2,000'
     },
     'fun-zone': {
         name: 'Fun Zone',
@@ -89,7 +89,7 @@ const eventDetails = {
             'Cumulative scoring'
         ],
         fee: '₹200 per head',
-        prizes: '1st Prize: ₹3,000\n2nd Prize: ₹1,500\n3rd Prize: ₹750'
+        prizes: '🥇 1st Prize: ₹3,000\n🥈 2nd Prize: ₹1,500\n🥉 3rd Prize: ₹750'
     },
     'box-cricket': {
         name: 'Box Cricket',
@@ -102,7 +102,7 @@ const eventDetails = {
             'Tennis ball used'
         ],
         fee: '₹200 per head',
-        prizes: 'Winning Team: ₹5,000\nRunners Up: ₹2,500'
+        prizes: '🏆 Winning Team: ₹5,000\n🥈 Runners Up: ₹2,500'
     },
     'carrom': {
         name: 'Carrom',
@@ -115,7 +115,7 @@ const eventDetails = {
             'Standard international rules'
         ],
         fee: '₹200 per head',
-        prizes: 'Winning Team: ₹3,000\nRunners Up: ₹1,500'
+        prizes: '🏆 Winning Team: ₹3,000\n🥈 Runners Up: ₹1,500'
     },
     'free-fire': {
         name: 'Free Fire',
@@ -141,12 +141,13 @@ const eventDetails = {
             '5 minutes per half'
         ],
         fee: '₹200 per head',
-        prizes: 'Winner: ₹4,000\nRunner: ₹2,000'
+        prizes: '🥇 Winner: ₹4,000\n🥈 Runner: ₹2,000'
     }
 };
 
-// ===== GOOGLE FORM LINK =====
-const GOOGLE_FORM_URL = 'https://forms.google.com/your-form-link-here'; // REPLACE WITH YOUR LINK
+// ===== YOUR GOOGLE FORM LINK =====
+// 🔴 REPLACE THIS WITH YOUR ACTUAL GOOGLE FORM LINK
+const GOOGLE_FORM_URL = 'https://forms.google.com/your-form-link-here';
 
 // ===== COUNTDOWN TIMER =====
 function updateCountdown() {
@@ -173,11 +174,12 @@ function updateCountdown() {
     document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
 }
 
+// Update countdown every second
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
 // ===== EVENT CLICK HANDLER =====
-document.querySelectorAll('.event-card').forEach(card => {
+document.querySelectorAll('.event-card-luxury').forEach(card => {
     card.addEventListener('click', function() {
         const eventKey = this.dataset.event;
         const event = eventDetails[eventKey];
@@ -186,19 +188,19 @@ document.querySelectorAll('.event-card').forEach(card => {
         
         const modalBody = document.getElementById('modalBody');
         modalBody.innerHTML = `
-            <h2>${event.name}</h2>
-            <p style="color: #475569; margin-bottom: 1.5rem;">${event.description}</p>
+            <h2>⚡ ${event.name} ⚡</h2>
+            <p style="color: #e0e0e0; margin-bottom: 1.5rem;">${event.description}</p>
             
-            <h3>Rules & Guidelines</h3>
+            <h3>📋 Rules & Guidelines</h3>
             <ul>
                 ${event.rules.map(rule => `<li>${rule}</li>`).join('')}
             </ul>
             
-            <h3>Registration Fee</h3>
-            <p style="color: #0f172a; font-weight: 600;">${event.fee}</p>
+            <h3>💰 Registration Fee</h3>
+            <p style="color: #FFE600; font-weight: 600;">${event.fee}</p>
             
-            <h3>Prizes</h3>
-            <p style="color: #2563eb; white-space: pre-line; font-weight: 500;">${event.prizes}</p>
+            <h3>🏆 Prizes</h3>
+            <p style="color: #FF6D00; white-space: pre-line; font-weight: 500;">${event.prizes}</p>
         `;
         
         document.getElementById('eventModal').classList.add('show');
@@ -206,14 +208,17 @@ document.querySelectorAll('.event-card').forEach(card => {
 });
 
 // ===== MODAL CONTROLS =====
-document.querySelector('.modal-close').addEventListener('click', () => {
+// Close button
+document.querySelector('.modal-close-luxury').addEventListener('click', () => {
     document.getElementById('eventModal').classList.remove('show');
 });
 
+// Cancel button
 document.querySelector('.modal-cancel').addEventListener('click', () => {
     document.getElementById('eventModal').classList.remove('show');
 });
 
+// Click outside modal to close
 document.getElementById('eventModal').addEventListener('click', (e) => {
     if (e.target.id === 'eventModal') {
         document.getElementById('eventModal').classList.remove('show');
@@ -221,11 +226,13 @@ document.getElementById('eventModal').addEventListener('click', (e) => {
 });
 
 // ===== REGISTER BUTTONS =====
+// Modal register button
 document.getElementById('modalRegisterBtn').addEventListener('click', (e) => {
     e.preventDefault();
     window.open(GOOGLE_FORM_URL, '_blank');
 });
 
+// Navbar register button
 document.getElementById('navRegisterBtn').addEventListener('click', (e) => {
     e.preventDefault();
     window.open(GOOGLE_FORM_URL, '_blank');
@@ -233,7 +240,7 @@ document.getElementById('navRegisterBtn').addEventListener('click', (e) => {
 
 // ===== ACTIVE NAV LINK ON SCROLL =====
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+const navItems = document.querySelectorAll('.nav-item');
 
 window.addEventListener('scroll', () => {
     let current = '';
@@ -245,21 +252,43 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === `#${current}`) {
+            item.classList.add('active');
         }
     });
 });
 
 // ===== SMOOTH SCROLL =====
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', (e) => {
         e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
+        const target = document.querySelector(item.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            target.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
+});
+
+// ===== PHONE NUMBER CLICK TRACKING (optional) =====
+document.querySelectorAll('.contact-row a[href^="tel:"]').forEach(phoneLink => {
+    phoneLink.addEventListener('click', () => {
+        console.log('Phone number clicked:', phoneLink.textContent);
+    });
+});
+
+// ===== ADD DYNAMIC YEAR TO FOOTER =====
+const footerYear = document.querySelector('.footer-premium p');
+if (footerYear) {
+    const currentYear = new Date().getFullYear();
+    footerYear.innerHTML = footerYear.innerHTML.replace('2026', currentYear);
+}
+
+// ===== PRELOADER (optional - remove if not needed) =====
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
 });
