@@ -927,3 +927,238 @@ body {
         padding: 2rem;
     }
 }
+/* ===== EEE BACKGROUND ELEMENTS ===== */
+.eee-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: #0a0a0f;
+}
+
+/* ===== TRANSFORMER TOWERS ===== */
+.transformer-tower {
+    position: absolute;
+    bottom: 0;
+    width: 4px;
+    height: 200px;
+    background: linear-gradient(to top, #FFE600, transparent);
+    opacity: 0.15;
+}
+
+.transformer-tower::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    width: 34px;
+    height: 40px;
+    border: 2px solid #FFE600;
+    border-radius: 30% 30% 0 0;
+    opacity: 0.2;
+}
+
+.transformer-tower::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -5px;
+    width: 14px;
+    height: 20px;
+    background: #FFE600;
+    border-radius: 50%;
+    filter: blur(4px);
+    opacity: 0.3;
+    animation: towerPulse 3s infinite;
+}
+
+.tower-1 { left: 10%; height: 250px; }
+.tower-2 { left: 30%; height: 180px; animation-delay: 1s; }
+.tower-3 { left: 60%; height: 220px; animation-delay: 2s; }
+.tower-4 { left: 85%; height: 200px; animation-delay: 1.5s; }
+
+@keyframes towerPulse {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.2); }
+}
+
+/* ===== TRANSMISSION LINES ===== */
+.power-line {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        #FFE600 20%, 
+        #FF6D00 50%, 
+        #FFE600 80%, 
+        transparent
+    );
+    opacity: 0.2;
+    animation: lineGlow 4s infinite;
+}
+
+.power-line:nth-child(2) { top: 50%; animation-delay: 1s; }
+.power-line:nth-child(3) { top: 70%; animation-delay: 2s; }
+
+@keyframes lineGlow {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+}
+
+/* ===== INSULATORS ===== */
+.insulator {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: repeating-linear-gradient(
+        45deg,
+        #888,
+        #888 3px,
+        #aaa 3px,
+        #aaa 6px
+    );
+    border-radius: 30% 30% 10% 10%;
+    opacity: 0.2;
+}
+
+.insulator-1 { top: 25%; left: 15%; }
+.insulator-2 { top: 45%; right: 20%; }
+.insulator-3 { bottom: 30%; left: 40%; }
+
+/* ===== LIGHTNING EFFECTS ===== */
+.lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.lightning-bolt {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: #FFE600;
+    filter: blur(2px);
+    opacity: 0;
+    transform: rotate(15deg);
+    animation: lightningFlash 5s infinite;
+}
+
+.lightning-bolt::before,
+.lightning-bolt::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: #FFE600;
+    filter: blur(2px);
+}
+
+.lightning-bolt::before {
+    transform: rotate(20deg) translateX(10px);
+    top: 20px;
+}
+
+.lightning-bolt::after {
+    transform: rotate(-15deg) translateX(-8px);
+    top: 40px;
+}
+
+.bolt-1 {
+    left: 20%;
+    top: 10%;
+    animation-delay: 0.5s;
+}
+
+.bolt-2 {
+    right: 30%;
+    top: 40%;
+    transform: rotate(-10deg);
+    animation-delay: 2.3s;
+}
+
+.bolt-3 {
+    left: 70%;
+    top: 60%;
+    transform: rotate(25deg);
+    animation-delay: 3.7s;
+}
+
+@keyframes lightningFlash {
+    0%, 95%, 98%, 100% { opacity: 0; }
+    96%, 97% { opacity: 0.7; }
+    99% { opacity: 0.3; }
+}
+
+/* ===== CIRCUIT PATTERN OVERLAY ===== */
+.circuit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20px 20px, rgba(255, 230, 0, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 60px 80px, rgba(255, 109, 0, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 100px 40px, rgba(98, 0, 234, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+}
+
+/* ===== ENERGY PARTICLES ===== */
+.energy-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #FFE600;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.3;
+    animation: particleFlow 8s infinite linear;
+}
+
+.energy-particle:nth-child(1) { top: 20%; left: 10%; animation-duration: 6s; }
+.energy-particle:nth-child(2) { top: 70%; left: 80%; animation-duration: 9s; background: #FF6D00; }
+.energy-particle:nth-child(3) { top: 40%; left: 50%; animation-duration: 7s; }
+.energy-particle:nth-child(4) { top: 80%; left: 30%; animation-duration: 10s; background: #6200EA; }
+.energy-particle:nth-child(5) { top: 30%; left: 70%; animation-duration: 8s; }
+
+@keyframes particleFlow {
+    0% { transform: translateY(0) translateX(0); opacity: 0.2; }
+    25% { transform: translateY(-30px) translateX(20px); opacity: 0.5; }
+    50% { transform: translateY(-60px) translateX(-20px); opacity: 0.3; }
+    75% { transform: translateY(-30px) translateX(-40px); opacity: 0.4; }
+    100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+}
+
+/* ===== VOLTAGE SPARKS ===== */
+.spark {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FFE600, transparent);
+    filter: blur(5px);
+    opacity: 0;
+    animation: sparkBurst 3s infinite;
+}
+
+.spark-1 { top: 35%; left: 25%; animation-delay: 1s; }
+.spark-2 { top: 65%; right: 35%; animation-delay: 2.2s; }
+.spark-3 { bottom: 25%; left: 65%; animation-delay: 3.5s; }
+
+@keyframes sparkBurst {
+    0%, 90%, 100% { opacity: 0; transform: scale(0.5); }
+    92%, 94% { opacity: 0.6; transform: scale(1.5); }
+    96% { opacity: 0.3; transform: scale(1); }
+}
+
+/* ===== UPDATE YOUR HTML BACKGROUND ===== */
