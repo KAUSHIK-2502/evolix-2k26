@@ -664,3 +664,50 @@ body {
         font-size: 1.8rem;
     }
 }
+/* ===== SIMPLE CONTACT CARD ===== */
+.contact-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #00ffff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.contact-card h3 {
+    color: #00ffff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.contact-person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-person .name {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.contact-person .phone {
+    color: #ff3366;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #ff3366;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.contact-person .phone:hover {
+    background: #ff3366;
+    color: #000000;
+}
