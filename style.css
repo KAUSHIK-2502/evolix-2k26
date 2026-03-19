@@ -1067,3 +1067,73 @@ body {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 40px rgba(255,221,0,0.4), 0 20px 60px rgba(10,26,74,0.5);
 }
+/* ===== PILL STYLE TIMER - CLEAN & PROFESSIONAL ===== */
+.eee-timer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.timer-pill {
+    background: #0a0a1a;
+    border: 2px solid #ffdd00;
+    border-radius: 60px;
+    padding: 20px 30px;
+    min-width: 140px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255, 221, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.timer-pill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(255, 221, 0, 0.6);
+    border-color: #ffffff;
+}
+
+.pill-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffdd00;
+    line-height: 1;
+    text-shadow: 0 0 15px rgba(255, 221, 0, 0.7);
+    margin-bottom: 5px;
+}
+
+.pill-label {
+    font-size: 1rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255, 221, 0, 0.3);
+    padding-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .eee-timer {
+        gap: 15px;
+    }
+    
+    .timer-pill {
+        min-width: 110px;
+        padding: 15px 20px;
+    }
+    
+    .pill-number {
+        font-size: 2.5rem;
+    }
+    
+    .pill-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timer-pill {
+        min-width: calc(50% - 15px);
+    }
+}
