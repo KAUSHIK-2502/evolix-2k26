@@ -7,85 +7,98 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts - Professional -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Subtle Background -->
-    <div class="bg-subtle"></div>
+    <!-- Dynamic Background -->
+    <div class="energy-bg">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
 
     <!-- Navigation -->
-    <nav class="nav-bar">
+    <nav class="nav-premium">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="0.png" alt="JJ College" class="nav-logo-img">
+                <img src="0.png" alt="JJ College" class="logo-premium">
             </div>
-            <div class="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#events" class="nav-link">Events</a>
-                <a href="#workshop" class="nav-link">Workshop</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            <div class="nav-menu">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#events" class="nav-item">Events</a>
+                <a href="#workshop" class="nav-item">Workshop</a>
+                <a href="#contact" class="nav-item">Contact</a>
             </div>
-            <a href="#" class="nav-register" id="navRegisterBtn">Register</a>
+            <button class="nav-cta" id="navRegisterBtn">
+                <span>Register</span>
+                <i class="fas fa-bolt"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- Main Container -->
-    <main class="main-container">
+    <!-- Main Content -->
+    <main class="main-premium">
         
         <!-- Hero Section -->
-        <section id="home" class="hero-section">
+        <section id="home" class="hero-premium">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="institution">
-                        <h1>J.J COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
-                        <p class="autonomous">AUTONOMOUS · SOWDAMBIKAA GROUP OF INSTITUTIONS</p>
+                    <div class="institution-badge">
+                        <span class="badge">AUTONOMOUS</span>
+                        <span class="badge">SOWDAMBIKAA GROUP</span>
                     </div>
                     
-                    <div class="dept-tag">
-                        <span class="dept-badge">DEPARTMENT OF</span>
-                        <h2>ELECTRICAL & ELECTRONICS ENGINEERING</h2>
+                    <h1 class="college-name">J.J COLLEGE OF ENGINEERING & TECHNOLOGY</h1>
+                    
+                    <div class="dept-display">
+                        <span class="dept-label">DEPARTMENT OF</span>
+                        <h2 class="dept-title">ELECTRICAL & ELECTRONICS ENGINEERING</h2>
                     </div>
                     
-                    <div class="presents">EETA PROUDLY PRESENTS</div>
+                    <div class="presents-tag">EETA PROUDLY PRESENTS</div>
                     
-                    <div class="evolix-title">
-                        <img src="evolix-logo.png" alt="EVOLIX 2K26" class="evolix-logo">
-                        <p class="symposium-tag">NATIONAL LEVEL TECHNICAL SYMPOSIUM</p>
+                    <!-- EVOLIX Logo -->
+                    <div class="evolix-premium">
+                        <img src="evolix-logo.png" alt="EVOLIX 2K26" class="evolix-lux">
+                        <div class="title-underline"></div>
+                        <p class="symposium-type">NATIONAL LEVEL TECHNICAL SYMPOSIUM</p>
                     </div>
                     
-                    <!-- Professional Countdown -->
-                    <div class="countdown-wrapper">
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="days">00</span>
-                            <span class="countdown-label">Days</span>
+                    <!-- Premium Countdown -->
+                    <div class="countdown-luxury">
+                        <div class="luxury-item">
+                            <span class="luxury-number" id="days">00</span>
+                            <span class="luxury-label">Days</span>
                         </div>
-                        <span class="countdown-sep">:</span>
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="hours">00</span>
-                            <span class="countdown-label">Hours</span>
+                        <div class="luxury-sep">:</div>
+                        <div class="luxury-item">
+                            <span class="luxury-number" id="hours">00</span>
+                            <span class="luxury-label">Hours</span>
                         </div>
-                        <span class="countdown-sep">:</span>
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="minutes">00</span>
-                            <span class="countdown-label">Minutes</span>
+                        <div class="luxury-sep">:</div>
+                        <div class="luxury-item">
+                            <span class="luxury-number" id="minutes">00</span>
+                            <span class="luxury-label">Minutes</span>
                         </div>
-                        <span class="countdown-sep">:</span>
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="seconds">00</span>
-                            <span class="countdown-label">Seconds</span>
+                        <div class="luxury-sep">:</div>
+                        <div class="luxury-item">
+                            <span class="luxury-number" id="seconds">00</span>
+                            <span class="luxury-label">Seconds</span>
                         </div>
                     </div>
                     
                     <!-- Event Meta -->
-                    <div class="event-meta">
+                    <div class="meta-luxury">
                         <div class="meta-item">
                             <i class="far fa-calendar-alt"></i>
                             <span>April 10, 2026</span>
                         </div>
                         <div class="meta-item">
                             <i class="far fa-clock"></i>
-                            <span>9:00 AM onwards</span>
+                            <span>9:00 AM</span>
                         </div>
                         <div class="meta-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -93,201 +106,258 @@
                         </div>
                     </div>
                     
-                    <!-- Pricing Cards - Professional -->
-                    <div class="pricing-row">
-                        <div class="price-card">
-                            <div class="price-type">Workshop</div>
-                            <div class="price-amount">₹250</div>
-                            <div class="price-period">per head</div>
+                    <!-- Pricing Cards -->
+                    <div class="pricing-premium">
+                        <div class="price-card-premium workshop-price">
+                            <div class="price-icon"><i class="fas fa-microchip"></i></div>
+                            <div class="price-content">
+                                <span class="price-label">Workshop</span>
+                                <span class="price-value">₹250</span>
+                                <span class="price-period">per head</span>
+                            </div>
                         </div>
-                        <div class="price-card">
-                            <div class="price-type">Events</div>
-                            <div class="price-amount">₹200</div>
-                            <div class="price-period">per head</div>
+                        <div class="price-card-premium event-price">
+                            <div class="price-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="price-content">
+                                <span class="price-label">Events</span>
+                                <span class="price-value">₹200</span>
+                                <span class="price-period">per head</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="hero-visual">
-                    <div class="visual-element">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
+                <div class="hero-visual-premium">
+                    <div class="energy-sphere"></div>
+                    <div class="tech-particles"></div>
                 </div>
             </div>
         </section>
 
         <!-- Events Section -->
-        <section id="events" class="events-section">
-            <h2 class="section-title">Technical Events</h2>
-            <div class="events-grid">
-                <div class="event-card" data-event="paper-vista">
+        <section id="events" class="events-premium">
+            <h2 class="section-heading">
+                <span class="heading-icon"><i class="fas fa-bolt"></i></span>
+                Technical Events
+                <span class="heading-icon"><i class="fas fa-bolt"></i></span>
+            </h2>
+            
+            <div class="events-grid-premium">
+                <div class="event-card-luxury" data-event="paper-vista">
+                    <div class="card-badge">⚡</div>
                     <h3>Paper Vista</h3>
                     <p>Research paper presentation</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
-                <div class="event-card" data-event="project-expo">
+                
+                <div class="event-card-luxury" data-event="project-expo">
+                    <div class="card-badge">⚡</div>
                     <h3>Project Expo</h3>
                     <p>Innovative project showcase</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
-                <div class="event-card" data-event="brain-chain">
+                
+                <div class="event-card-luxury" data-event="brain-chain">
+                    <div class="card-badge">⚡</div>
                     <h3>Brain Chain</h3>
                     <p>Logical thinking challenge</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
-                <div class="event-card" data-event="quiz-arena">
+                
+                <div class="event-card-luxury" data-event="quiz-arena">
+                    <div class="card-badge">⚡</div>
                     <h3>Quiz Arena</h3>
                     <p>Technical quiz competition</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
             </div>
 
-            <h2 class="section-title">Non-Technical Events</h2>
-            <div class="events-grid">
-                <div class="event-card" data-event="dumb-charades">
+            <h2 class="section-heading">
+                <span class="heading-icon"><i class="fas fa-gamepad"></i></span>
+                Non-Technical Events
+                <span class="heading-icon"><i class="fas fa-gamepad"></i></span>
+            </h2>
+            
+            <div class="events-grid-premium">
+                <div class="event-card-luxury" data-event="dumb-charades">
                     <h3>Dumb Charades</h3>
                     <p>Gestures & guessing game</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
-                <div class="event-card" data-event="signal-scrambles">
+                
+                <div class="event-card-luxury" data-event="signal-scrambles">
                     <h3>Signal Scrambles</h3>
                     <p>Decode the signals</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
-                <div class="event-card" data-event="fun-zone">
+                
+                <div class="event-card-luxury" data-event="fun-zone">
                     <h3>Fun Zone</h3>
                     <p>Fun games & activities</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
-                <div class="event-card" data-event="box-cricket">
+                
+                <div class="event-card-luxury" data-event="box-cricket">
                     <h3>Box Cricket</h3>
                     <p>Indoor cricket tournament</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
-                <div class="event-card" data-event="carrom">
+                
+                <div class="event-card-luxury" data-event="carrom">
                     <h3>Carrom</h3>
                     <p>Classic carrom tournament</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
             </div>
 
-            <h2 class="section-title">E-Sports</h2>
-            <div class="events-grid">
-                <div class="event-card" data-event="free-fire">
+            <h2 class="section-heading">
+                <span class="heading-icon"><i class="fas fa-trophy"></i></span>
+                E-Sports
+                <span class="heading-icon"><i class="fas fa-trophy"></i></span>
+            </h2>
+            
+            <div class="events-grid-premium">
+                <div class="event-card-luxury" data-event="free-fire">
                     <h3>Free Fire</h3>
                     <p>Battle royale tournament</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
-                <div class="event-card" data-event="e-football">
+                
+                <div class="event-card-luxury" data-event="e-football">
                     <h3>E-Football</h3>
                     <p>Virtual football</p>
-                    <span class="event-more">View details →</span>
+                    <div class="card-footer">
+                        <span class="card-more">View Details →</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Workshop Section -->
-        <section id="workshop" class="workshop-section">
-            <h2 class="section-title">Workshop</h2>
-            <div class="workshop-card">
+        <section id="workshop" class="workshop-premium">
+            <h2 class="section-heading">
+                <span class="heading-icon"><i class="fas fa-cog"></i></span>
+                Workshop
+                <span class="heading-icon"><i class="fas fa-cog"></i></span>
+            </h2>
+            
+            <div class="workshop-luxury">
                 <div class="workshop-header">
                     <span class="workshop-tag">Embedded + IoT</span>
                 </div>
                 <p class="workshop-desc">Hands-on workshop on Embedded Systems and Internet of Things. Learn from industry experts and get practical experience with microcontrollers, sensors, and IoT platforms.</p>
-                <div class="workshop-meta">
-                    <div class="workshop-meta-item">
-                        <strong>Duration</strong>
-                        <span>2 Days</span>
+                <div class="workshop-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Duration</span>
+                        <span class="spec-value">2 Days</span>
                     </div>
-                    <div class="workshop-meta-item">
-                        <strong>Seats</strong>
-                        <span>50</span>
+                    <div class="spec-item">
+                        <span class="spec-label">Seats</span>
+                        <span class="spec-value">50</span>
                     </div>
-                    <div class="workshop-meta-item">
-                        <strong>Fee</strong>
-                        <span>₹250</span>
+                    <div class="spec-item">
+                        <span class="spec-label">Fee</span>
+                        <span class="spec-value">₹250</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">Contact</h2>
+        <section id="contact" class="contact-premium">
+            <h2 class="section-heading">
+                <span class="heading-icon"><i class="fas fa-phone-alt"></i></span>
+                Contact
+                <span class="heading-icon"><i class="fas fa-phone-alt"></i></span>
+            </h2>
             
-            <div class="contact-grid">
-                <!-- Faculty Coordinators -->
-                <div class="contact-group">
-                    <h3>Faculty Coordinators</h3>
+            <div class="contact-grid-luxury">
+                <!-- Faculty -->
+                <div class="contact-card">
+                    <div class="card-header">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Faculty Coordinators</h3>
+                    </div>
                     <div class="contact-list">
-                        <div class="contact-person">
-                            <div class="contact-info">
-                                <span class="contact-name">Dr. G. Sundararajan</span>
-                                <span class="contact-role">AP / EEE</span>
-                            </div>
-                            <a href="tel:9842253235" class="contact-phone">9842253235</a>
+                        <div class="contact-row">
+                            <span>Dr. G. Sundararajan</span>
+                            <a href="tel:9842253235">9842253235</a>
                         </div>
-                        <div class="contact-person">
-                            <div class="contact-info">
-                                <span class="contact-name">Mr. P. Jothn Brito</span>
-                                <span class="contact-role">AP / EEE</span>
-                            </div>
-                            <a href="tel:9942770040" class="contact-phone">9942770040</a>
+                        <div class="contact-row">
+                            <span>Mr. P. Jothn Brito</span>
+                            <a href="tel:9942770040">9942770040</a>
                         </div>
-                        <div class="contact-person">
-                            <div class="contact-info">
-                                <span class="contact-name">Mrs. R. Gayathri</span>
-                                <span class="contact-role">AP / EEE</span>
-                            </div>
-                            <a href="tel:9344735899" class="contact-phone">9344735899</a>
+                        <div class="contact-row">
+                            <span>Mrs. R. Gayathri</span>
+                            <a href="tel:9344735899">9344735899</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Student Coordinators -->
-                <div class="contact-group">
-                    <h3>Student Coordinators</h3>
+                <!-- Students -->
+                <div class="contact-card">
+                    <div class="card-header">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Student Coordinators</h3>
+                    </div>
                     <div class="contact-list">
-                        <div class="contact-person">
-                            <div class="contact-info">
-                                <span class="contact-name">S. Aksheetha</span>
-                            </div>
-                            <a href="tel:7373373794" class="contact-phone">7373373794</a>
+                        <div class="contact-row">
+                            <span>S. Aksheetha</span>
+                            <a href="tel:7373373794">7373373794</a>
                         </div>
-                        <div class="contact-person">
-                            <div class="contact-info">
-                                <span class="contact-name">M. Sanjeev Raj</span>
-                            </div>
-                            <a href="tel:9150952958" class="contact-phone">9150952958</a>
+                        <div class="contact-row">
+                            <span>M. Sanjeev Raj</span>
+                            <a href="tel:9150952958">9150952958</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Query Contact -->
-                <div class="contact-group highlight">
-                    <h3>For Queries</h3>
-                    <div class="contact-person query">
-                        <div class="contact-info">
-                            <span class="contact-name">KARTHIKEYAN R</span>
+                <!-- Query -->
+                <div class="contact-card highlight">
+                    <div class="card-header">
+                        <i class="fas fa-headset"></i>
+                        <h3>For Queries</h3>
+                    </div>
+                    <div class="contact-list">
+                        <div class="contact-row query-row">
+                            <span class="query-name">KARTHIKEYAN R</span>
+                            <a href="tel:9080252129" class="query-phone">9080252129</a>
                         </div>
-                        <a href="tel:9080252129" class="contact-phone highlight">9080252129</a>
                     </div>
                 </div>
             </div>
             
             <!-- Social & Venue -->
-            <div class="info-row">
-                <div class="info-item">
+            <div class="info-luxury">
+                <div class="info-chip">
                     <i class="fab fa-instagram"></i>
                     <span>@EVOLIX_2K26</span>
                 </div>
-                <div class="info-item">
+                <div class="info-chip">
                     <i class="far fa-envelope"></i>
                     <span>evolix_2k26@gmail.com</span>
                 </div>
-                <div class="info-item">
+                <div class="info-chip">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>JJCET Auditorium</span>
                 </div>
@@ -295,19 +365,19 @@
         </section>
 
         <!-- Footer -->
-        <footer class="footer">
+        <footer class="footer-premium">
             <p>© 2026 Department of Electrical and Electronics Engineering. All rights reserved.</p>
         </footer>
     </main>
 
-    <!-- Event Modal -->
-    <div class="modal" id="eventModal">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div id="modalBody" class="modal-body"></div>
-            <div class="modal-actions">
-                <a href="#" class="modal-btn primary" id="modalRegisterBtn">Register</a>
-                <button class="modal-btn secondary modal-cancel">Close</button>
+    <!-- Modal -->
+    <div class="modal-luxury" id="eventModal">
+        <div class="modal-content-luxury">
+            <button class="modal-close-luxury">&times;</button>
+            <div class="modal-body-luxury" id="modalBody"></div>
+            <div class="modal-actions-luxury">
+                <a href="#" class="modal-btn-luxury primary" id="modalRegisterBtn">Register Now</a>
+                <button class="modal-btn-luxury secondary modal-cancel">Close</button>
             </div>
         </div>
     </div>
