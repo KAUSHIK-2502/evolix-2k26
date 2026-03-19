@@ -1138,17 +1138,36 @@ body {
     }
 }
 
+
+/* ===== NEW BACKGROUND - DARK GREY ===== */
 body {
-    background: #03001a; /* Lighter background */
+    background: #1a1a2e;  /* Dark grey with slight purple tint */
     color: #ffffff;
 }
 
-h1, h2, h3, .price-value, .pill-number {
-    color: #ffdd00;
-    text-shadow: 0 0 15px #ffdd00;
+/* Keep your circuit pattern but lighter */
+.circuit-overlay {
+    background-image: 
+        linear-gradient(90deg, rgba(255, 221, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
-.coordinator-card, .pricing-card, .timer-pill {
-    background: #0a1555; /* Much lighter blue */
+/* Update cards to stand out */
+.college-header, 
+.dept-section, 
+.pricing-card, 
+.coordinator-card,
+.timer-pill,
+.event-chip,
+.query-card,
+.venue-card {
+    background: #0f0f1f;  /* Lighter than bg */
     border: 2px solid #ffdd00;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Text stays yellow/white */
+h1, h2, h3, .price-value, .pill-number {
+    color: #ffdd00;
 }
