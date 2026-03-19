@@ -928,6 +928,7 @@ body {
     }
 }
 /* ===== EEE BACKGROUND ELEMENTS ===== */
+/* ===== EEE BACKGROUND ELEMENTS - VISIBLE VERSION ===== */
 .eee-bg {
     position: fixed;
     top: 0;
@@ -939,99 +940,111 @@ body {
     background: #0a0a0f;
 }
 
-/* ===== TRANSFORMER TOWERS ===== */
+/* ===== TRANSFORMER TOWERS - MUCH BOLDER ===== */
 .transformer-tower {
     position: absolute;
     bottom: 0;
-    width: 4px;
-    height: 200px;
-    background: linear-gradient(to top, #FFE600, transparent);
-    opacity: 0.15;
+    width: 8px;
+    height: 300px;
+    background: linear-gradient(to top, #FFE600, #FF6D00, transparent);
+    opacity: 0.6;
+    box-shadow: 0 0 30px #FFE600;
 }
 
 .transformer-tower::before {
     content: '';
     position: absolute;
-    top: -20px;
-    left: -15px;
-    width: 34px;
-    height: 40px;
-    border: 2px solid #FFE600;
+    top: -30px;
+    left: -25px;
+    width: 58px;
+    height: 60px;
+    border: 4px solid #FFE600;
     border-radius: 30% 30% 0 0;
-    opacity: 0.2;
+    opacity: 0.8;
+    box-shadow: 0 0 30px #FFE600;
 }
 
 .transformer-tower::after {
     content: '';
     position: absolute;
-    top: -40px;
-    left: -5px;
-    width: 14px;
-    height: 20px;
+    top: -50px;
+    left: -10px;
+    width: 28px;
+    height: 30px;
     background: #FFE600;
     border-radius: 50%;
-    filter: blur(4px);
-    opacity: 0.3;
-    animation: towerPulse 3s infinite;
+    filter: blur(8px);
+    opacity: 0.9;
+    animation: towerPulse 2s infinite;
 }
 
-.tower-1 { left: 10%; height: 250px; }
-.tower-2 { left: 30%; height: 180px; animation-delay: 1s; }
-.tower-3 { left: 60%; height: 220px; animation-delay: 2s; }
-.tower-4 { left: 85%; height: 200px; animation-delay: 1.5s; }
+.tower-1 { left: 10%; height: 350px; }
+.tower-2 { left: 30%; height: 280px; animation-delay: 1s; }
+.tower-3 { left: 60%; height: 320px; animation-delay: 2s; }
+.tower-4 { left: 85%; height: 300px; animation-delay: 1.5s; }
 
 @keyframes towerPulse {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(1.2); }
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); box-shadow: 0 0 50px #FFE600; }
 }
 
-/* ===== TRANSMISSION LINES ===== */
+/* ===== TRANSMISSION LINES - VERY VISIBLE ===== */
 .power-line {
     position: absolute;
     top: 30%;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 4px;
     background: linear-gradient(90deg, 
         transparent, 
-        #FFE600 20%, 
-        #FF6D00 50%, 
-        #FFE600 80%, 
+        #FFE600 10%, 
+        #FF6D00 30%,
+        #FFE600 50%,
+        #FF6D00 70%,
+        #FFE600 90%, 
         transparent
     );
-    opacity: 0.2;
-    animation: lineGlow 4s infinite;
+    opacity: 0.8;
+    box-shadow: 0 0 40px #FFE600;
+    animation: lineGlow 3s infinite;
 }
 
-.power-line:nth-child(2) { top: 50%; animation-delay: 1s; }
-.power-line:nth-child(3) { top: 70%; animation-delay: 2s; }
+.power-line:nth-child(5) { top: 50%; animation-delay: 1s; }
+.power-line:nth-child(6) { top: 70%; animation-delay: 2s; }
 
 @keyframes lineGlow {
-    0%, 100% { opacity: 0.1; }
-    50% { opacity: 0.3; }
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; box-shadow: 0 0 60px #FFE600; }
 }
 
-/* ===== INSULATORS ===== */
+/* ===== INSULATORS - VISIBLE ===== */
 .insulator {
     position: absolute;
-    width: 20px;
-    height: 30px;
+    width: 30px;
+    height: 50px;
     background: repeating-linear-gradient(
         45deg,
-        #888,
-        #888 3px,
-        #aaa 3px,
-        #aaa 6px
+        #FFE600,
+        #FFE600 5px,
+        #FF6D00 5px,
+        #FF6D00 10px
     );
     border-radius: 30% 30% 10% 10%;
-    opacity: 0.2;
+    opacity: 0.7;
+    box-shadow: 0 0 30px #FFE600;
+    animation: insulatorGlow 3s infinite;
+}
+
+@keyframes insulatorGlow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; box-shadow: 0 0 50px #FFE600; }
 }
 
 .insulator-1 { top: 25%; left: 15%; }
 .insulator-2 { top: 45%; right: 20%; }
 .insulator-3 { bottom: 30%; left: 40%; }
 
-/* ===== LIGHTNING EFFECTS ===== */
+/* ===== LIGHTNING EFFECTS - VERY DRAMATIC ===== */
 .lightning {
     position: absolute;
     top: 0;
@@ -1043,33 +1056,35 @@ body {
 
 .lightning-bolt {
     position: absolute;
-    width: 2px;
-    height: 100px;
+    width: 4px;
+    height: 200px;
     background: #FFE600;
     filter: blur(2px);
     opacity: 0;
     transform: rotate(15deg);
-    animation: lightningFlash 5s infinite;
+    animation: lightningFlash 4s infinite;
+    box-shadow: 0 0 60px #FFE600;
 }
 
 .lightning-bolt::before,
 .lightning-bolt::after {
     content: '';
     position: absolute;
-    width: 2px;
-    height: 60px;
+    width: 4px;
+    height: 120px;
     background: #FFE600;
     filter: blur(2px);
+    box-shadow: 0 0 40px #FFE600;
 }
 
 .lightning-bolt::before {
-    transform: rotate(20deg) translateX(10px);
-    top: 20px;
+    transform: rotate(25deg) translateX(15px);
+    top: 30px;
 }
 
 .lightning-bolt::after {
-    transform: rotate(-15deg) translateX(-8px);
-    top: 40px;
+    transform: rotate(-20deg) translateX(-12px);
+    top: 60px;
 }
 
 .bolt-1 {
@@ -1093,12 +1108,12 @@ body {
 }
 
 @keyframes lightningFlash {
-    0%, 95%, 98%, 100% { opacity: 0; }
-    96%, 97% { opacity: 0.7; }
-    99% { opacity: 0.3; }
+    0%, 94%, 97%, 100% { opacity: 0; }
+    95%, 96% { opacity: 1; }
+    98%, 99% { opacity: 0.6; }
 }
 
-/* ===== CIRCUIT PATTERN OVERLAY ===== */
+/* ===== CIRCUIT PATTERN - VISIBLE ===== */
 .circuit-overlay {
     position: absolute;
     top: 0;
@@ -1106,49 +1121,51 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(circle at 20px 20px, rgba(255, 230, 0, 0.03) 1px, transparent 1px),
-        radial-gradient(circle at 60px 80px, rgba(255, 109, 0, 0.03) 1px, transparent 1px),
-        radial-gradient(circle at 100px 40px, rgba(98, 0, 234, 0.03) 1px, transparent 1px);
-    background-size: 80px 80px;
+        radial-gradient(circle at 20px 20px, #FFE600 2px, transparent 2px),
+        radial-gradient(circle at 60px 80px, #FF6D00 2px, transparent 2px),
+        radial-gradient(circle at 100px 40px, #FFE600 2px, transparent 2px);
+    background-size: 100px 100px;
+    opacity: 0.2;
     pointer-events: none;
 }
 
-/* ===== ENERGY PARTICLES ===== */
+/* ===== ENERGY PARTICLES - VERY VISIBLE ===== */
 .energy-particle {
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 8px;
+    height: 8px;
     background: #FFE600;
     border-radius: 50%;
-    filter: blur(2px);
-    opacity: 0.3;
-    animation: particleFlow 8s infinite linear;
+    filter: blur(3px);
+    opacity: 0.8;
+    animation: particleFlow 6s infinite linear;
+    box-shadow: 0 0 30px #FFE600;
 }
 
-.energy-particle:nth-child(1) { top: 20%; left: 10%; animation-duration: 6s; }
-.energy-particle:nth-child(2) { top: 70%; left: 80%; animation-duration: 9s; background: #FF6D00; }
-.energy-particle:nth-child(3) { top: 40%; left: 50%; animation-duration: 7s; }
-.energy-particle:nth-child(4) { top: 80%; left: 30%; animation-duration: 10s; background: #6200EA; }
-.energy-particle:nth-child(5) { top: 30%; left: 70%; animation-duration: 8s; }
+.energy-particle:nth-child(16) { top: 20%; left: 10%; animation-duration: 6s; }
+.energy-particle:nth-child(17) { top: 70%; left: 80%; animation-duration: 9s; background: #FF6D00; }
+.energy-particle:nth-child(18) { top: 40%; left: 50%; animation-duration: 7s; }
+.energy-particle:nth-child(19) { top: 80%; left: 30%; animation-duration: 10s; background: #FF6D00; }
+.energy-particle:nth-child(20) { top: 30%; left: 70%; animation-duration: 8s; }
 
 @keyframes particleFlow {
-    0% { transform: translateY(0) translateX(0); opacity: 0.2; }
-    25% { transform: translateY(-30px) translateX(20px); opacity: 0.5; }
-    50% { transform: translateY(-60px) translateX(-20px); opacity: 0.3; }
-    75% { transform: translateY(-30px) translateX(-40px); opacity: 0.4; }
-    100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+    0% { transform: translateY(0) translateX(0); opacity: 0.8; }
+    25% { transform: translateY(-50px) translateX(30px); opacity: 1; }
+    50% { transform: translateY(-100px) translateX(-30px); opacity: 0.8; }
+    75% { transform: translateY(-50px) translateX(-60px); opacity: 1; }
+    100% { transform: translateY(0) translateX(0); opacity: 0.8; }
 }
 
-/* ===== VOLTAGE SPARKS ===== */
+/* ===== VOLTAGE SPARKS - VERY DRAMATIC ===== */
 .spark {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: radial-gradient(circle, #FFE600, transparent);
-    filter: blur(5px);
+    background: radial-gradient(circle, #FFE600, #FF6D00, transparent);
+    filter: blur(8px);
     opacity: 0;
-    animation: sparkBurst 3s infinite;
+    animation: sparkBurst 2s infinite;
 }
 
 .spark-1 { top: 35%; left: 25%; animation-delay: 1s; }
@@ -1156,9 +1173,7 @@ body {
 .spark-3 { bottom: 25%; left: 65%; animation-delay: 3.5s; }
 
 @keyframes sparkBurst {
-    0%, 90%, 100% { opacity: 0; transform: scale(0.5); }
-    92%, 94% { opacity: 0.6; transform: scale(1.5); }
-    96% { opacity: 0.3; transform: scale(1); }
+    0%, 85%, 100% { opacity: 0; transform: scale(0.5); }
+    86%, 90% { opacity: 1; transform: scale(2); }
+    92%, 96% { opacity: 0.6; transform: scale(1.5); }
 }
-
-/* ===== UPDATE YOUR HTML BACKGROUND ===== */
