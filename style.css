@@ -7,20 +7,10 @@
 
 body {
     font-family: 'Rajdhani', sans-serif;
-    background: #030014;
+    background: #0a0a0f;
     color: #ffffff;
     position: relative;
     overflow-x: hidden;
-}
-
-/* ===== ELECTRICAL THEME COLORS ===== */
-:root {
-    --current-yellow: #ffdd00;
-    --voltage-blue: #0a1a4a;
-    --deep-blue: #0a1172;
-    --spark-glow: 0 0 20px #ffdd00, 0 0 40px #0a1a4a;
-    --yellow-glow: 0 0 20px rgba(255, 221, 0, 0.7);
-    --blue-glow: 0 0 30px rgba(10, 26, 74, 0.9);
 }
 
 /* ===== CIRCUIT BACKGROUND ===== */
@@ -31,8 +21,8 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(90deg, rgba(255, 221, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(0deg, rgba(10, 26, 74, 0.03) 1px, transparent 1px);
+        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 51, 102, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
     z-index: -1;
@@ -45,7 +35,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, transparent 0%, #030014 100%);
+    background: radial-gradient(circle at 50% 50%, transparent 0%, #0a0a0f 100%);
 }
 
 /* ===== MAIN CONTAINER ===== */
@@ -61,34 +51,31 @@ body {
 .college-header {
     display: flex;
     align-items: center;
-    gap: 50px;
-    padding: 30px 40px;
-    background: rgba(0, 0, 0, 0.4);
-    border: 3px solid var(--current-yellow);
+    gap: 30px;
+    padding: 30px;
+    background: rgba(0, 255, 255, 0.05);
+    border: 2px solid #00ffff;
     border-radius: 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 0 40px rgba(255, 221, 0, 0.3);
+    margin-bottom: 30px;
     position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
 }
 
 .college-header::before {
-    content: '⚡';
+    content: '';
     position: absolute;
-    top: -15px;
-    left: 20px;
-    color: var(--current-yellow);
-    font-size: 2rem;
-    animation: sparkFlicker 2s infinite;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
+    animation: scan 3s linear infinite;
 }
 
-.college-header::after {
-    content: '⚡';
-    position: absolute;
-    bottom: -15px;
-    right: 20px;
-    color: var(--voltage-blue);
-    font-size: 2rem;
-    animation: sparkFlicker 2s infinite 1s;
+@keyframes scan {
+    0% { transform: translateX(-30%) translateY(-30%) rotate(45deg); }
+    100% { transform: translateX(30%) translateY(30%) rotate(45deg); }
 }
 
 .logo-container {
@@ -96,94 +83,60 @@ body {
 }
 
 .college-logo-main {
-    max-width: 280px;
-    width: 100%;
+    max-width: 150px;
     height: auto;
-    display: block;
-    filter: drop-shadow(0 0 20px rgba(255, 221, 0, 0.5));
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.7));
 }
 
 .college-title h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 800;
-    color: var(--current-yellow);
-    text-shadow: 0 0 15px rgba(255, 221, 0, 0.7);
-    margin-bottom: 8px;
-    letter-spacing: 2px;
+    color: #00ffff;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    margin-bottom: 5px;
 }
 
 .college-title h2 {
-    font-size: 1.8rem;
-    color: #ffffff;
+    font-size: 1.4rem;
+    color: #ff3366;
+    text-shadow: 0 0 15px rgba(255, 51, 102, 0.7);
     margin-bottom: 5px;
-    text-shadow: 0 0 10px rgba(255, 221, 0, 0.3);
 }
 
 .college-title h3 {
-    font-size: 1.4rem;
-    color: var(--voltage-blue);
-    text-shadow: 0 0 15px rgba(10, 26, 74, 0.7);
+    font-size: 1.2rem;
+    color: #ffffff;
+    opacity: 0.9;
 }
 
 /* ===== DEPARTMENT SECTION ===== */
 .dept-section {
     text-align: center;
     padding: 40px;
-    background: rgba(10, 26, 74, 0.1);
-    border: 2px solid var(--voltage-blue);
+    background: rgba(255, 51, 102, 0.05);
+    border: 2px solid #ff3366;
     border-radius: 20px;
     margin-bottom: 30px;
     position: relative;
-    box-shadow: 0 0 30px rgba(10, 26, 74, 0.4);
+    box-shadow: 0 0 30px rgba(255, 51, 102, 0.3);
 }
 
 .dept-name {
     font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
     font-weight: 800;
-    color: #ffffff;
+    background: linear-gradient(135deg, #00ffff, #ff3366);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 15px;
     letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.dept-name::before,
-.dept-name::after {
-    content: '⚡';
-    font-size: 2rem;
-}
-
-.dept-name::before {
-    color: var(--current-yellow);
-    animation: sparkLeft 2s infinite;
-}
-
-.dept-name::after {
-    color: var(--voltage-blue);
-    animation: sparkRight 2s infinite;
-}
-
-@keyframes sparkLeft {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    25% { opacity: 0.5; transform: scale(1.3); }
-    50% { opacity: 1; transform: scale(1); }
-    75% { opacity: 0.7; transform: scale(1.2); }
-}
-
-@keyframes sparkRight {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    25% { opacity: 0.7; transform: scale(1.2); }
-    50% { opacity: 1; transform: scale(1); }
-    75% { opacity: 0.5; transform: scale(1.3); }
 }
 
 .presents {
     font-size: 1.3rem;
-    color: var(--current-yellow);
+    color: #ffffff;
     margin-bottom: 25px;
     position: relative;
     display: inline-block;
@@ -197,7 +150,7 @@ body {
     top: 50%;
     width: 50px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, var(--current-yellow), var(--voltage-blue), transparent);
+    background: linear-gradient(90deg, transparent, #00ffff, #ff3366, transparent);
 }
 
 .presents::before { left: -30px; }
@@ -213,13 +166,13 @@ body {
     max-width: 500px;
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 30px rgba(255, 221, 0, 0.8)) drop-shadow(0 0 40px rgba(10, 26, 74, 0.8));
-    animation: powerPulse 2.5s infinite;
+    filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 30px rgba(255, 51, 102, 0.8));
+    animation: evolvePulse 2s infinite;
 }
 
-@keyframes powerPulse {
-    0%, 100% { filter: drop-shadow(0 0 30px #ffdd00) drop-shadow(0 0 40px #0a1a4a); }
-    50% { filter: drop-shadow(0 0 50px #ffdd00) drop-shadow(0 0 60px #0a1a4a); }
+@keyframes evolvePulse {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 30px rgba(255, 51, 102, 0.8)); }
+    50% { transform: scale(1.02); filter: drop-shadow(0 0 50px rgba(0, 255, 255, 1)) drop-shadow(0 0 50px rgba(255, 51, 102, 1)); }
 }
 
 .evolix-sub {
@@ -240,7 +193,7 @@ body {
 }
 
 .pricing-card {
-    background: linear-gradient(145deg, #0a0a1a, #010014);
+    background: linear-gradient(145deg, #1a1a1a, #111122);
     border: 2px solid;
     border-radius: 30px;
     padding: 30px 50px;
@@ -252,17 +205,17 @@ body {
 }
 
 .pricing-card.workshop-price {
-    border-color: var(--current-yellow);
-    box-shadow: 0 0 40px rgba(255, 221, 0, 0.4);
+    border-color: #00ffff;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
 }
 
 .pricing-card.event-price {
-    border-color: var(--voltage-blue);
-    box-shadow: 0 0 40px rgba(10, 26, 74, 0.5);
+    border-color: #ff3366;
+    box-shadow: 0 0 40px rgba(255, 51, 102, 0.3);
 }
 
 .pricing-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.05);
 }
 
 .price-icon {
@@ -270,8 +223,8 @@ body {
     margin-bottom: 15px;
 }
 
-.workshop-price .price-icon { color: var(--current-yellow); }
-.event-price .price-icon { color: var(--voltage-blue); }
+.workshop-price .price-icon { color: #00ffff; }
+.event-price .price-icon { color: #ff3366; }
 
 .price-label {
     font-size: 1.3rem;
@@ -286,15 +239,8 @@ body {
     margin-bottom: 5px;
 }
 
-.workshop-price .price-value { 
-    color: var(--current-yellow); 
-    text-shadow: 0 0 20px rgba(255, 221, 0, 0.7);
-}
-
-.event-price .price-value { 
-    color: var(--voltage-blue); 
-    text-shadow: 0 0 20px rgba(10, 26, 74, 0.7);
-}
+.workshop-price .price-value { color: #00ffff; text-shadow: 0 0 20px rgba(0, 255, 255, 0.7); }
+.event-price .price-value { color: #ff3366; text-shadow: 0 0 20px rgba(255, 51, 102, 0.7); }
 
 .price-per {
     font-size: 1rem;
@@ -321,27 +267,27 @@ body {
 }
 
 .tech-title {
-    background: rgba(255, 221, 0, 0.1);
-    border: 2px solid var(--current-yellow);
-    color: var(--current-yellow);
-    text-shadow: 0 0 15px rgba(255, 221, 0, 0.7);
-    box-shadow: 0 0 30px rgba(255, 221, 0, 0.2);
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
 }
 
 .nontech-title {
-    background: rgba(10, 26, 74, 0.1);
-    border: 2px solid var(--voltage-blue);
-    color: var(--voltage-blue);
-    text-shadow: 0 0 15px rgba(10, 26, 74, 0.7);
-    box-shadow: 0 0 30px rgba(10, 26, 74, 0.3);
+    background: rgba(255, 51, 102, 0.1);
+    border: 2px solid #ff3366;
+    color: #ff3366;
+    text-shadow: 0 0 15px rgba(255, 51, 102, 0.7);
+    box-shadow: 0 0 30px rgba(255, 51, 102, 0.2);
 }
 
 .esports-title {
-    background: linear-gradient(135deg, rgba(255, 221, 0, 0.1), rgba(10, 26, 74, 0.1));
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 51, 102, 0.1));
     border: 2px solid;
-    border-image: linear-gradient(135deg, var(--current-yellow), var(--voltage-blue)) 1;
+    border-image: linear-gradient(135deg, #00ffff, #ff3366) 1;
     color: #ffffff;
-    text-shadow: 0 0 15px rgba(255, 221, 0, 0.5), 0 0 15px rgba(10, 26, 74, 0.5);
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 15px rgba(255, 51, 102, 0.5);
 }
 
 .events-grid {
@@ -353,8 +299,8 @@ body {
 }
 
 .event-chip {
-    background: rgba(0, 0, 0, 0.5);
-    border: 2px solid var(--current-yellow);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.3);
     border-radius: 40px;
     padding: 15px 30px;
     font-size: 1.1rem;
@@ -374,7 +320,7 @@ body {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, var(--current-yellow), var(--voltage-blue), var(--current-yellow));
+    background: linear-gradient(45deg, #00ffff, #ff3366, #00ffff);
     border-radius: 40px;
     z-index: -1;
     opacity: 0;
@@ -384,11 +330,14 @@ body {
 .event-chip:hover {
     transform: translateY(-3px) scale(1.05);
     color: #000000;
-    border-color: transparent;
 }
 
 .event-chip:hover::before {
     opacity: 1;
+}
+
+.event-chip:hover {
+    background: transparent;
 }
 
 /* ===== COORDINATORS SECTION ===== */
@@ -397,15 +346,15 @@ body {
 }
 
 .workshop-title {
-    background: rgba(255, 221, 0, 0.1);
-    border: 2px solid var(--current-yellow);
-    color: var(--current-yellow);
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid #00ffff;
+    color: #00ffff;
 }
 
 .student-title {
-    background: rgba(10, 26, 74, 0.1);
-    border: 2px solid var(--voltage-blue);
-    color: var(--voltage-blue);
+    background: rgba(255, 51, 102, 0.1);
+    border: 2px solid #ff3366;
+    color: #ff3366;
 }
 
 .faculty-grid,
@@ -417,8 +366,8 @@ body {
 }
 
 .coordinator-card {
-    background: linear-gradient(145deg, #0a0a1a, #010014);
-    border: 2px solid;
+    background: linear-gradient(145deg, #111122, #1a1a1a);
+    border: 1px solid;
     border-radius: 20px;
     padding: 30px;
     text-align: center;
@@ -426,16 +375,16 @@ body {
 }
 
 .coordinator-card.faculty {
-    border-color: var(--current-yellow);
+    border-color: #00ffff;
 }
 
 .coordinator-card.student {
-    border-color: var(--voltage-blue);
+    border-color: #ff3366;
 }
 
 .coordinator-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 221, 0, 0.2), 0 10px 30px rgba(10, 26, 74, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2), 0 10px 30px rgba(255, 51, 102, 0.2);
 }
 
 .coordinator-card i {
@@ -443,8 +392,8 @@ body {
     margin-bottom: 15px;
 }
 
-.faculty i { color: var(--current-yellow); }
-.student i { color: var(--voltage-blue); }
+.faculty i { color: #00ffff; }
+.student i { color: #ff3366; }
 
 .coordinator-card h3 {
     font-size: 1.3rem;
@@ -465,121 +414,28 @@ body {
 }
 
 .faculty .phone-link {
-    background: rgba(255, 221, 0, 0.1);
-    border: 2px solid var(--current-yellow);
-    color: var(--current-yellow);
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid #00ffff;
 }
 
 .student .phone-link {
-    background: rgba(10, 26, 74, 0.1);
-    border: 2px solid var(--voltage-blue);
-    color: var(--voltage-blue);
+    background: rgba(255, 51, 102, 0.1);
+    border: 1px solid #ff3366;
 }
 
 .phone-link:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px currentColor;
 }
 
 .faculty .phone-link:hover {
-    background: var(--current-yellow);
+    background: #00ffff;
     color: #000000;
-    box-shadow: 0 0 30px var(--current-yellow);
 }
 
 .student .phone-link:hover {
-    background: var(--voltage-blue);
-    color: #ffffff;
-    box-shadow: 0 0 30px var(--voltage-blue);
-}
-
-/* ===== QUERY CONTACT SECTION ===== */
-.query-section {
-    margin: 50px 0;
-}
-
-.query-card {
-    background: linear-gradient(145deg, #0a0a1a, #010014);
-    border: 3px solid var(--current-yellow);
-    border-radius: 30px;
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 600px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    box-shadow: 0 0 50px rgba(255, 221, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.query-card::before {
-    content: '⚡⚡⚡';
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 5rem;
-    color: rgba(255, 221, 0, 0.1);
-    transform: rotate(20deg);
-}
-
-.query-icon {
-    flex-shrink: 0;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 221, 0, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--current-yellow);
-}
-
-.query-icon i {
-    font-size: 4rem;
-    color: var(--current-yellow);
-}
-
-.query-details h3 {
-    font-size: 1.5rem;
-    color: var(--current-yellow);
-    margin-bottom: 15px;
-    font-family: 'Orbitron', sans-serif;
-}
-
-.query-person {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.query-name {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 1px;
-}
-
-.query-phone {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(10, 26, 74, 0.3);
-    border: 2px solid var(--voltage-blue);
-    color: var(--voltage-blue);
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 50px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.query-phone:hover {
-    background: var(--voltage-blue);
-    color: var(--current-yellow);
-    transform: scale(1.05);
-    box-shadow: 0 0 30px var(--voltage-blue);
+    background: #ff3366;
+    color: #000000;
 }
 
 /* ===== VENUE SECTION ===== */
@@ -589,9 +445,9 @@ body {
 }
 
 .venue-card {
-    background: linear-gradient(135deg, rgba(255, 221, 0, 0.1), rgba(10, 26, 74, 0.1));
-    border: 3px solid;
-    border-image: linear-gradient(135deg, var(--current-yellow), var(--voltage-blue)) 1;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 51, 102, 0.1));
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #00ffff, #ff3366) 1;
     border-radius: 30px;
     padding: 40px;
     display: inline-block;
@@ -600,7 +456,7 @@ body {
 
 .venue-card i {
     font-size: 4rem;
-    background: linear-gradient(135deg, var(--current-yellow), var(--voltage-blue));
+    background: linear-gradient(135deg, #00ffff, #ff3366);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 15px;
@@ -614,14 +470,14 @@ body {
 
 .venue-card p {
     font-size: 1.3rem;
-    color: var(--current-yellow);
+    color: #cccccc;
 }
 
 /* ===== CONTACT FOOTER ===== */
 .contact-footer {
     margin: 50px 0;
     padding: 30px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.02);
     border-radius: 20px;
 }
 
@@ -649,29 +505,18 @@ body {
 }
 
 .social-icon:first-child {
-    background: rgba(255, 221, 0, 0.1);
-    border: 2px solid var(--current-yellow);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 51, 102, 0.1));
+    border: 1px solid #00ffff;
 }
 
 .social-icon:last-child {
-    background: rgba(10, 26, 74, 0.1);
-    border: 2px solid var(--voltage-blue);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 51, 102, 0.1));
+    border: 1px solid #ff3366;
 }
 
 .social-icon:hover {
     transform: translateY(-3px);
-}
-
-.social-icon:first-child:hover {
-    background: var(--current-yellow);
-    color: #000000;
-    box-shadow: 0 0 30px var(--current-yellow);
-}
-
-.social-icon:last-child:hover {
-    background: var(--voltage-blue);
-    color: #ffffff;
-    box-shadow: 0 0 30px var(--voltage-blue);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4), 0 5px 20px rgba(255, 51, 102, 0.4);
 }
 
 /* ===== REGISTER BUTTON ===== */
@@ -684,7 +529,8 @@ body {
 
 .register-big-btn {
     display: inline-block;
-    background: linear-gradient(135deg, var(--current-yellow), var(--voltage-blue));
+    background: linear-gradient(135deg, #00ffff, #ff3366, #00ffff);
+    background-size: 200% 200%;
     color: #000000;
     text-decoration: none;
     padding: 18px 40px;
@@ -693,50 +539,41 @@ body {
     font-weight: 800;
     font-size: 1.3rem;
     letter-spacing: 2px;
-    box-shadow: 0 0 30px var(--current-yellow), 0 0 30px var(--voltage-blue);
-    animation: powerFloat 2s infinite;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 30px rgba(255, 51, 102, 0.5);
+    animation: gradientShift 3s infinite, float 2s infinite;
     white-space: nowrap;
 }
 
-.register-big-btn::after {
-    content: '⚡';
-    margin-left: 10px;
-    animation: sparkPower 1s infinite;
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
-@keyframes powerFloat {
+@keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
 
-@keyframes sparkPower {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.3); }
+.register-big-btn i {
+    margin-left: 10px;
+    animation: spark 1s infinite;
 }
 
-/* ===== RESPONSIVE ===== */
+@keyframes spark {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.3); }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .college-header {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
         padding: 20px;
     }
     
-    .college-logo-main {
-        max-width: 220px;
-    }
-    
     .college-title h1 {
-        font-size: 1.6rem;
-    }
-    
-    .college-title h2 {
-        font-size: 1.4rem;
-    }
-    
-    .college-title h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     
     .dept-name {
@@ -762,24 +599,9 @@ body {
         font-size: 0.9rem;
     }
     
-    .query-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
-        gap: 20px;
-    }
-    
-    .query-person {
-        justify-content: center;
-    }
-    
-    .query-name {
-        font-size: 1.5rem;
-    }
-    
-    .venue-card {
-        min-width: auto;
-        padding: 30px;
+    .faculty-grid,
+    .student-grid {
+        grid-template-columns: 1fr;
     }
     
     .register-fixed {
@@ -791,496 +613,21 @@ body {
         padding: 12px 25px;
         font-size: 1rem;
     }
-}
-
-@media (max-width: 480px) {
-    .query-person {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .query-phone {
-        width: 100%;
-        justify-content: center;
-    }
     
     .social-links {
         flex-direction: column;
         align-items: center;
-    }
-}
-
-
-/* ===== ENHANCED CONTRAST & READABILITY ===== */
-
-/* Make text pop more */
-body {
-    background: #020010; /* Slightly lighter than before */
-}
-
-/* Add stronger contrast to headers */
-.college-title h1 {
-    color: #ffdd00;
-    text-shadow: 0 0 20px #ffdd00, 2px 2px 0 #0a1a4a;
-    letter-spacing: 3px;
-}
-
-.college-title h2 {
-    color: #ffffff;
-    text-shadow: 0 0 15px #ffdd00;
-    font-weight: 600;
-}
-
-.college-title h3 {
-    color: #ffdd00;
-    font-size: 1.6rem;
-    text-shadow: 0 0 10px #0a1a4a;
-}
-
-/* Make EVOLIX logo stand out more */
-.evolix-logo-main {
-    filter: drop-shadow(0 0 40px #ffdd00) drop-shadow(0 0 60px #0a1a4a);
-    border-bottom: 3px solid #ffdd00;
-    border-top: 3px solid #0a1a4a;
-    border-radius: 20px;
-    padding: 10px 0;
-}
-
-/* Add more EEE elements */
-.dept-section {
-    background: linear-gradient(135deg, rgba(255,221,0,0.05), rgba(10,26,74,0.1));
-    border-width: 3px;
-}
-
-.dept-name {
-    font-size: 2.2rem;
-    background: linear-gradient(135deg, #ffdd00, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Make pricing cards pop */
-.pricing-card {
-    background: linear-gradient(145deg, #0a0a2a, #010018);
-    border-width: 3px;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.pricing-card:hover {
-    transform: translateY(-15px) rotateX(5deg);
-    box-shadow: 0 20px 40px #ffdd00, 0 20px 60px #0a1a4a;
-}
-
-/* Add voltage text to pricing */
-.pricing-card.workshop-price::after {
-    content: '⏚';
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: #ffdd00;
-    font-size: 2rem;
-    opacity: 0.3;
-}
-
-.pricing-card.event-price::after {
-    content: '⏚';
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: #0a1a4a;
-    font-size: 2rem;
-    opacity: 0.3;
-}
-
-/* Make event chips more exciting */
-.event-chip {
-    background: rgba(10, 26, 74, 0.3);
-    border: 2px solid #ffdd00;
-    font-weight: 700;
-    backdrop-filter: blur(5px);
-}
-
-.event-chip::after {
-    content: '⚡';
-    margin-left: 8px;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.event-chip:hover::after {
-    opacity: 1;
-    margin-left: 12px;
-}
-
-/* Add electrical symbols to section titles */
-.section-title span {
-    position: relative;
-    padding: 10px 50px;
-}
-
-.tech-title::before {
-    content: '⏚';
-    position: absolute;
-    left: 10px;
-    color: #ffdd00;
-    font-size: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.tech-title::after {
-    content: '⏚';
-    position: absolute;
-    right: 10px;
-    color: #0a1a4a;
-    font-size: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Make coordinator cards more readable */
-.coordinator-card {
-    background: linear-gradient(145deg, #0a1030, #010018);
-    border-width: 3px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-}
-
-.coordinator-card h3 {
-    color: #ffdd00;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.faculty .phone-link {
-    background: rgba(255,221,0,0.2);
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-/* Enhance query card */
-.query-card {
-    background: linear-gradient(145deg, #0a1040, #010020);
-    border-width: 4px;
-    border-color: #ffdd00;
-    box-shadow: 0 0 60px rgba(255,221,0,0.4);
-}
-
-.query-name {
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: #ffdd00;
-    text-shadow: 0 0 20px #ffdd00;
-}
-
-.query-phone {
-    font-size: 1.5rem;
-    padding: 15px 30px;
-    background: rgba(10,26,74,0.5);
-    border-width: 3px;
-}
-
-/* Add voltage meter effect to venue */
-.venue-card {
-    background: linear-gradient(135deg, #0a1a4a, #020010);
-    border-width: 4px;
-}
-
-.venue-card::before {
-    content: '⚡⚡⚡';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #ffdd00;
-    font-size: 2rem;
-    letter-spacing: 10px;
-    animation: voltageMeter 2s infinite;
-}
-
-@keyframes voltageMeter {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; text-shadow: 0 0 20px #ffdd00; }
-}
-
-/* Make social links stronger */
-.social-icon {
-    font-size: 1.3rem;
-    font-weight: 600;
-    padding: 12px 30px;
-    border-width: 3px;
-}
-
-/* Enhance register button */
-.register-big-btn {
-    background: linear-gradient(135deg, #ffdd00, #0a1a4a, #ffdd00);
-    background-size: 200% 200%;
-    color: #ffffff;
-    font-size: 1.5rem;
-    padding: 20px 45px;
-    border: 2px solid #ffffff;
-    animation: powerFloat 2s infinite, gradientShift 3s infinite;
-}
-
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-/* Add electrical grid lines in background */
-.circuit-overlay {
-    background-image: 
-        linear-gradient(90deg, rgba(255,221,0,0.05) 1px, transparent 1px),
-        linear-gradient(0deg, rgba(10,26,74,0.05) 1px, transparent 1px),
-        radial-gradient(circle at 20% 30%, rgba(255,221,0,0.1) 0%, transparent 20%),
-        radial-gradient(circle at 80% 70%, rgba(10,26,74,0.1) 0%, transparent 20%);
-    background-size: 40px 40px, 40px 40px, 200px 200px, 200px 200px;
-}
-
-/* Add power lines to header */
-.college-header::before {
-    content: '⚡⚡⚡⚡⚡';
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #ffdd00;
-    font-size: 1.5rem;
-    letter-spacing: 10px;
-    opacity: 0.5;
-    animation: powerLine 3s infinite;
-}
-
-@keyframes powerLine {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.8; }
-}
-
-/* Add depth to cards */
-.event-chip, .pricing-card, .coordinator-card, .query-card {
-    transform-style: preserve-3d;
-    backface-visibility: visible;
-}
-
-.event-chip:hover, .pricing-card:hover, .coordinator-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(255,221,0,0.4), 0 20px 60px rgba(10,26,74,0.5);
-}
-/* ===== PILL STYLE TIMER - CLEAN & PROFESSIONAL ===== */
-.eee-timer {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 40px 0;
-    flex-wrap: wrap;
-}
-
-.timer-pill {
-    background: #0a0a1a;
-    border: 2px solid #ffdd00;
-    border-radius: 60px;
-    padding: 20px 30px;
-    min-width: 140px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(255, 221, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.timer-pill:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 35px rgba(255, 221, 0, 0.6);
-    border-color: #ffffff;
-}
-
-.pill-number {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #ffdd00;
-    line-height: 1;
-    text-shadow: 0 0 15px rgba(255, 221, 0, 0.7);
-    margin-bottom: 5px;
-}
-
-.pill-label {
-    font-size: 1rem;
-    color: #ffffff;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-top: 1px solid rgba(255, 221, 0, 0.3);
-    padding-top: 8px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .eee-timer {
-        gap: 15px;
-    }
-    
-    .timer-pill {
-        min-width: 110px;
-        padding: 15px 20px;
-    }
-    
-    .pill-number {
-        font-size: 2.5rem;
-    }
-    
-    .pill-label {
-        font-size: 0.8rem;
+        gap: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .timer-pill {
-        min-width: calc(50% - 15px);
+    .venue-card {
+        min-width: auto;
+        padding: 20px;
     }
-}
-
-
-
-/* ===== CLICKABLE EVENTS ===== */
-.clickable-event {
-    cursor: pointer;
-    position: relative;
-    padding-right: 45px;
-    transition: all 0.3s ease;
-}
-
-.event-hint {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #ffdd00;
-    font-size: 1.1rem;
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
-
-.clickable-event:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(255,221,0,0.4);
-    border-color: #ffffff;
-}
-
-.clickable-event:hover .event-hint {
-    opacity: 1;
-    right: 12px;
-}
-
-/* Event Detail Modal */
-.event-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-}
-
-.event-modal.show {
-    display: flex;
-}
-
-.modal-content {
-    background: #0a0a1a;
-    border: 3px solid #ffdd00;
-    border-radius: 30px;
-    padding: 40px;
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    box-shadow: 0 0 60px rgba(255,221,0,0.4);
-}
-
-.modal-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
-    color: #ffdd00;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
-.modal-content h2 {
-    color: #ffdd00;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    padding-right: 30px;
-}
-
-.modal-content h3 {
-    color: #ffffff;
-    margin: 20px 0 10px;
-}
-
-.modal-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.modal-content li {
-    color: #cccccc;
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-}
-
-.modal-content li::before {
-    content: '⚡';
-    color: #ffdd00;
-    position: absolute;
-    left: 0;
-}
-
-.modal-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.modal-register-btn {
-    flex: 1;
-    background: #ffdd00;
-    color: #000000;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 50px;
-    font-weight: 700;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.modal-cancel-btn {
-    flex: 1;
-    background: transparent;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 50px;
-    font-weight: 700;
-    text-align: center;
-    border: 2px solid #ffdd00;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.modal-register-btn:hover {
-    background: #ffffff;
-    box-shadow: 0 0 30px #ffdd00;
-}
-
-.modal-cancel-btn:hover {
-    background: #ffdd00;
-    color: #000000;
+    
+    .venue-card h2 {
+        font-size: 1.8rem;
+    }
 }
