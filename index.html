@@ -185,6 +185,85 @@
         </div>
     </div>
 </div>
+
+<!-- Power Meter Countdown - EEE Style -->
+<div class="power-grid">
+    <div class="transformer">
+        <div class="primary-winding"></div>
+        <div class="secondary-winding"></div>
+    </div>
+    
+    <div class="meter-title">
+        <span class="voltage-in">⚡ 440V ⚡</span>
+        <span class="meter-label">POWER COUNTDOWN</span>
+        <span class="voltage-out">⚡ 220V ⚡</span>
+    </div>
+    
+    <div class="power-meters">
+        <!-- Days Meter -->
+        <div class="meter-cell">
+            <div class="meter-face">
+                <div class="meter-scale">
+                    <span>0</span><span>100</span><span>200</span><span>300</span>
+                </div>
+                <div class="meter-needle" id="days-needle" style="transform: rotate(0deg);"></div>
+                <div class="meter-center"></div>
+            </div>
+            <div class="meter-value" id="days">00</div>
+            <div class="meter-unit">DAYS</div>
+            <div class="current-type">AC</div>
+        </div>
+        
+        <!-- Hours Meter -->
+        <div class="meter-cell">
+            <div class="meter-face">
+                <div class="meter-scale">
+                    <span>0</span><span>6</span><span>12</span><span>18</span><span>24</span>
+                </div>
+                <div class="meter-needle" id="hours-needle" style="transform: rotate(0deg);"></div>
+                <div class="meter-center"></div>
+            </div>
+            <div class="meter-value" id="hours">00</div>
+            <div class="meter-unit">HOURS</div>
+            <div class="current-type">DC</div>
+        </div>
+        
+        <!-- Minutes Meter -->
+        <div class="meter-cell">
+            <div class="meter-face">
+                <div class="meter-scale">
+                    <span>0</span><span>15</span><span>30</span><span>45</span><span>60</span>
+                </div>
+                <div class="meter-needle" id="minutes-needle" style="transform: rotate(0deg);"></div>
+                <div class="meter-center"></div>
+            </div>
+            <div class="meter-value" id="minutes">00</div>
+            <div class="meter-unit">MINUTES</div>
+            <div class="current-type">AC</div>
+        </div>
+        
+        <!-- Seconds Meter -->
+        <div class="meter-cell">
+            <div class="meter-face">
+                <div class="meter-scale">
+                    <span>0</span><span>15</span><span>30</span><span>45</span><span>60</span>
+                </div>
+                <div class="meter-needle" id="seconds-needle" style="transform: rotate(0deg);"></div>
+                <div class="meter-center"></div>
+            </div>
+            <div class="meter-value" id="seconds">00</div>
+            <div class="meter-unit">SECONDS</div>
+            <div class="current-type">AC</div>
+        </div>
+    </div>
+    
+    <div class="power-footer">
+        <span class="hertz">50Hz</span>
+        <span class="phase">3-PHASE</span>
+        <span class="hertz">60Hz</span>
+    </div>
+</div>
+        
     <script src="script.js"></script>
 </body>
 </html>
