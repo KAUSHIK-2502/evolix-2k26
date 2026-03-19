@@ -3,321 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVOLIX 2K26 | EEE Department</title>
+    <title>EVOLIX '26 | EEE Department</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght=300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Animated Circuit Background -->
-    <div class="circuit-bg">
-        <div class="circuit-line"></div>
-        <div class="circuit-line"></div>
-        <div class="circuit-line"></div>
-        <div class="circuit-node"></div>
-        <div class="circuit-node"></div>
-        <div class="circuit-node"></div>
+    <!-- Circuit Board Background -->
+    <div class="circuit-overlay"></div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header with College Info -->
+        <div class="college-header">
+            <div class="logo-container">
+                <img src="0.png" alt="JJ College" class="college-logo-main">
+            </div>
+            <div class="college-title">
+                <h1>J.J COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+                <h2>AUTONOMOUS</h2>
+                <h3>SOWDAMBIKAA GROUP OF INSTITUTIONS</h3>
+            </div>
+        </div>
+
+        <!-- Department & Symposium Title -->
+        <div class="dept-section">
+            <div class="dept-name">
+                DEPARTMENT OF ELECTRICAL AND ELECTRONICS ENGINEERING
+            </div>
+            <div class="presents">EETA PROUDLY PRESENTS</div>
+            
+            <!-- EVOLIX Logo Area -->
+            <div class="evolix-container">
+                <img src="evolix-logo.png" alt="EVOLIX '26" class="evolix-logo-main">
+                <div class="evolix-sub">A NATIONAL LEVEL TECHNICAL SYMPOSIUM</div>
+            </div>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-section">
+            <div class="pricing-card workshop-price">
+                <div class="price-icon"><i class="fas fa-microchip"></i></div>
+                <div class="price-label">WORKSHOP</div>
+                <div class="price-value">₹250</div>
+                <div class="price-per">PER HEAD</div>
+            </div>
+            <div class="pricing-card event-price">
+                <div class="price-icon"><i class="fas fa-bolt"></i></div>
+                <div class="price-label">EVENTS</div>
+                <div class="price-value">₹200</div>
+                <div class="price-per">PER HEAD</div>
+            </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-section">
+            <h2 class="section-title">
+                <span class="tech-title">⚡ TECHNICAL ⚡</span>
+            </h2>
+            <div class="events-grid">
+                <div class="event-chip">PAPER VISTA</div>
+                <div class="event-chip">PROJECT EXPO</div>
+                <div class="event-chip">BRAIN CHAIN</div>
+                <div class="event-chip">QUIZ ARENA</div>
+            </div>
+
+            <h2 class="section-title">
+                <span class="nontech-title">🎮 NON-TECHNICAL 🎮</span>
+            </h2>
+            <div class="events-grid">
+                <div class="event-chip">DUMP CHARADES</div>
+                <div class="event-chip">SIGNAL SCRAMBLES</div>
+                <div class="event-chip">FUN ZONE</div>
+                <div class="event-chip">BOX CRICKET</div>
+                <div class="event-chip">CARROM</div>
+            </div>
+
+            <h2 class="section-title">
+                <span class="esports-title">🎯 E-SPORTS 🎯</span>
+            </h2>
+            <div class="events-grid">
+                <div class="event-chip">FREE FIRE</div>
+                <div class="event-chip">E-FOOTBALL</div>
+            </div>
+        </div>
+
+        <!-- Workshop Coordinators -->
+        <div class="coordinators-section">
+            <h2 class="section-title">
+                <span class="workshop-title">🔧 WORKSHOP COORDINATORS 🔧</span>
+            </h2>
+            
+            <div class="faculty-grid">
+                <div class="coordinator-card faculty">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Dr. G. Sundararajan (AP)</h3>
+                    <a href="tel:9842253235" class="phone-link">
+                        <i class="fas fa-phone"></i> 9842253235
+                    </a>
+                </div>
+                <div class="coordinator-card faculty">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Mr. P. Jothn Brito (AP)</h3>
+                    <a href="tel:9942770040" class="phone-link">
+                        <i class="fas fa-phone"></i> 9942770040
+                    </a>
+                </div>
+                <div class="coordinator-card faculty">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Mrs. R. Gayathri (AP)</h3>
+                    <a href="tel:9344735899" class="phone-link">
+                        <i class="fas fa-phone"></i> 9344735899
+                    </a>
+                </div>
+            </div>
+
+            <h2 class="section-title">
+                <span class="student-title">👥 STUDENT COORDINATORS 👥</span>
+            </h2>
+            
+            <div class="student-grid">
+                <div class="coordinator-card student">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>S. Aksheetha</h3>
+                    <a href="tel:7373373794" class="phone-link">
+                        <i class="fas fa-phone"></i> 7373373794
+                    </a>
+                </div>
+                <div class="coordinator-card student">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>M. Sanjeev Raj</h3>
+                    <a href="tel:9150952958" class="phone-link">
+                        <i class="fas fa-phone"></i> 9150952958
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Venue & Contact -->
+        <div class="venue-section">
+            <div class="venue-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>VENUE:</h2>
+                <p>JJCET AUDITORIUM</p>
+            </div>
+        </div>
+
+        <!-- Social & Email -->
+        <div class="contact-footer">
+            <div class="social-links">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i> @EVOLIX_2K26
+                </a>
+                <a href="mailto:evolix_2k26@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i> evolix_2k26@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <!-- Register Button -->
+        <div class="register-fixed">
+            <a href="#" class="register-big-btn">
+                REGISTER NOW <i class="fas fa-bolt"></i>
+            </a>
+        </div>
     </div>
 
-    <!-- High Voltage Navigation -->
-    <nav class="power-nav">
-        <div class="nav-container">
-            <div class="power-logo">
-                <img src="0.png" alt="JJ College" class="nav-logo-img">
-                <span class="voltage-indicator">⚡220kV⚡</span>
-            </div>
-            <div class="nav-links">
-                <a href="#home" class="power-link">HOME</a>
-                <a href="#events" class="power-link">EVENTS</a>
-                <a href="#workshop" class="power-link">WORKSHOP</a>
-                <a href="#committee" class="power-link">COMMITTEE</a>
-                <a href="#contact" class="power-link">CONTACT</a>
-            </div>
-            <div class="power-register">
-                <a href="#register" class="high-voltage-btn">REGISTER <i class="fas fa-bolt"></i></a>
-            </div>
-            <div class="power-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Hero Section -->
-    <section id="home" class="power-hero">
-        <div class="transformer-box">
-            <div class="primary-coil"></div>
-            <div class="secondary-coil"></div>
-        </div>
-        
-        <div class="hero-content">
-            <div class="institution-badge">
-                <img src="0.png" alt="JJ College" class="hero-college-logo">
-                <div class="badge-text">
-                    <span class="autonomous">AUTONOMOUS</span>
-                    <span class="estd">ESTD. 1994</span>
-                </div>
-            </div>
-
-            <div class="department-header">
-                <h1 class="dept-name">
-                    <span class="electrical">ELECTRICAL</span>
-                    <span class="and">&</span>
-                    <span class="electronics">ELECTRONICS</span>
-                </h1>
-                <div class="engineering">ENGINEERING</div>
-            </div>
-
-            <div class="presents-highlight">
-                <div class="pulse-line"></div>
-                <span class="presents-text">PROUDLY PRESENTS</span>
-                <div class="pulse-line"></div>
-            </div>
-
-            <!-- Main Logos -->
-            <div class="symposium-logos">
-                <div class="logo-wrapper">
-                    <img src="evolix-logo.png" alt="EVOLIX 2K26" class="evolix-main-logo">
-                </div>
-            </div>
-
-            <div class="symposium-tagline">
-                <span class="national">NATIONAL LEVEL</span>
-                <span class="technical">TECHNICAL SYMPOSIUM</span>
-            </div>
-
-            <!-- Power Meter Countdown -->
-            <div class="power-meter-container">
-                <div class="meter-title">COUNTDOWN <i class="fas fa-bolt"></i></div>
-                <div class="power-meters">
-                    <div class="meter">
-                        <div class="meter-needle" id="days-needle"></div>
-                        <div class="meter-scale">
-                            <span>0</span><span>100</span><span>200</span><span>300</span>
-                        </div>
-                        <div class="meter-value" id="days">00</div>
-                        <div class="meter-label">DAYS</div>
-                    </div>
-                    <div class="meter">
-                        <div class="meter-needle" id="hours-needle"></div>
-                        <div class="meter-scale">
-                            <span>0</span><span>6</span><span>12</span><span>18</span><span>24</span>
-                        </div>
-                        <div class="meter-value" id="hours">00</div>
-                        <div class="meter-label">HOURS</div>
-                    </div>
-                    <div class="meter">
-                        <div class="meter-needle" id="minutes-needle"></div>
-                        <div class="meter-scale">
-                            <span>0</span><span>15</span><span>30</span><span>45</span><span>60</span>
-                        </div>
-                        <div class="meter-value" id="minutes">00</div>
-                        <div class="meter-label">MINUTES</div>
-                    </div>
-                    <div class="meter">
-                        <div class="meter-needle" id="seconds-needle"></div>
-                        <div class="meter-scale">
-                            <span>0</span><span>15</span><span>30</span><span>45</span><span>60</span>
-                        </div>
-                        <div class="meter-value" id="seconds">00</div>
-                        <div class="meter-label">SECONDS</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Event Details - Circuit Style -->
-            <div class="circuit-details">
-                <div class="detail-node">
-                    <i class="fas fa-calendar-alt"></i>
-                    <div class="node-content">
-                        <span class="node-label">DATE</span>
-                        <span class="node-value">APRIL 10, 2026</span>
-                    </div>
-                </div>
-                <div class="detail-node">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="node-content">
-                        <span class="node-label">VENUE</span>
-                        <span class="node-value">JJCET AUDITORIUM</span>
-                    </div>
-                </div>
-                <div class="detail-node">
-                    <i class="fas fa-clock"></i>
-                    <div class="node-content">
-                        <span class="node-label">TIME</span>
-                        <span class="node-value">9:00 AM ONWARDS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Buttons -->
-            <div class="power-cta">
-                <a href="#register" class="cta-power primary">
-                    <span class="cta-text">REGISTER NOW</span>
-                    <span class="cta-current">⏚</span>
-                </a>
-                <a href="#events" class="cta-power secondary">
-                    <span class="cta-text">VIEW EVENTS</span>
-                    <span class="cta-current">⏚</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Floating Electrical Elements -->
-        <div class="floating-elements">
-            <div class="element resistor">⊏⊐</div>
-            <div class="element capacitor">-||-</div>
-            <div class="element inductor">◠◡◠</div>
-            <div class="element diode">▶|◀</div>
-            <div class="element transistor">⚛︎</div>
-            <div class="element ground">⏚</div>
-        </div>
-    </section>
-
-    <!-- Workshop Section - Transformer Style -->
-    <section id="workshop" class="workshop-power">
-        <div class="workshop-header">
-            <h2 class="workshop-title">
-                <span class="yellow-wire">⚡</span> 
-                POWER WORKSHOP 
-                <span class="blue-wire">⚡</span>
-            </h2>
-            <div class="wire-connection"></div>
-        </div>
-
-        <div class="workshop-core">
-            <div class="core-left">
-                <div class="workshop-icon">
-                    <i class="fas fa-microchip"></i>
-                    <i class="fas fa-bolt"></i>
-                    <i class="fas fa-wifi"></i>
-                </div>
-                <h3>EMBEDDED + IOT</h3>
-                <div class="workshop-specs">
-                    <div class="spec">
-                        <span class="spec-label">VOLTAGE</span>
-                        <span class="spec-value">5V LOGIC</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">CURRENT</span>
-                        <span class="spec-value">2A PEAK</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">FREQUENCY</span>
-                        <span class="spec-value">16 MHz</span>
-                    </div>
-                </div>
-                <p class="workshop-description">
-                    Hands-on workshop on Embedded Systems and Internet of Things. 
-                    Learn from industry experts and get practical experience with 
-                    microcontrollers, sensors, and IoT platforms.
-                </p>
-                <div class="workshop-features">
-                    <div class="feature-circuit">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Certificate Provided</span>
-                    </div>
-                    <div class="feature-circuit">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Limited: 50 Seats</span>
-                    </div>
-                    <div class="feature-circuit">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Hands-on Training</span>
-                    </div>
-                </div>
-                <a href="#" class="workshop-register">
-                    <span>REGISTER FOR WORKSHOP</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="core-right">
-                <div class="oscilloscope">
-                    <div class="screen">
-                        <div class="wave blue-wave"></div>
-                        <div class="wave yellow-wave"></div>
-                    </div>
-                    <div class="controls">
-                        <span></span><span></span><span></span><span></span>
-                    </div>
-                </div>
-                <div class="stats-panel">
-                    <div class="stat">
-                        <span class="stat-number">2</span>
-                        <span class="stat-unit">DAYS</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">6+</span>
-                        <span class="stat-unit">PROJECTS</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">50</span>
-                        <span class="stat-unit">SEATS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Section - Circuit Board Style -->
-    <section id="events" class="events-circuit">
-        <h2 class="circuit-title">
-            <span class="trace-left"></span>
-            TECHNICAL EVENTS
-            <span class="trace-right"></span>
-        </h2>
-
-        <div class="events-grid-circuit">
-            <!-- Paper Vista -->
-            <div class="event-component" data-voltage="5V">
-                <div class="component-pins">
-                    <span></span><span></span><span></span>
-                </div>
-                <div class="component-body">
-                    <div class="component-icon">
-                        <i class="fas fa-file-alt"></i>
-                        <span class="voltage-rating">5V</span>
-                    </div>
-                    <h3>Paper Vista</h3>
-                    <p>Present your research papers and innovative ideas. Compete with brightest minds.</p>
-                    <div class="component-footer">
-                        <span class="component-code">IC-001</span>
-                        <a href="#" class="component-link">KNOW MORE <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Expo -->
-            <div class="event-component" data-voltage="12V">
-                <div class="component-pins">
-                    <span></span><span></span><span></span>
-                </div>
-                <div class="component-body">
-                    <div class="component-icon">
-                        <i class="fas fa-cogs"></i>
-                        <span class="voltage-rating">12V</span>
-                    </div>
-                    <h3>Project Expo</h3>
-                    <p>Showcase your innovative projects. Get feedback from industry experts.</p>
-                    <div class="component-footer">
-                        <span class="component-code">IC-002</span>
-                        <a href="#" class="component-link">KNOW MORE <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Brain Chain -->
-            <div class="event-component" data-voltage="3.3V">
-                <div class="component-pins">
-                    <span></span><span></span><span></span>
-                </div>
-                <div class="component-body">
-                    <div class="component-icon">
-                        <i class="fas fa-brain"></i>
-                        <span class="voltage-rating">3.3V</span>
-                    </div>
-                    <h3>Brain Chain</h3>
-                    <p>Connect the dots! A challenging event that tests your logical thinking.</p>
-                    <div class="component-footer">
-                        <span class="component-code">
+    <script src="script.js"></script>
+</body>
+</html>
