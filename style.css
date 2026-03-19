@@ -1217,3 +1217,148 @@ p, span, div, .pill-label, .price-label {
 .voltage-out {
     color: #0a1a4a;  /* Dark blue visible on white */
 }
+
+/* ===== CLICKABLE EVENTS ===== */
+.clickable-event {
+    cursor: pointer;
+    position: relative;
+    padding-right: 45px;
+    transition: all 0.3s ease;
+}
+
+.event-hint {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffdd00;
+    font-size: 1.1rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.clickable-event:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(255,221,0,0.4);
+    border-color: #ffffff;
+}
+
+.clickable-event:hover .event-hint {
+    opacity: 1;
+    right: 12px;
+}
+
+/* Event Detail Modal */
+.event-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: #0a0a1a;
+    border: 3px solid #ffdd00;
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 0 60px rgba(255,221,0,0.4);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #ffdd00;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.modal-content h2 {
+    color: #ffdd00;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-right: 30px;
+}
+
+.modal-content h3 {
+    color: #ffffff;
+    margin: 20px 0 10px;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content li {
+    color: #cccccc;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.modal-content li::before {
+    content: '⚡';
+    color: #ffdd00;
+    position: absolute;
+    left: 0;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.modal-register-btn {
+    flex: 1;
+    background: #ffdd00;
+    color: #000000;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modal-cancel-btn {
+    flex: 1;
+    background: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-align: center;
+    border: 2px solid #ffdd00;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modal-register-btn:hover {
+    background: #ffffff;
+    box-shadow: 0 0 30px #ffdd00;
+}
+
+.modal-cancel-btn:hover {
+    background: #ffdd00;
+    color: #000000;
+}
