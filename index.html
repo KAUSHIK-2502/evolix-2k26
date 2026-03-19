@@ -7,337 +7,307 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Professional -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Power Grid Background -->
-    <div class="power-grid-bg">
-        <div class="transmission-tower"></div>
-        <div class="transmission-tower"></div>
-        <div class="transmission-tower"></div>
-        <div class="power-line"></div>
-        <div class="power-line"></div>
-    </div>
+    <!-- Subtle Background -->
+    <div class="bg-subtle"></div>
 
-    <!-- Main Wrapper -->
-    <div class="wrapper">
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="0.png" alt="JJ College" class="nav-logo-img">
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#workshop" class="nav-link">Workshop</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="#" class="nav-register" id="navRegisterBtn">Register</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="main-container">
         
-        <!-- Header Section with Substation Design -->
-        <header class="substation-header">
-            <div class="insulator"></div>
-            <div class="transformer-bank">
-                <div class="transformer">
-                    <img src="0.png" alt="JJ College" class="header-logo">
-                    <div class="winding"></div>
-                </div>
-                <div class="bus-bar">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-            <div class="college-info">
-                <h1>J.J COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
-                <h2>AUTONOMOUS</h2>
-                <h3>SOWDAMBIKAA GROUP OF INSTITUTIONS</h3>
-            </div>
-        </header>
-
-        <!-- Department Banner -->
-        <div class="dept-banner">
-            <div class="phase-indicator">R <span>⚡</span> Y <span>⚡</span> B</div>
-            <h2>DEPARTMENT OF ELECTRICAL AND ELECTRONICS ENGINEERING</h2>
-            <div class="current-flow">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-
-        <!-- EVOLIX Hero Section -->
-        <section class="evolix-hero">
-            <div class="voltage-regulator">
-                <div class="regulator-left">
-                    <span class="kv">440KV</span>
-                </div>
-                <div class="regulator-center">
-                    <img src="evolix-logo.png" alt="EVOLIX 2K26" class="evolix-main">
-                    <p class="presents-line">EETA PROUDLY PRESENTS</p>
-                    <p class="symposium-type">A NATIONAL LEVEL TECHNICAL SYMPOSIUM</p>
-                </div>
-                <div class="regulator-right">
-                    <span class="kv">220KV</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Panel -->
-        <div class="pricing-panel">
-            <div class="panel workshop">
-                <div class="panel-header">
-                    <i class="fas fa-microchip"></i>
-                    <span>WORKSHOP</span>
-                </div>
-                <div class="panel-body">
-                    <span class="amount">₹250</span>
-                    <span class="unit">PER HEAD</span>
-                </div>
-                <div class="panel-footer">
-                    <span class="ac">~</span>
-                    <span class="hz">50Hz</span>
-                    <span class="ac">~</span>
-                </div>
-            </div>
-            <div class="panel events">
-                <div class="panel-header">
-                    <i class="fas fa-bolt"></i>
-                    <span>EVENTS</span>
-                </div>
-                <div class="panel-body">
-                    <span class="amount">₹200</span>
-                    <span class="unit">PER HEAD</span>
-                </div>
-                <div class="panel-footer">
-                    <span class="ac">⏚</span>
-                    <span class="hz">GROUND</span>
-                    <span class="ac">⏚</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Power Meter Countdown -->
-        <div class="power-meter">
-            <div class="meter-header">
-                <span class="phase-l1">L1</span>
-                <span class="meter-title">POWER COUNTDOWN</span>
-                <span class="phase-l3">L3</span>
-            </div>
-            <div class="meter-grid">
-                <div class="meter-unit">
-                    <div class="display">
-                        <span class="value" id="days">00</span>
-                        <span class="unit-label">DAYS</span>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="institution">
+                        <h1>J.J COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+                        <p class="autonomous">AUTONOMOUS · SOWDAMBIKAA GROUP OF INSTITUTIONS</p>
                     </div>
-                    <div class="waveform"></div>
-                </div>
-                <div class="meter-unit">
-                    <div class="display">
-                        <span class="value" id="hours">00</span>
-                        <span class="unit-label">HOURS</span>
+                    
+                    <div class="dept-tag">
+                        <span class="dept-badge">DEPARTMENT OF</span>
+                        <h2>ELECTRICAL & ELECTRONICS ENGINEERING</h2>
                     </div>
-                    <div class="waveform"></div>
-                </div>
-                <div class="meter-unit">
-                    <div class="display">
-                        <span class="value" id="minutes">00</span>
-                        <span class="unit-label">MINUTES</span>
+                    
+                    <div class="presents">EETA PROUDLY PRESENTS</div>
+                    
+                    <div class="evolix-title">
+                        <img src="evolix-logo.png" alt="EVOLIX 2K26" class="evolix-logo">
+                        <p class="symposium-tag">NATIONAL LEVEL TECHNICAL SYMPOSIUM</p>
                     </div>
-                    <div class="waveform"></div>
-                </div>
-                <div class="meter-unit">
-                    <div class="display">
-                        <span class="value" id="seconds">00</span>
-                        <span class="unit-label">SECONDS</span>
-                    </div>
-                    <div class="waveform"></div>
-                </div>
-            </div>
-            <div class="meter-footer">
-                <span class="neutral">NEUTRAL</span>
-                <span class="earth">EARTH</span>
-            </div>
-        </div>
-
-        <!-- Event Grid - Substation Style -->
-        <section class="event-substation">
-            <div class="busbar">
-                <span></span><span>TECHNICAL</span><span></span>
-            </div>
-            <div class="breaker-grid">
-                <div class="breaker" data-event="paper-vista">
-                    <div class="breaker-symbol">⚡</div>
-                    <span>PAPER VISTA</span>
-                    <div class="status">CLOSED</div>
-                </div>
-                <div class="breaker" data-event="project-expo">
-                    <div class="breaker-symbol">⚡</div>
-                    <span>PROJECT EXPO</span>
-                    <div class="status">CLOSED</div>
-                </div>
-                <div class="breaker" data-event="brain-chain">
-                    <div class="breaker-symbol">⚡</div>
-                    <span>BRAIN CHAIN</span>
-                    <div class="status">CLOSED</div>
-                </div>
-                <div class="breaker" data-event="quiz-arena">
-                    <div class="breaker-symbol">⚡</div>
-                    <span>QUIZ ARENA</span>
-                    <div class="status">CLOSED</div>
-                </div>
-            </div>
-
-            <div class="busbar">
-                <span></span><span>NON-TECHNICAL</span><span></span>
-            </div>
-            <div class="breaker-grid">
-                <div class="breaker" data-event="dumb-charades">
-                    <div class="breaker-symbol">🎮</div>
-                    <span>DUMB CHARADES</span>
-                    <div class="status">CLOSED</div>
-                </div>
-                <div class="breaker" data-event="signal-scrambles">
-                    <div class="breaker-symbol">📡</div>
-                    <span>SIGNAL SCRAMBLES</span>
-                    <div class="status">CLOSED</div>
-                </div>
-                <div class="breaker" data-event="fun-zone">
-                    <div class="breaker-symbol">🎯</div>
-                    <span>FUN ZONE</span>
-                    <div class="status">CLOSED</div>
-                </div>
-                <div class="breaker" data-event="box-cricket">
-                    <div class="breaker-symbol">🏏</div>
-                    <span>BOX CRICKET</span>
-                    <div class="status">CLOSED</div>
-                </div>
-                <div class="breaker" data-event="carrom">
-                    <div class="breaker-symbol">🎯</div>
-                    <span>CARROM</span>
-                    <div class="status">CLOSED</div>
-                </div>
-            </div>
-
-            <div class="busbar">
-                <span></span><span>E-SPORTS</span><span></span>
-            </div>
-            <div class="breaker-grid">
-                <div class="breaker" data-event="free-fire">
-                    <div class="breaker-symbol">🔥</div>
-                    <span>FREE FIRE</span>
-                    <div class="status">CLOSED</div>
-                </div>
-                <div class="breaker" data-event="e-football">
-                    <div class="breaker-symbol">⚽</div>
-                    <span>E-FOOTBALL</span>
-                    <div class="status">CLOSED</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Control Room - Coordinators -->
-        <section class="control-room">
-            <div class="console">
-                <div class="console-header">
-                    <span class="led-red"></span>
-                    <span class="led-yellow"></span>
-                    <span class="led-green"></span>
-                    <h3>FACULTY COORDINATORS</h3>
-                </div>
-                <div class="console-grid">
-                    <div class="operator">
-                        <i class="fas fa-user-tie"></i>
-                        <div class="op-details">
-                            <h4>Dr. G. Sundararajan</h4>
-                            <p>AP / EEE</p>
-                            <a href="tel:9842253235" class="op-call">9842253235</a>
+                    
+                    <!-- Professional Countdown -->
+                    <div class="countdown-wrapper">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
                         </div>
                     </div>
-                    <div class="operator">
-                        <i class="fas fa-user-tie"></i>
-                        <div class="op-details">
-                            <h4>Mr. P. Jothn Brito</h4>
-                            <p>AP / EEE</p>
-                            <a href="tel:9942770040" class="op-call">9942770040</a>
+                    
+                    <!-- Event Meta -->
+                    <div class="event-meta">
+                        <div class="meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>April 10, 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="far fa-clock"></i>
+                            <span>9:00 AM onwards</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>JJCET Auditorium</span>
                         </div>
                     </div>
-                    <div class="operator">
-                        <i class="fas fa-user-tie"></i>
-                        <div class="op-details">
-                            <h4>Mrs. R. Gayathri</h4>
-                            <p>AP / EEE</p>
-                            <a href="tel:9344735899" class="op-call">9344735899</a>
+                    
+                    <!-- Pricing Cards - Professional -->
+                    <div class="pricing-row">
+                        <div class="price-card">
+                            <div class="price-type">Workshop</div>
+                            <div class="price-amount">₹250</div>
+                            <div class="price-period">per head</div>
+                        </div>
+                        <div class="price-card">
+                            <div class="price-type">Events</div>
+                            <div class="price-amount">₹200</div>
+                            <div class="price-period">per head</div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="console">
-                <div class="console-header">
-                    <span class="led-red"></span>
-                    <span class="led-yellow"></span>
-                    <span class="led-green"></span>
-                    <h3>STUDENT COORDINATORS</h3>
-                </div>
-                <div class="console-grid">
-                    <div class="operator">
-                        <i class="fas fa-user-graduate"></i>
-                        <div class="op-details">
-                            <h4>S. Aksheetha</h4>
-                            <a href="tel:7373373794" class="op-call">7373373794</a>
-                        </div>
-                    </div>
-                    <div class="operator">
-                        <i class="fas fa-user-graduate"></i>
-                        <div class="op-details">
-                            <h4>M. Sanjeev Raj</h4>
-                            <a href="tel:9150952958" class="op-call">9150952958</a>
-                        </div>
+                
+                <div class="hero-visual">
+                    <div class="visual-element">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Query Substation -->
-        <div class="query-substation">
-            <div class="query-header">
-                <span class="alert">⚠️</span>
-                <span>QUERY DESK</span>
-                <span class="alert">⚠️</span>
-            </div>
-            <div class="query-body">
-                <div class="query-contact">
-                    <span class="query-name">KARTHIKEYAN R</span>
-                    <a href="tel:9080252129" class="query-number">9080252129</a>
+        <!-- Events Section -->
+        <section id="events" class="events-section">
+            <h2 class="section-title">Technical Events</h2>
+            <div class="events-grid">
+                <div class="event-card" data-event="paper-vista">
+                    <h3>Paper Vista</h3>
+                    <p>Research paper presentation</p>
+                    <span class="event-more">View details →</span>
+                </div>
+                <div class="event-card" data-event="project-expo">
+                    <h3>Project Expo</h3>
+                    <p>Innovative project showcase</p>
+                    <span class="event-more">View details →</span>
+                </div>
+                <div class="event-card" data-event="brain-chain">
+                    <h3>Brain Chain</h3>
+                    <p>Logical thinking challenge</p>
+                    <span class="event-more">View details →</span>
+                </div>
+                <div class="event-card" data-event="quiz-arena">
+                    <h3>Quiz Arena</h3>
+                    <p>Technical quiz competition</p>
+                    <span class="event-more">View details →</span>
                 </div>
             </div>
-        </div>
 
-        <!-- Venue & Social -->
-        <div class="venue-grid">
-            <div class="venue-cell">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>AUDITORIUM</h3>
-                <p>JJCET AUDITORIUM</p>
+            <h2 class="section-title">Non-Technical Events</h2>
+            <div class="events-grid">
+                <div class="event-card" data-event="dumb-charades">
+                    <h3>Dumb Charades</h3>
+                    <p>Gestures & guessing game</p>
+                    <span class="event-more">View details →</span>
+                </div>
+                <div class="event-card" data-event="signal-scrambles">
+                    <h3>Signal Scrambles</h3>
+                    <p>Decode the signals</p>
+                    <span class="event-more">View details →</span>
+                </div>
+                <div class="event-card" data-event="fun-zone">
+                    <h3>Fun Zone</h3>
+                    <p>Fun games & activities</p>
+                    <span class="event-more">View details →</span>
+                </div>
+                <div class="event-card" data-event="box-cricket">
+                    <h3>Box Cricket</h3>
+                    <p>Indoor cricket tournament</p>
+                    <span class="event-more">View details →</span>
+                </div>
+                <div class="event-card" data-event="carrom">
+                    <h3>Carrom</h3>
+                    <p>Classic carrom tournament</p>
+                    <span class="event-more">View details →</span>
+                </div>
             </div>
-            <div class="venue-cell">
-                <i class="fab fa-instagram"></i>
-                <h3>INSTAGRAM</h3>
-                <p>@EVOLIX_2K26</p>
-            </div>
-            <div class="venue-cell">
-                <i class="fas fa-envelope"></i>
-                <h3>EMAIL</h3>
-                <p>evolix_2k26@gmail.com</p>
-            </div>
-        </div>
 
-        <!-- Main Control Button -->
-        <div class="main-control">
-            <a href="#" class="control-button" id="mainRegisterBtn">
-                <span class="button-text">REGISTER</span>
-                <span class="button-glow"></span>
-            </a>
-        </div>
+            <h2 class="section-title">E-Sports</h2>
+            <div class="events-grid">
+                <div class="event-card" data-event="free-fire">
+                    <h3>Free Fire</h3>
+                    <p>Battle royale tournament</p>
+                    <span class="event-more">View details →</span>
+                </div>
+                <div class="event-card" data-event="e-football">
+                    <h3>E-Football</h3>
+                    <p>Virtual football</p>
+                    <span class="event-more">View details →</span>
+                </div>
+            </div>
+        </section>
 
-    </div>
+        <!-- Workshop Section -->
+        <section id="workshop" class="workshop-section">
+            <h2 class="section-title">Workshop</h2>
+            <div class="workshop-card">
+                <div class="workshop-header">
+                    <span class="workshop-tag">Embedded + IoT</span>
+                </div>
+                <p class="workshop-desc">Hands-on workshop on Embedded Systems and Internet of Things. Learn from industry experts and get practical experience with microcontrollers, sensors, and IoT platforms.</p>
+                <div class="workshop-meta">
+                    <div class="workshop-meta-item">
+                        <strong>Duration</strong>
+                        <span>2 Days</span>
+                    </div>
+                    <div class="workshop-meta-item">
+                        <strong>Seats</strong>
+                        <span>50</span>
+                    </div>
+                    <div class="workshop-meta-item">
+                        <strong>Fee</strong>
+                        <span>₹250</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact</h2>
+            
+            <div class="contact-grid">
+                <!-- Faculty Coordinators -->
+                <div class="contact-group">
+                    <h3>Faculty Coordinators</h3>
+                    <div class="contact-list">
+                        <div class="contact-person">
+                            <div class="contact-info">
+                                <span class="contact-name">Dr. G. Sundararajan</span>
+                                <span class="contact-role">AP / EEE</span>
+                            </div>
+                            <a href="tel:9842253235" class="contact-phone">9842253235</a>
+                        </div>
+                        <div class="contact-person">
+                            <div class="contact-info">
+                                <span class="contact-name">Mr. P. Jothn Brito</span>
+                                <span class="contact-role">AP / EEE</span>
+                            </div>
+                            <a href="tel:9942770040" class="contact-phone">9942770040</a>
+                        </div>
+                        <div class="contact-person">
+                            <div class="contact-info">
+                                <span class="contact-name">Mrs. R. Gayathri</span>
+                                <span class="contact-role">AP / EEE</span>
+                            </div>
+                            <a href="tel:9344735899" class="contact-phone">9344735899</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Student Coordinators -->
+                <div class="contact-group">
+                    <h3>Student Coordinators</h3>
+                    <div class="contact-list">
+                        <div class="contact-person">
+                            <div class="contact-info">
+                                <span class="contact-name">S. Aksheetha</span>
+                            </div>
+                            <a href="tel:7373373794" class="contact-phone">7373373794</a>
+                        </div>
+                        <div class="contact-person">
+                            <div class="contact-info">
+                                <span class="contact-name">M. Sanjeev Raj</span>
+                            </div>
+                            <a href="tel:9150952958" class="contact-phone">9150952958</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Query Contact -->
+                <div class="contact-group highlight">
+                    <h3>For Queries</h3>
+                    <div class="contact-person query">
+                        <div class="contact-info">
+                            <span class="contact-name">KARTHIKEYAN R</span>
+                        </div>
+                        <a href="tel:9080252129" class="contact-phone highlight">9080252129</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social & Venue -->
+            <div class="info-row">
+                <div class="info-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>@EVOLIX_2K26</span>
+                </div>
+                <div class="info-item">
+                    <i class="far fa-envelope"></i>
+                    <span>evolix_2k26@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>JJCET Auditorium</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Department of Electrical and Electronics Engineering. All rights reserved.</p>
+        </footer>
+    </main>
 
     <!-- Event Modal -->
-    <div class="event-modal" id="eventModal">
+    <div class="modal" id="eventModal">
         <div class="modal-content">
             <button class="modal-close">&times;</button>
-            <div class="modal-body" id="modalBody">
-                <!-- Content loaded dynamically -->
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="modal-register" id="modalRegisterBtn" target="_blank">REGISTER</a>
-                <button class="modal-cancel">CLOSE</button>
+            <div id="modalBody" class="modal-body"></div>
+            <div class="modal-actions">
+                <a href="#" class="modal-btn primary" id="modalRegisterBtn">Register</a>
+                <button class="modal-btn secondary modal-cancel">Close</button>
             </div>
         </div>
     </div>
