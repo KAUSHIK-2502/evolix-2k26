@@ -3,174 +3,1002 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVOLIX '26 | EEE Department</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>EVOLIX'2K26 - JJCET | EEE Department</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #1e3c72);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navigation - subtle enhancement */
+        .navbar {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            border-bottom: 2px solid #ffd700;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header - enhanced */
+        .header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            margin: 2rem 0;
+            border: 2px solid #ffd700;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            margin: 1rem 0;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: glow 2s infinite;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ffd700; }
+            50% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; }
+            100% { text-shadow: 0 0 10px #ffd700; }
+        }
+
+        .header h2, .header h3, .header h4 {
+            margin: 0.5rem 0;
+            letter-spacing: 1px;
+        }
+
+        /* Date Badge - enhanced */
+        .date-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 1rem 3rem;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 60px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+            border: 3px solid white;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+
+        .date-badge:hover {
+            transform: scale(1.05);
+        }
+
+        /* Countdown - enhanced */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 1.5rem 2rem;
+            border-radius: 20px;
+            min-width: 130px;
+            border: 2px solid #ffd700;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, rgba(255, 215, 0, 0.3), transparent);
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .countdown-item:hover::before {
+            opacity: 1;
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .countdown-item span {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ffd700;
+            display: block;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .countdown-item p {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        /* Fees Cards - enhanced */
+        .fees {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .fee-card {
+            background: white;
+            padding: 2.5rem 4rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 3px solid #ffd700;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fee-card::after {
+            content: '⚡';
+            position: absolute;
+            bottom: -20px;
+            right: -10px;
+            font-size: 5rem;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        .fee-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .fee-card h3 {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .fee-card .price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #667eea;
+            text-shadow: 2px 2px 0 #ffd700;
+        }
+
+        /* Register Button - enhanced */
+        .register-btn {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .register-btn a {
+            display: inline-block;
+            background: linear-gradient(45deg, #ffd700, #ffaa00);
+            color: #1e3c72;
+            padding: 1.5rem 4rem;
+            font-size: 2.2rem;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 60px;
+            border: 3px solid white;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); box-shadow: 0 15px 40px rgba(255, 215, 0, 0.7); }
+            100% { transform: scale(1); }
+        }
+
+        .register-btn a:hover {
+            transform: scale(1.05);
+            background: white;
+            color: #1e3c72;
+        }
+
+        /* Section Titles - enhanced */
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin: 4rem 0 2rem;
+            color: #ffd700;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: '⚡';
+            margin: 0 1.5rem;
+            font-size: 2.5rem;
+            opacity: 0.8;
+            animation: spark 1.5s infinite;
+        }
+
+        @keyframes spark {
+            0% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.5; transform: scale(1); }
+        }
+
+        /* Events Grid - enhanced */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 2px solid #ffd700;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .event-card:hover::before {
+            left: 100%;
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: white;
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
+        }
+
+        .event-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .event-card h3 {
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .event-card p {
+            color: #eee;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-tag {
+            display: inline-block;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Schedule - enhanced */
+        .schedule {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            border: 3px solid #ffd700;
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .schedule h2 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white;
+        }
+
+        .schedule-table th {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .schedule-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #ffd700;
+        }
+
+        .schedule-table tr:hover {
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        /* Registration Form - enhanced */
+        .registration-form {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            border: 3px solid #ffd700;
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .registration-form h2 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ffd700;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: white;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .submit-btn {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 900;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            border: 3px solid white;
+            letter-spacing: 2px;
+        }
+
+        .submit-btn:hover {
+            background: white;
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Coordinators Grid - enhanced */
+        .coordinators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .coordinator-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 3px solid #ffd700;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coordinator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
+        }
+
+        .coordinator-card::after {
+            content: '⚡';
+            position: absolute;
+            bottom: -20px;
+            left: -10px;
+            font-size: 6rem;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        .coordinator-card h3 {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .coordinator-card .role {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .coordinator-card .phone {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.8rem;
+            border-radius: 15px;
+            border: 2px solid #ffd700;
+        }
+
+        .coordinator-card .phone a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        /* Venue - enhanced */
+        .venue {
+            text-align: center;
+            background: rgba(255, 215, 0, 0.2);
+            border: 3px solid #ffd700;
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 3rem 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .venue h2 {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .venue p {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .map-placeholder {
+            background: rgba(0, 0, 0, 0.3);
+            height: 200px;
+            border-radius: 20px;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ffd700;
+        }
+
+        /* Footer - enhanced */
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 3px solid #ffd700;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 0.8rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .date-badge {
+                font-size: 1.4rem;
+                padding: 0.8rem 1.5rem;
+            }
+            
+            .countdown-item {
+                min-width: 80px;
+                padding: 1rem;
+            }
+            
+            .countdown-item span {
+                font-size: 2.2rem;
+            }
+            
+            .fee-card {
+                padding: 1.5rem 2rem;
+            }
+            
+            .fee-card .price {
+                font-size: 2.5rem;
+            }
+            
+            .register-btn a {
+                font-size: 1.5rem;
+                padding: 1rem 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .schedule {
+                padding: 1rem;
+                overflow-x: auto;
+            }
+        }
+
+        /* Animations */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Circuit Board Background -->
-    <div class="circuit-overlay"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#events">EVENTS</a>
+            <a href="#schedule">SCHEDULE</a>
+            <a href="#register">REGISTER</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </nav>
 
-    <!-- Main Container -->
-    <div class="main-container">
-        <!-- Header with College Info -->
-        <div class="college-header">
-            <div class="logo-container">
-                <img src="0.png" alt="JJ College" class="college-logo-main">
-            </div>
-            <div class="college-title">
-                <h1>J.J COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+    <div class="container">
+        <!-- Header Section -->
+        <section id="home" class="header">
+            <div>
+                <h3>J.J COLLEGE OF ENGINEERING AND TECHNOLOGY</h3>
                 <h2>AUTONOMOUS</h2>
                 <h3>SOWDAMBIKAA GROUP OF INSTITUTIONS</h3>
-            </div>
-        </div>
-
-        <!-- Department & Symposium Title -->
-        <div class="dept-section">
-            <div class="dept-name">
-                DEPARTMENT OF ELECTRICAL AND ELECTRONICS ENGINEERING
-            </div>
-            <div class="presents">EETA PROUDLY PRESENTS</div>
-            
-            <!-- EVOLIX Logo Area -->
-            <div class="evolix-container">
-                <img src="evolix-logo.png" alt="EVOLIX '26" class="evolix-logo-main">
-                <div class="evolix-sub">A NATIONAL LEVEL TECHNICAL SYMPOSIUM</div>
-            </div>
-        </div>
-
-        <!-- Pricing Cards -->
-        <div class="pricing-section">
-            <div class="pricing-card workshop-price">
-                <div class="price-icon"><i class="fas fa-microchip"></i></div>
-                <div class="price-label">WORKSHOP</div>
-                <div class="price-value">₹250</div>
-                <div class="price-per">PER HEAD</div>
-            </div>
-            <div class="pricing-card event-price">
-                <div class="price-icon"><i class="fas fa-bolt"></i></div>
-                <div class="price-label">EVENTS</div>
-                <div class="price-value">₹200</div>
-                <div class="price-per">PER HEAD</div>
-            </div>
-        </div>
-
-        <!-- Events Grid -->
-        <div class="events-section">
-            <h2 class="section-title">
-                <span class="tech-title">⚡ TECHNICAL ⚡</span>
-            </h2>
-            <div class="events-grid">
-                <div class="event-chip">PAPER VISTA</div>
-                <div class="event-chip">PROJECT EXPO</div>
-                <div class="event-chip">BRAIN CHAIN</div>
-                <div class="event-chip">QUIZ ARENA</div>
-            </div>
-
-            <h2 class="section-title">
-                <span class="nontech-title">🎮 NON-TECHNICAL 🎮</span>
-            </h2>
-            <div class="events-grid">
-                <div class="event-chip">DUMP CHARADES</div>
-                <div class="event-chip">SIGNAL SCRAMBLES</div>
-                <div class="event-chip">FUN ZONE</div>
-                <div class="event-chip">BOX CRICKET</div>
-                <div class="event-chip">CARROM</div>
-            </div>
-
-            <h2 class="section-title">
-                <span class="esports-title">🎯 E-SPORTS 🎯</span>
-            </h2>
-            <div class="events-grid">
-                <div class="event-chip">FREE FIRE</div>
-                <div class="event-chip">E-FOOTBALL</div>
-            </div>
-        </div>
-
-        <!-- Workshop Coordinators -->
-        <div class="coordinators-section">
-            <h2 class="section-title">
-                <span class="workshop-title">🔧 WORKSHOP COORDINATORS 🔧</span>
-            </h2>
-            
-            <div class="faculty-grid">
-                <div class="coordinator-card faculty">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Dr. G. Sundararajan (AP)</h3>
-                    <a href="tel:9842253235" class="phone-link">
-                        <i class="fas fa-phone"></i> 9842253235
-                    </a>
+                <h4>DEPARTMENT OF ELECTRICAL AND ELECTRONICS ENGINEERING</h4>
+                <h2>EETA PROUDLY PRESENTS</h2>
+                <h1>A NATIONAL LEVEL TECHNICAL SYMPOSIUM</h1>
+                
+                <div class="date-badge">
+                    📅 APRIL 10-11, 2026 📅
                 </div>
-                <div class="coordinator-card faculty">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Mr. P. Jothn Brito (AP)</h3>
-                    <a href="tel:9942770040" class="phone-link">
-                        <i class="fas fa-phone"></i> 9942770040
-                    </a>
+
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="days">21</span>
+                        <p>DAYS</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">16</span>
+                        <p>HOURS</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">45</span>
+                        <p>MINUTES</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">47</span>
+                        <p>SECONDS</p>
+                    </div>
                 </div>
-                <div class="coordinator-card faculty">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Mrs. R. Gayathri (AP)</h3>
-                    <a href="tel:9344735899" class="phone-link">
-                        <i class="fas fa-phone"></i> 9344735899
-                    </a>
+
+                <div class="fees">
+                    <div class="fee-card">
+                        <h3>WORKSHOP</h3>
+                        <div class="price">₹250</div>
+                        <p>PER HEAD</p>
+                    </div>
+                    <div class="fee-card">
+                        <h3>EVENTS</h3>
+                        <div class="price">₹200</div>
+                        <p>PER HEAD</p>
+                    </div>
+                </div>
+
+                <div class="register-btn">
+                    <a href="#register">⚡ REGISTER NOW ⚡</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Events -->
+        <section id="events">
+            <h2 class="section-title">⚡ TECHNICAL ⚡</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-icon">📄</div>
+                    <h3>PAPER VISTA</h3>
+                    <p>Present your innovative research papers on latest technologies</p>
+                    <span class="event-tag">Team of 2</span>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">🔧</div>
+                    <h3>PROJECT EXPO</h3>
+                    <p>Showcase your working projects and innovations</p>
+                    <span class="event-tag">Team of 3-4</span>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">🧠</div>
+                    <h3>BRAIN CHAIN</h3>
+                    <p>Connect the dots in this technical challenge</p>
+                    <span class="event-tag">Individual</span>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">❓</div>
+                    <h3>QUIZ ARENA</h3>
+                    <p>Test your technical knowledge</p>
+                    <span class="event-tag">Team of 2</span>
                 </div>
             </div>
 
-            <h2 class="section-title">
-                <span class="student-title">👥 STUDENT COORDINATORS 👥</span>
-            </h2>
+            <h2 class="section-title">🎮 NON-TECHNICAL 🎮</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-icon">🎭</div>
+                    <h3>DUMB CHARADES</h3>
+                    <p>Act it out without speaking</p>
+                    <span class="event-tag">Team of 4</span>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">📡</div>
+                    <h3>SIGNAL SCRAMBLES</h3>
+                    <p>Decode the messages</p>
+                    <span class="event-tag">Team of 2</span>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">🎪</div>
+                    <h3>FUN ZONE</h3>
+                    <p>Exciting mini-games</p>
+                    <span class="event-tag">Individual</span>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">🏏</div>
+                    <h3>BOX CRICKET</h3>
+                    <p>6-over-a-side matches</p>
+                    <span class="event-tag">Team of 5</span>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">🎯</div>
+                    <h3>CARROM</h3>
+                    <p>Classic carrom tournament</p>
+                    <span class="event-tag">Doubles</span>
+                </div>
+            </div>
+
+            <h2 class="section-title">🎯 E-SPORTS 🎯</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-icon">🔫</div>
+                    <h3>FREE FIRE</h3>
+                    <p>Mobile battle royale</p>
+                    <span class="event-tag">Squad</span>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">⚽</div>
+                    <h3>E-FOOTBALL</h3>
+                    <p>Virtual football</p>
+                    <span class="event-tag">1v1</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule">
+            <div class="schedule">
+                <h2>📋 EVENT SCHEDULE 📋</h2>
+                <table class="schedule-table">
+                    <tr>
+                        <th>Time</th>
+                        <th>Event</th>
+                        <th>Venue</th>
+                    </tr>
+                    <tr><td>9:00 AM - 10:00 AM</td><td>Inauguration</td><td>Auditorium</td></tr>
+                    <tr><td>10:30 AM - 1:00 PM</td><td>Paper Vista</td><td>Hall 101</td></tr>
+                    <tr><td>10:30 AM - 1:00 PM</td><td>Project Expo</td><td>Seminar Hall</td></tr>
+                    <tr><td>10:30 AM - 12:00 PM</td><td>Quiz Arena</td><td>Hall 102</td></tr>
+                    <tr><td>1:00 PM - 2:00 PM</td><td>Lunch Break</td><td>Cafeteria</td></tr>
+                    <tr><td>2:00 PM - 4:00 PM</td><td>Brain Chain</td><td>Hall 103</td></tr>
+                    <tr><td>2:00 PM - 5:00 PM</td><td>Non-Tech Events</td><td>Ground Floor</td></tr>
+                    <tr><td>4:00 PM - 6:00 PM</td><td>E-Sports Finals</td><td>Lab 201</td></tr>
+                    <tr><td>6:00 PM - 7:00 PM</td><td>Prize Distribution</td><td>Auditorium</td></tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section id="register">
+            <div class="registration-form">
+                <h2>📝 REGISTRATION 📝</h2>
+                <form id="registrationForm" onsubmit="return validateForm(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>College Name *</label>
+                            <input type="text" id="college" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone *</label>
+                            <input type="tel" id="phone" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Year *</label>
+                            <select id="year" required>
+                                <option value="">Select</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Department *</label>
+                            <input type="text" id="department" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Events *</label>
+                        <select id="events" multiple size="4" required>
+                            <option>Paper Vista</option>
+                            <option>Project Expo</option>
+                            <option>Brain Chain</option>
+                            <option>Quiz Arena</option>
+                            <option>Dumb Charades</option>
+                            <option>Signal Scrambles</option>
+                            <option>Fun Zone</option>
+                            <option>Box Cricket</option>
+                            <option>Carrom</option>
+                            <option>Free Fire</option>
+                            <option>E-Football</option>
+                        </select>
+                        <small>Hold Ctrl to select multiple</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Payment Transaction ID *</label>
+                        <input type="text" id="transaction" required>
+                        <small>Pay to: 9080252129 (Google Pay/PhonePe)</small>
+                    </div>
+
+                    <button type="submit" class="submit-btn">⚡ REGISTER ⚡</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Coordinators Section -->
+        <section id="contact">
+            <h2 class="section-title">🔧 WORKSHOP COORDINATORS 🔧</h2>
+            <h2 class="section-title">👥 STUDENT COORDINATORS 👥</h2>
             
-            <div class="student-grid">
-                <div class="coordinator-card student">
-                    <i class="fas fa-user-graduate"></i>
+            <div class="coordinators-grid">
+                <div class="coordinator-card">
                     <h3>S. Aksheetha</h3>
-                    <a href="tel:7373373794" class="phone-link">
-                        <i class="fas fa-phone"></i> 7373373794
-                    </a>
+                    <div class="role">Student Coordinator</div>
+                    <div class="phone">
+                        <a href="tel:7373373794">📞 7373373794</a>
+                    </div>
                 </div>
-                <div class="coordinator-card student">
-                    <i class="fas fa-user-graduate"></i>
+                <div class="coordinator-card">
                     <h3>M. Sanjeev Raj</h3>
-                    <a href="tel:9150952958" class="phone-link">
-                        <i class="fas fa-phone"></i> 9150952958
-                    </a>
+                    <div class="role">Student Coordinator</div>
+                    <div class="phone">
+                        <a href="tel:9150952958">📞 9150952958</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Venue & Contact -->
-        <div class="venue-section">
-            <div class="venue-card">
-                <i class="fas fa-map-marker-alt"></i>
-                <h2>VENUE:</h2>
+            <h2 class="section-title">📞 FOR QUERIES 📞</h2>
+            <div class="coordinators-grid">
+                <div class="coordinator-card">
+                    <h3>KARTHIKEYAN R</h3>
+                    <div class="role">Event Coordinator</div>
+                    <div class="phone">
+                        <a href="tel:9080252129">📞 9080252129</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="venue">
+                <h2>📍 VENUE</h2>
                 <p>JJCET AUDITORIUM</p>
+                <div class="map-placeholder">
+                    Google Maps - JJCET Auditorium
+                </div>
             </div>
-        </div>
-
-        <!-- Social & Email -->
-        <div class="contact-footer">
-            <div class="social-links">
-                <a href="#" class="social-icon">
-                    <i class="fab fa-instagram"></i> @EVOLIX_2K26
-                </a>
-                <a href="mailto:evolix_2k26@gmail.com" class="social-icon">
-                    <i class="fas fa-envelope"></i> evolix_2k26@gmail.com
-                </a>
-            </div>
-        </div>
-
-        <!-- Register Button -->
-        <div class="register-fixed">
-            <a href="#" class="register-big-btn">
-                REGISTER NOW <i class="fas fa-bolt"></i>
-            </a>
-        </div>
+        </section>
     </div>
 
-    <script src="script.js"></script>
+    <footer class="footer">
+        <p>© 2026 EVOLIX'2K26 - Department of Electrical and Electronics Engineering</p>
+        <p>J.J. College of Engineering and Technology | Sowdambikaa Group of Institutions</p>
+        <p style="color: #ffd700; margin-top: 1rem;">⚡ EETA ⚡</p>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('April 10, 2026 09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Form Validation
+        function validateForm(event) {
+            event.preventDefault();
+            alert('⚡ Registration Submitted! You will receive confirmation soon.');
+            return false;
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
