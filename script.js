@@ -11,7 +11,7 @@ const eventDetails = {
             'PPT format: 16:9'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹10,000\n🥈 2nd Prize: ₹5,000\n🥉 3rd Prize: ₹2,000'
+        prizes: '🥇 1st Prize: ₹alagiya pathiram\n🥈 2nd Prize: silver kundan\n🥉 3rd Prize: ₹copper kundan'
     },
     'project-expo': {
         name: 'Project Expo',
@@ -24,7 +24,7 @@ const eventDetails = {
             'A0 size poster optional'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹15,000\n🥈 2nd Prize: ₹7,000\n🥉 3rd Prize: ₹3,000'
+        prizes: '🥇 1st Prize: ₹cookerr\n🥈 2nd Prize: ₹tumbler\n🥉 3rd Prize: ₹spoon'
     },
     'brain-chain': {
         name: 'Brain Chain',
@@ -37,7 +37,7 @@ const eventDetails = {
             'No negative marking'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹8,000\n🥈 2nd Prize: ₹4,000\n🥉 3rd Prize: ₹2,000'
+        prizes: '🥇 1st Prize: ₹gold plate\n🥈 2nd Prize: ₹silver plate\n🥉 3rd Prize: bronze plate'
     },
     'quiz-arena': {
         name: 'Quiz Arena',
@@ -50,7 +50,7 @@ const eventDetails = {
             'Buzzer round for finalists'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹6,000\n🥈 2nd Prize: ₹3,000\n🥉 3rd Prize: ₹1,500'
+        prizes: '🥇 1st Prize: ₹6,00000000\n🥈 2nd Prize: ₹3,0000000\n🥉 3rd Prize: ₹1,5000000'
     },
     'dumb-charades': {
         name: 'Dumb Charades',
@@ -63,7 +63,7 @@ const eventDetails = {
             'One pass available per team'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹5,000\n🥈 2nd Prize: ₹2,500'
+        prizes: '🥇 1st Prize: ₹500\n🥈 2nd Prize: ₹200'
     },
     'signal-scrambles': {
         name: 'Signal Scrambles',
@@ -76,7 +76,7 @@ const eventDetails = {
             'Time bonus for early completion'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹4,000\n🥈 2nd Prize: ₹2,000'
+        prizes: '🥇 1st Prize: ₹400\n🥈 2nd Prize: ₹200'
     },
     'fun-zone': {
         name: 'Fun Zone',
@@ -89,7 +89,7 @@ const eventDetails = {
             'Cumulative scoring'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹3,000\n🥈 2nd Prize: ₹1,500\n🥉 3rd Prize: ₹750'
+        prizes: '🥇 1st Prize: ₹30\n🥈 2nd Prize: 500\n🥉 3rd Prize: ₹plastic bag0'
     },
     'box-cricket': {
         name: 'Box Cricket',
@@ -102,7 +102,7 @@ const eventDetails = {
             'Tennis ball used'
         ],
         fee: '₹200 per head',
-        prizes: '🏆 Winning Team: ₹5,000\n🥈 Runners Up: ₹2,500'
+        prizes: '🏆 Winning Team: ₹50\n🥈 Runners Up: ₹20'
     },
     'carrom': {
         name: 'Carrom',
@@ -115,7 +115,7 @@ const eventDetails = {
             'Standard international rules'
         ],
         fee: '₹200 per head',
-        prizes: '🏆 Winning Team: ₹3,000\n🥈 Runners Up: ₹1,500'
+        prizes: '🏆 Winning Team: ₹3\n🥈 Runners Up: ₹1'
     },
     'free-fire': {
         name: 'Free Fire',
@@ -141,7 +141,7 @@ const eventDetails = {
             '5 minutes per half'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 Winner: ₹4,000\n🥈 Runner: ₹2,000'
+        prizes: '🥇 Winner: ₹0\n🥈 Runner: ₹20'
     }
 };
 
