@@ -1071,3 +1071,16 @@ body {
     96% { opacity: 0.2; }
     97% { opacity: 0; }
 }
+
+/* Better emoji styling */
+.event-card-luxury h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* If you want emojis to have a slight animation on hover */
+.event-card-luxury:hover h3 {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
