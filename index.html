@@ -385,5 +385,52 @@
     </div>
 
     <script src="script.js"></script>
+
+                    <!-- Registration Options Modal -->
+<div class="modal-luxury" id="registrationModal">
+    <div class="modal-content-luxury registration-modal">
+        <button class="modal-close-luxury" id="closeRegModal">&times;</button>
+        <div class="modal-body-luxury">
+            <h2 style="text-align: center;">⚡ Choose Your Registration Type ⚡</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #b0b0b0;">Select one of the following options</p>
+            
+            <div class="reg-options-container">
+                <!-- Event Only -->
+                <div class="reg-option-card" data-reg-type="event">
+                    <div class="reg-option-icon">🎯</div>
+                    <h3>Events Only</h3>
+                    <p class="reg-option-desc">Participate in any technical, non-technical or e-sports events</p>
+                    <div class="reg-option-price">₹200 <span>/ per head</span></div>
+                    <button class="reg-select-btn" data-url="YOUR_EVENT_FORM_LINK">Select →</button>
+                </div>
+                
+                <!-- Workshop Only -->
+                <div class="reg-option-card" data-reg-type="workshop">
+                    <div class="reg-option-icon">🔧</div>
+                    <h3>Workshop Only</h3>
+                    <p class="reg-option-desc">Hands-on Embedded + IoT workshop with certificate</p>
+                    <div class="reg-option-price">₹250 <span>/ per head</span></div>
+                    <button class="reg-select-btn" data-url="YOUR_WORKSHOP_FORM_LINK">Select →</button>
+                </div>
+                
+                <!-- Combo Offer -->
+                <div class="reg-option-card combo-highlight" data-reg-type="combo">
+                    <div class="offer-tag">🔥 BEST OFFER 🔥</div>
+                    <div class="reg-option-icon">⚡</div>
+                    <h3>Combo Offer</h3>
+                    <p class="reg-option-desc">Events + Workshop at special discounted price</p>
+                    <div class="reg-option-price">₹350 <span>/ per head</span></div>
+                    <div class="reg-save-badge">Save ₹100</div>
+                    <button class="reg-select-btn combo-btn" data-url="YOUR_COMBO_FORM_LINK">Select →</button>
+                </div>
+            </div>
+            
+            <div class="reg-note">
+                <i class="fas fa-info-circle"></i>
+                <span>Limited seats available! Register early to secure your spot.</span>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
