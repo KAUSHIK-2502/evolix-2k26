@@ -202,54 +202,69 @@ document.querySelectorAll('.event-card-luxury').forEach(card => {
     });
 });
 
-// ===== MODAL CONTROLS =====
-// Close event modal
-document.getElementById('closeEventModal').addEventListener('click', () => {
-    document.getElementById('eventModal').classList.remove('show');
-});
+// ===== EVENT MODAL CONTROLS =====
+const closeEventModal = document.getElementById('closeEventModal');
+const cancelEventModal = document.getElementById('cancelEventModal');
+const eventModal = document.getElementById('eventModal');
 
-document.getElementById('cancelEventModal').addEventListener('click', () => {
-    document.getElementById('eventModal').classList.remove('show');
-});
+if (closeEventModal) {
+    closeEventModal.addEventListener('click', () => {
+        eventModal.classList.remove('show');
+    });
+}
 
-// Click outside event modal to close
-document.getElementById('eventModal').addEventListener('click', (e) => {
-    if (e.target.id === 'eventModal') {
-        document.getElementById('eventModal').classList.remove('show');
-    }
-});
+if (cancelEventModal) {
+    cancelEventModal.addEventListener('click', () => {
+        eventModal.classList.remove('show');
+    });
+}
 
-// ===== REGISTRATION MODAL =====
+if (eventModal) {
+    eventModal.addEventListener('click', (e) => {
+        if (e.target === eventModal) {
+            eventModal.classList.remove('show');
+        }
+    });
+}
+
+// ===== REGISTRATION MODAL (3 OPTIONS) =====
 const regModal = document.getElementById('registrationModal');
 const navRegisterBtn = document.getElementById('navRegisterBtn');
 const eventModalRegisterBtn = document.getElementById('eventModalRegisterBtn');
 const closeRegModal = document.getElementById('closeRegModal');
 
-// Open registration modal from nav button
+// IMPORTANT: This opens the 3-option modal, NOT direct Google Form
 if (navRegisterBtn) {
     navRegisterBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        if (regModal) regModal.classList.add('show');
+        console.log('Register clicked - opening options modal');
+        if (regModal) {
+            regModal.classList.add('show');
+        } else {
+            alert('Registration modal not found. Please check HTML.');
+        }
     });
 }
 
-// Open registration modal from event modal's Register Now button
+// Handle Register button inside event modal
 if (eventModalRegisterBtn) {
     eventModalRegisterBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        document.getElementById('eventModal').classList.remove('show');
-        if (regModal) regModal.classList.add('show');
+        eventModal.classList.remove('show');
+        if (regModal) {
+            regModal.classList.add('show');
+        }
     });
 }
 
 // Close registration modal
 if (closeRegModal) {
     closeRegModal.addEventListener('click', () => {
-        if (regModal) regModal.classList.remove('show');
+        regModal.classList.remove('show');
     });
 }
 
-// Click outside registration modal to close
+// Close when clicking outside
 if (regModal) {
     regModal.addEventListener('click', (e) => {
         if (e.target === regModal) {
@@ -258,34 +273,20 @@ if (regModal) {
     });
 }
 
-// Handle registration option selection
+// Handle registration option selection - Opens respective Google Form
 document.querySelectorAll('.reg-select-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         
         const url = btn.getAttribute('data-url');
-        if (url && url !== 'https://forms.gle/YOUR_EVENT_LINK' && url !== 'https://forms.gle/YOUR_WORKSHOP_LINK' && url !== 'https://forms.gle/YOUR_COMBO_LINK') {
-            window.open(url, '_blank');
-            if (regModal) regModal.classList.remove('show');
-        } else {
-            alert('⚠️ Registration links will be added soon!\n\nPlease contact coordinators:\n📞 KARTHIKEYAN R - 9080252129');
-        }
-    });
-});
-
-// Card click also selects
-document.querySelectorAll('.reg-option-card').forEach(card => {
-    card.addEventListener('click', (e) => {
-        if (e.target.classList.contains('reg-select-btn')) return;
+        console.log('Opening form:', url);
         
-        const btn = card.querySelector('.reg-select-btn');
-        if (btn) {
-            const url = btn.getAttribute('data-url');
-            if (url && url !== 'https://forms.gle/YOUR_EVENT_LINK' && url !== 'https://forms.gle/YOUR_WORKSHOP_LINK' && url !== 'https://forms.gle/YOUR_COMBO_LINK') {
-                window.open(url, '_blank');
-                if (regModal) regModal.classList.remove('show');
-            }
+        if (url && url !== 'YOUR_EVENT_FORM_LINK' && url !== 'YOUR_WORKSHOP_FORM_LINK' && url !== 'YOUR_COMBO_FORM_LINK') {
+            window.open(url, '_blank');
+            regModal.classList.remove('show');
+        } else {
+            alert('⚠️ Registration link will be added soon!\n\nPlease contact: KARTHIKEYAN R - 9080252129');
         }
     });
 });
@@ -333,4 +334,4 @@ if (footerYear) {
     footerYear.innerHTML = footerYear.innerHTML.replace('2026', currentYear);
 }
 
-console.log('✅ EVOLIX 2K26 website loaded successfully!');
+console.log('✅ EVOLIX 2K26 loaded - Register button shows 3 options modal');
