@@ -11,7 +11,7 @@ const eventDetails = {
             'PPT format: 16:9'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹alagiya pathiram\n🥈 2nd Prize: silver kundan\n🥉 3rd Prize: ₹copper kundan'
+        prizes: '🥇 1st Prize: ₹10,000\n🥈 2nd Prize: ₹5,000\n🥉 3rd Prize: ₹2,000'
     },
     'project-expo': {
         name: 'Project Expo',
@@ -24,7 +24,7 @@ const eventDetails = {
             'A0 size poster optional'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹cookerr\n🥈 2nd Prize: ₹tumbler\n🥉 3rd Prize: ₹spoon'
+        prizes: '🥇 1st Prize: ₹15,000\n🥈 2nd Prize: ₹7,000\n🥉 3rd Prize: ₹3,000'
     },
     'brain-chain': {
         name: 'Brain Chain',
@@ -37,7 +37,7 @@ const eventDetails = {
             'No negative marking'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹gold plate\n🥈 2nd Prize: ₹silver plate\n🥉 3rd Prize: bronze plate'
+        prizes: '🥇 1st Prize: ₹8,000\n🥈 2nd Prize: ₹4,000\n🥉 3rd Prize: ₹2,000'
     },
     'quiz-arena': {
         name: 'Quiz Arena',
@@ -50,7 +50,7 @@ const eventDetails = {
             'Buzzer round for finalists'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹6,00000000\n🥈 2nd Prize: ₹3,0000000\n🥉 3rd Prize: ₹1,5000000'
+        prizes: '🥇 1st Prize: ₹6,000\n🥈 2nd Prize: ₹3,000\n🥉 3rd Prize: ₹1,500'
     },
     'dumb-charades': {
         name: 'Dumb Charades',
@@ -63,7 +63,7 @@ const eventDetails = {
             'One pass available per team'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹500\n🥈 2nd Prize: ₹200'
+        prizes: '🥇 1st Prize: ₹5,000\n🥈 2nd Prize: ₹2,500'
     },
     'signal-scrambles': {
         name: 'Signal Scrambles',
@@ -76,7 +76,7 @@ const eventDetails = {
             'Time bonus for early completion'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹400\n🥈 2nd Prize: ₹200'
+        prizes: '🥇 1st Prize: ₹4,000\n🥈 2nd Prize: ₹2,000'
     },
     'fun-zone': {
         name: 'Fun Zone',
@@ -89,7 +89,7 @@ const eventDetails = {
             'Cumulative scoring'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 1st Prize: ₹30\n🥈 2nd Prize: 500\n🥉 3rd Prize: ₹plastic bag0'
+        prizes: '🥇 1st Prize: ₹3,000\n🥈 2nd Prize: ₹1,500\n🥉 3rd Prize: ₹750'
     },
     'box-cricket': {
         name: 'Box Cricket',
@@ -102,7 +102,7 @@ const eventDetails = {
             'Tennis ball used'
         ],
         fee: '₹200 per head',
-        prizes: '🏆 Winning Team: ₹50\n🥈 Runners Up: ₹20'
+        prizes: '🏆 Winning Team: ₹5,000\n🥈 Runners Up: ₹2,500'
     },
     'carrom': {
         name: 'Carrom',
@@ -115,7 +115,7 @@ const eventDetails = {
             'Standard international rules'
         ],
         fee: '₹200 per head',
-        prizes: '🏆 Winning Team: ₹3\n🥈 Runners Up: ₹1'
+        prizes: '🏆 Winning Team: ₹3,000\n🥈 Runners Up: ₹1,500'
     },
     'free-fire': {
         name: 'Free Fire',
@@ -141,13 +141,9 @@ const eventDetails = {
             '5 minutes per half'
         ],
         fee: '₹200 per head',
-        prizes: '🥇 Winner: ₹0\n🥈 Runner: ₹20'
+        prizes: '🥇 Winner: ₹4,000\n🥈 Runner: ₹2,000'
     }
 };
-
-// ===== YOUR GOOGLE FORM LINK =====
-// 🔴 REPLACE THIS WITH YOUR ACTUAL GOOGLE FORM LINK
-const GOOGLE_FORM_URL = 'https://forms.google.com/your-form-link-here';
 
 // ===== COUNTDOWN TIMER =====
 function updateCountdown() {
@@ -174,7 +170,6 @@ function updateCountdown() {
     document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
 }
 
-// Update countdown every second
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
@@ -208,34 +203,105 @@ document.querySelectorAll('.event-card-luxury').forEach(card => {
 });
 
 // ===== MODAL CONTROLS =====
-// Close button
-document.querySelector('.modal-close-luxury').addEventListener('click', () => {
+// Close event modal
+document.getElementById('closeEventModal').addEventListener('click', () => {
     document.getElementById('eventModal').classList.remove('show');
 });
 
-// Cancel button
-document.querySelector('.modal-cancel').addEventListener('click', () => {
+document.getElementById('cancelEventModal').addEventListener('click', () => {
     document.getElementById('eventModal').classList.remove('show');
 });
 
-// Click outside modal to close
+// Click outside event modal to close
 document.getElementById('eventModal').addEventListener('click', (e) => {
     if (e.target.id === 'eventModal') {
         document.getElementById('eventModal').classList.remove('show');
     }
 });
 
-// ===== REGISTER BUTTONS =====
-// Modal register button
-document.getElementById('modalRegisterBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.open(GOOGLE_FORM_URL, '_blank');
+// ===== REGISTRATION MODAL =====
+const regModal = document.getElementById('registrationModal');
+const navRegisterBtn = document.getElementById('navRegisterBtn');
+const eventModalRegisterBtn = document.getElementById('eventModalRegisterBtn');
+const closeRegModal = document.getElementById('closeRegModal');
+
+// Open registration modal from nav button
+if (navRegisterBtn) {
+    navRegisterBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (regModal) regModal.classList.add('show');
+    });
+}
+
+// Open registration modal from event modal's Register Now button
+if (eventModalRegisterBtn) {
+    eventModalRegisterBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('eventModal').classList.remove('show');
+        if (regModal) regModal.classList.add('show');
+    });
+}
+
+// Close registration modal
+if (closeRegModal) {
+    closeRegModal.addEventListener('click', () => {
+        if (regModal) regModal.classList.remove('show');
+    });
+}
+
+// Click outside registration modal to close
+if (regModal) {
+    regModal.addEventListener('click', (e) => {
+        if (e.target === regModal) {
+            regModal.classList.remove('show');
+        }
+    });
+}
+
+// Handle registration option selection
+document.querySelectorAll('.reg-select-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const url = btn.getAttribute('data-url');
+        if (url && url !== 'https://forms.gle/YOUR_EVENT_LINK' && url !== 'https://forms.gle/YOUR_WORKSHOP_LINK' && url !== 'https://forms.gle/YOUR_COMBO_LINK') {
+            window.open(url, '_blank');
+            if (regModal) regModal.classList.remove('show');
+        } else {
+            alert('⚠️ Registration links will be added soon!\n\nPlease contact coordinators:\n📞 KARTHIKEYAN R - 9080252129');
+        }
+    });
 });
 
-// Navbar register button
-document.getElementById('navRegisterBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.open(GOOGLE_FORM_URL, '_blank');
+// Card click also selects
+document.querySelectorAll('.reg-option-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+        if (e.target.classList.contains('reg-select-btn')) return;
+        
+        const btn = card.querySelector('.reg-select-btn');
+        if (btn) {
+            const url = btn.getAttribute('data-url');
+            if (url && url !== 'https://forms.gle/YOUR_EVENT_LINK' && url !== 'https://forms.gle/YOUR_WORKSHOP_LINK' && url !== 'https://forms.gle/YOUR_COMBO_LINK') {
+                window.open(url, '_blank');
+                if (regModal) regModal.classList.remove('show');
+            }
+        }
+    });
+});
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(item.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
 // ===== ACTIVE NAV LINK ON SCROLL =====
@@ -260,27 +326,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ===== SMOOTH SCROLL =====
-document.querySelectorAll('.nav-item').forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(item.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// ===== PHONE NUMBER CLICK TRACKING (optional) =====
-document.querySelectorAll('.contact-row a[href^="tel:"]').forEach(phoneLink => {
-    phoneLink.addEventListener('click', () => {
-        console.log('Phone number clicked:', phoneLink.textContent);
-    });
-});
-
 // ===== ADD DYNAMIC YEAR TO FOOTER =====
 const footerYear = document.querySelector('.footer-premium p');
 if (footerYear) {
@@ -288,89 +333,4 @@ if (footerYear) {
     footerYear.innerHTML = footerYear.innerHTML.replace('2026', currentYear);
 }
 
-// ===== PRELOADER (optional - remove if not needed) =====
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
-
-// ===== REGISTRATION MODAL WITH 3 OPTIONS =====
-// Replace these with your actual Google Form links
-const REGISTRATION_LINKS = {
-    event: 'YOUR_EVENT_GOOGLE_FORM_LINK_HERE',
-    workshop: 'YOUR_WORKSHOP_GOOGLE_FORM_LINK_HERE',
-    combo: 'YOUR_COMBO_GOOGLE_FORM_LINK_HERE'
-};
-
-// Get elements
-const regModal = document.getElementById('registrationModal');
-const navRegisterBtn = document.getElementById('navRegisterBtn');
-const modalRegisterBtn = document.getElementById('modalRegisterBtn');
-const closeRegModal = document.getElementById('closeRegModal');
-
-// Open registration modal when Register button is clicked
-if (navRegisterBtn) {
-    navRegisterBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        regModal.classList.add('show');
-    });
-}
-
-// Also handle the register button inside event modals
-if (modalRegisterBtn) {
-    modalRegisterBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        // Close event modal first
-        document.getElementById('eventModal').classList.remove('show');
-        // Open registration modal
-        regModal.classList.add('show');
-    });
-}
-
-// Close registration modal
-if (closeRegModal) {
-    closeRegModal.addEventListener('click', () => {
-        regModal.classList.remove('show');
-    });
-}
-
-// Close when clicking outside
-if (regModal) {
-    regModal.addEventListener('click', (e) => {
-        if (e.target === regModal) {
-            regModal.classList.remove('show');
-        }
-    });
-}
-
-// Handle option selection
-document.querySelectorAll('.reg-select-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const url = btn.getAttribute('data-url');
-        if (url && url !== 'YOUR_EVENT_FORM_LINK' && url !== 'YOUR_WORKSHOP_FORM_LINK' && url !== 'YOUR_COMBO_FORM_LINK') {
-            window.open(url, '_blank');
-            regModal.classList.remove('show');
-        } else {
-            alert('Registration link will be added soon! Please contact coordinators.');
-        }
-    });
-});
-
-// Card click also selects (optional)
-document.querySelectorAll('.reg-option-card').forEach(card => {
-    card.addEventListener('click', (e) => {
-        // Don't trigger if clicking on button
-        if (e.target.classList.contains('reg-select-btn')) return;
-        
-        const btn = card.querySelector('.reg-select-btn');
-        if (btn) {
-            const url = btn.getAttribute('data-url');
-            if (url && url !== 'YOUR_EVENT_FORM_LINK' && url !== 'YOUR_WORKSHOP_FORM_LINK' && url !== 'YOUR_COMBO_FORM_LINK') {
-                window.open(url, '_blank');
-                regModal.classList.remove('show');
-            }
-        }
-    });
-});
+console.log('✅ EVOLIX 2K26 website loaded successfully!');
