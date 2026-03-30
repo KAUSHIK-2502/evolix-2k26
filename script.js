@@ -292,3 +292,85 @@ if (footerYear) {
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
+
+// ===== REGISTRATION MODAL WITH 3 OPTIONS =====
+// Replace these with your actual Google Form links
+const REGISTRATION_LINKS = {
+    event: 'YOUR_EVENT_GOOGLE_FORM_LINK_HERE',
+    workshop: 'YOUR_WORKSHOP_GOOGLE_FORM_LINK_HERE',
+    combo: 'YOUR_COMBO_GOOGLE_FORM_LINK_HERE'
+};
+
+// Get elements
+const regModal = document.getElementById('registrationModal');
+const navRegisterBtn = document.getElementById('navRegisterBtn');
+const modalRegisterBtn = document.getElementById('modalRegisterBtn');
+const closeRegModal = document.getElementById('closeRegModal');
+
+// Open registration modal when Register button is clicked
+if (navRegisterBtn) {
+    navRegisterBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        regModal.classList.add('show');
+    });
+}
+
+// Also handle the register button inside event modals
+if (modalRegisterBtn) {
+    modalRegisterBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Close event modal first
+        document.getElementById('eventModal').classList.remove('show');
+        // Open registration modal
+        regModal.classList.add('show');
+    });
+}
+
+// Close registration modal
+if (closeRegModal) {
+    closeRegModal.addEventListener('click', () => {
+        regModal.classList.remove('show');
+    });
+}
+
+// Close when clicking outside
+if (regModal) {
+    regModal.addEventListener('click', (e) => {
+        if (e.target === regModal) {
+            regModal.classList.remove('show');
+        }
+    });
+}
+
+// Handle option selection
+document.querySelectorAll('.reg-select-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const url = btn.getAttribute('data-url');
+        if (url && url !== 'YOUR_EVENT_FORM_LINK' && url !== 'YOUR_WORKSHOP_FORM_LINK' && url !== 'YOUR_COMBO_FORM_LINK') {
+            window.open(url, '_blank');
+            regModal.classList.remove('show');
+        } else {
+            alert('Registration link will be added soon! Please contact coordinators.');
+        }
+    });
+});
+
+// Card click also selects (optional)
+document.querySelectorAll('.reg-option-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+        // Don't trigger if clicking on button
+        if (e.target.classList.contains('reg-select-btn')) return;
+        
+        const btn = card.querySelector('.reg-select-btn');
+        if (btn) {
+            const url = btn.getAttribute('data-url');
+            if (url && url !== 'YOUR_EVENT_FORM_LINK' && url !== 'YOUR_WORKSHOP_FORM_LINK' && url !== 'YOUR_COMBO_FORM_LINK') {
+                window.open(url, '_blank');
+                regModal.classList.remove('show');
+            }
+        }
+    });
+});
