@@ -122,11 +122,12 @@ const eventDetails = {
         description: 'Battle it out in Free Fire. Solo and squad tournaments with exciting prizes.',
         rules: [
             'Squad: 4 members',
-            'Solo category also available',
+            
             'Room ID provided on spot',
             'No hacks/cheats allowed',
             'Banned players will be disqualified'
         ],
+        fee: '₹100 per squad',
       
        
     },
@@ -140,6 +141,7 @@ const eventDetails = {
             'Tournament bracket',
             '5 minutes per half'
         ],
+        fee: '₹50 per head',
       
     }
 };
