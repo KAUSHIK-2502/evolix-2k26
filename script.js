@@ -193,8 +193,7 @@ document.querySelectorAll('.event-card-luxury').forEach(card => {
             <h3>💰 Registration Fee</h3>
             <p style="color: #FFE600; font-weight: 600;">${event.fee}</p>
             
-            <h3>🏆 Prizes</h3>
-            <p style="color: #FF6D00; white-space: pre-line; font-weight: 500;">${event.prizes}</p>
+           
         `;
         
         document.getElementById('eventModal').classList.add('show');
