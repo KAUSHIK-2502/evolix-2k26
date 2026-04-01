@@ -61,12 +61,12 @@ const eventDetails = {
         type: 'non-technical',
         rules: [
             'Team size: 3 members',
-            'No speaking or lip movement',
+            'Act silently (No speaking or lip movement)',
             'Time limit: 2 minutes per team',
-            'Movies, songs, objects',
-            'One pass available per team'
+            'Player will guess the movie names within given time limit',
+            'One player picks a chit'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Medal\n🥈 2nd Prize: Cash Prize + Medal'
+        prizes: '🥇 1st Prize: Cash Prize + Medal + certificate\n🥈 2nd Prize: Cash Prize + Medal+ certificate'
     },
     'signal-scrambles': {
         name: 'Signal Scrambles',
@@ -79,7 +79,7 @@ const eventDetails = {
             'Multiple difficulty levels',
             'Time bonus for early completion'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Medal\n🥈 2nd Prize: Cash Prize + Medal'
+        prizes: '🥇 1st Prize: Cash Prize + Medal+ certificate\n🥈 2nd Prize: Cash Prize + Medal+ certificate'
     },
     'fun-zone': {
         name: 'Fun Zone',
@@ -105,7 +105,7 @@ const eventDetails = {
             '3 overs per match',
             'Tennis ball used'
         ],
-        prizes: '🏆 Winners: Cash Prize + Medal\n🥈 Runners Up: Cash Prize + Medal'
+        prizes: '🏆 Winners: Cash Prize + Medal+ certificate\n🥈 Runners Up: Cash Prize + Medal+ certificate'
     },
     'carrom': {
         name: 'Carrom',
@@ -118,7 +118,7 @@ const eventDetails = {
             'Best of 3 games',
             'Standard international rules'
         ],
-        prizes: '🏆 Winners: Cash Prize + Medal\n🥈 Runners Up: Cash Prize + Medal'
+        prizes: '🏆 Winners: Cash Prize + Medal+ certificate\n🥈 Runners Up: Cash Prize + Medal+ certificate'
     },
     
     // E-SPORTS
