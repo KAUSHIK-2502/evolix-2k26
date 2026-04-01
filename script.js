@@ -1,8 +1,10 @@
 // ===== EVENT DETAILS DATABASE =====
 const eventDetails = {
+    // TECHNICAL EVENTS - Cash Prize + Certificate
     'paper-vista': {
         name: 'Paper Vista',
         description: 'Present your research papers and innovative ideas. Compete with brightest minds from across the country.',
+        type: 'technical',
         rules: [
             'Team size: 1-3 members',
             'Abstract submission required by March 30, 2026',
@@ -10,12 +12,12 @@ const eventDetails = {
             'Original research only',
             'PPT format: 16:9'
         ],
-        fee: '₹200 per head',
-        
+        prizes: '🥇 1st Prize: Cash Prize + Certificate+ shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     'project-expo': {
         name: 'Project Expo',
         description: 'Showcase your innovative projects. Get feedback from industry experts and compete for recognition.',
+        type: 'technical',
         rules: [
             'Team size: 1-4 members',
             'Working model/prototype required',
@@ -23,12 +25,12 @@ const eventDetails = {
             'Innovation and practicality judged',
             'A0 size poster optional'
         ],
-        fee: '₹200 per head',
-      
+        prizes: '🥇 1st Prize: Cash Prize + Certificate+ shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     'brain-chain': {
         name: 'Brain Chain',
         description: 'Connect the dots! A challenging event that tests your logical thinking and problem-solving skills.',
+        type: 'technical',
         rules: [
             'Team size: 2 members',
             'Multiple rounds',
@@ -36,12 +38,12 @@ const eventDetails = {
             'Finals - Buzzer round',
             'No negative marking'
         ],
-        fee: '₹200 per head',
-        
+        prizes: '🥇 1st Prize: Cash Prize + Certificate+ shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     'quiz-arena': {
         name: 'Quiz Arena',
         description: 'Test your technical knowledge. Multiple rounds covering various domains of engineering.',
+        type: 'technical',
         rules: [
             'Team size: 2 members',
             'Topics: Core EEE, Aptitude, Current affairs',
@@ -49,25 +51,27 @@ const eventDetails = {
             'Finals - Stage round',
             'Buzzer round for finalists'
         ],
-        fee: '₹200 per head',
-       
+        prizes: '🥇 1st Prize: Cash Prize + Certificate + shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
+    
+    // NON-TECHNICAL EVENTS - Cash Prize + Medal
     'dumb-charades': {
         name: 'Dumb Charades',
         description: 'Act it out! Fun-filled game of gestures and guessing. Team event that guarantees laughter.',
+        type: 'non-technical',
         rules: [
-            'Team size: 4 members',
+            'Team size: 3 members',
             'No speaking or lip movement',
             'Time limit: 2 minutes per team',
-            'Movies, songs, TV shows only',
+            'Movies, songs, objects',
             'One pass available per team'
         ],
-        fee: '₹200 per head',
-       
+        prizes: '🥇 1st Prize: Cash Prize + Medal\n🥈 2nd Prize: Cash Prize + Medal'
     },
     'signal-scrambles': {
         name: 'Signal Scrambles',
         description: 'Decode the signals! Test your communication skills in this exciting and challenging game.',
+        type: 'non-technical',
         rules: [
             'Team size: 2 members',
             'One sender, one receiver',
@@ -75,12 +79,12 @@ const eventDetails = {
             'Multiple difficulty levels',
             'Time bonus for early completion'
         ],
-        fee: '₹200 per head',
-       
+        prizes: '🥇 1st Prize: Cash Prize + Medal\n🥈 2nd Prize: Cash Prize + Medal'
     },
     'fun-zone': {
         name: 'Fun Zone',
         description: 'Multiple fun games and activities. Take a break and enjoy with friends.',
+        type: 'non-technical',
         rules: [
             'Individual event',
             'Multiple mini-games',
@@ -88,12 +92,12 @@ const eventDetails = {
             'Games: Ring toss, Stack up, Memory test',
             'Cumulative scoring'
         ],
-        fee: '₹200 per head',
-       
+        prizes: 'SURPRISE GIFTS🎁'
     },
     'box-cricket': {
         name: 'Box Cricket',
         description: 'Exciting box cricket tournament. Show your cricketing skills in this indoor format.',
+        type: 'non-technical',
         rules: [
             'Team size: 5 members',
             'Tournament format',
@@ -101,12 +105,12 @@ const eventDetails = {
             '3 overs per match',
             'Tennis ball used'
         ],
-        fee: '₹200 per head',
-       
+        prizes: '🏆 Winners: Cash Prize + Medal\n🥈 Runners Up: Cash Prize + Medal'
     },
     'carrom': {
         name: 'Carrom',
         description: 'Classic carrom tournament. Compete in doubles format.',
+        type: 'non-technical',
         rules: [
             'Team size: 2 members (doubles)',
             'Tournament format',
@@ -114,12 +118,14 @@ const eventDetails = {
             'Best of 3 games',
             'Standard international rules'
         ],
-        fee: '₹200 per head',
-      
+        prizes: '🏆 Winners: Cash Prize + Medal\n🥈 Runners Up: Cash Prize + Medal'
     },
+    
+    // E-SPORTS
     'free-fire': {
         name: 'Free Fire',
         description: 'Battle it out in Free Fire. Solo and squad tournaments with exciting prizes.',
+        type: 'non-technical',
         rules: [
             'Squad: 4 members',
             
@@ -127,25 +133,22 @@ const eventDetails = {
             'No hacks/cheats allowed',
             'Banned players will be disqualified'
         ],
-        fee: '₹100 per squad',
-      
-       
+        prizes: '🏆 Squad Winners: Cash Prize'
     },
     'e-football': {
         name: 'E-Football',
         description: 'Virtual football tournament. Show your gaming skills on the virtual pitch.',
+        type: 'non-technical',
         rules: [
             '1v1 matches',
-            'Platform: PS5/PC',
+            'Platform: MOBILE/PC',
             'Game: eFootball PES',
             'Tournament bracket',
             '5 minutes per half'
         ],
-        fee: '₹50 per head',
-      
+        prizes: '🥇 Winner: Cash Prize'
     }
 };
-
 // ===== COUNTDOWN TIMER =====
 function updateCountdown() {
     const eventDate = new Date('April 10, 2026 09:00:00').getTime();
