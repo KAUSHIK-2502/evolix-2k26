@@ -95,10 +95,10 @@ const eventDetails = {
         name: 'Box Cricket',
         description: 'Exciting box cricket tournament. Show your cricketing skills in this indoor format.',
         rules: [
-            'Team size: 5-7 members',
+            'Team size: 5 members',
             'Tournament format',
             'Knockout rounds',
-            '5 overs per match',
+            '3 overs per match',
             'Tennis ball used'
         ],
         fee: '₹200 per head',
