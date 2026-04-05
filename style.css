@@ -1458,3 +1458,288 @@ body {
     }
 }
 
+/* ===== COMPLETE MOBILE FIX - ADD AT THE VERY END ===== */
+
+/* Force all cards to stack vertically on mobile */
+@media (max-width: 768px) {
+    /* Fix grid layouts - force single column */
+    .events-grid-premium,
+    .esports-games-grid,
+    .contact-grid-luxury,
+    .reg-options-container {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Fix event cards */
+    .event-card-luxury {
+        width: 100% !important;
+        margin: 0 0 1rem 0 !important;
+        padding: 1.2rem !important;
+    }
+    
+    .event-card-luxury h3 {
+        font-size: 1.2rem !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    
+    .event-card-luxury p {
+        text-align: center !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .card-more {
+        text-align: center !important;
+        display: block !important;
+    }
+    
+    /* Fix eSports cards */
+    .esports-game-card-premium {
+        width: 100% !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Fix contact cards */
+    .contact-card {
+        width: 100% !important;
+        margin-bottom: 1rem !important;
+        padding: 1.2rem !important;
+    }
+    
+    .contact-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.5rem !important;
+    }
+    
+    /* Fix agenda/schedule */
+    .agenda-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0.8rem !important;
+    }
+    
+    .agenda-time {
+        margin-bottom: 0.3rem !important;
+    }
+    
+    .agenda-event {
+        flex-wrap: wrap !important;
+    }
+    
+    .event-sub {
+        margin-left: 0 !important;
+        margin-top: 0.3rem !important;
+    }
+    
+    /* Fix workshop section */
+    .workshop-luxury {
+        padding: 1.2rem !important;
+    }
+    
+    .workshop-tag {
+        font-size: 0.9rem !important;
+        padding: 0.4rem 1.2rem !important;
+    }
+    
+    .workshop-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Fix section headings */
+    .section-heading {
+        font-size: 1.3rem !important;
+        justify-content: center !important;
+        text-align: center !important;
+        flex-wrap: wrap !important;
+    }
+    
+    /* Fix meta info */
+    .meta-luxury {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .meta-item {
+        justify-content: center !important;
+    }
+    
+    /* Fix countdown */
+    .countdown-luxury {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 0.8rem !important;
+        padding: 0.8rem !important;
+    }
+    
+    .luxury-item {
+        min-width: 60px !important;
+    }
+    
+    .luxury-number {
+        font-size: 1.6rem !important;
+    }
+    
+    /* Fix pricing cards */
+    .price-card-premium {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    /* Fix combo offer */
+    .combo-price {
+        transform: scale(1) !important;
+    }
+    
+    /* Fix modal on mobile */
+    .modal-content-luxury {
+        width: 95% !important;
+        padding: 1.2rem !important;
+        margin: 1rem !important;
+    }
+    
+    .modal-body-luxury h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .modal-body-luxury h3 {
+        font-size: 1rem !important;
+    }
+    
+    .modal-body-luxury li {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Fix info chips */
+    .info-luxury {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.8rem !important;
+    }
+    
+    .info-chip {
+        width: 90% !important;
+        justify-content: center !important;
+    }
+    
+    /* Fix hero section */
+    .hero-content {
+        text-align: center !important;
+        padding: 0 !important;
+    }
+    
+    .institution-badge {
+        justify-content: center !important;
+    }
+    
+    .college-name {
+        font-size: 1.2rem !important;
+    }
+    
+    .dept-title {
+        font-size: 1rem !important;
+    }
+    
+    .evolix-lux {
+        max-width: 180px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Fix session headers */
+    .session-header {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .session-header h3 {
+        font-size: 1rem !important;
+    }
+    
+    /* Fix break items */
+    .break-item {
+        margin: 0.5rem 0 !important;
+    }
+}
+
+/* Extra small phones (below 480px) */
+@media (max-width: 480px) {
+    .college-name {
+        font-size: 1rem !important;
+    }
+    
+    .dept-title {
+        font-size: 0.9rem !important;
+    }
+    
+    .symposium-type {
+        font-size: 0.6rem !important;
+    }
+    
+    .luxury-number {
+        font-size: 1.3rem !important;
+    }
+    
+    .luxury-label {
+        font-size: 0.5rem !important;
+    }
+    
+    .price-value {
+        font-size: 1.2rem !important;
+    }
+    
+    .price-label {
+        font-size: 0.6rem !important;
+    }
+    
+    .event-card-luxury h3 {
+        font-size: 1rem !important;
+    }
+    
+    .event-card-luxury p {
+        font-size: 0.75rem !important;
+    }
+    
+    .section-heading {
+        font-size: 1.1rem !important;
+    }
+    
+    .agenda-time {
+        font-size: 0.7rem !important;
+    }
+    
+    .agenda-event span {
+        font-size: 0.8rem !important;
+    }
+    
+    .workshop-tag {
+        font-size: 0.8rem !important;
+    }
+    
+    .workshop-desc {
+        font-size: 0.75rem !important;
+    }
+}
+
+/* Fix for tablet devices (between 768px and 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .events-grid-premium {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .hero-grid {
+        gap: 2rem !important;
+    }
+    
+    .college-name {
+        font-size: 1.5rem !important;
+    }
+    
+    .dept-title {
+        font-size: 1.5rem !important;
+    }
+}
