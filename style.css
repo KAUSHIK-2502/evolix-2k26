@@ -2593,3 +2593,13 @@ body {
     box-shadow: 0 20px 40px rgba(255, 230, 0, 0.2);
     cursor: pointer;
 }
+
+/* WhatsApp link in modal */
+.modal-body-luxury a[href*="whatsapp"] {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.modal-body-luxury a[href*="whatsapp"]:hover {
+    text-decoration: underline;
+}
