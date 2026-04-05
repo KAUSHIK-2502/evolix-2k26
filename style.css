@@ -2293,3 +2293,290 @@ body {
         font-size: 2rem;
     }
 }
+
+
+/* ===== ESPORTS PREMIUM SECTION - MATCHING WEBSITE VIBE ===== */
+.esports-schedule-premium {
+    margin: 4rem 0;
+}
+
+.esports-premium-container {
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+    border: 1px solid rgba(255, 230, 0, 0.2);
+    border-radius: 30px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Banner */
+.esports-header-banner {
+    background: linear-gradient(135deg, rgba(255, 230, 0, 0.15), rgba(255, 109, 0, 0.1));
+    border-radius: 60px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(255, 230, 0, 0.3);
+}
+
+.esports-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.esports-header-content i {
+    color: #FFE600;
+    font-size: 1.2rem;
+}
+
+.esports-header-content span {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* WhatsApp Card */
+.esports-whatsapp-card {
+    background: linear-gradient(135deg, #1f1f1f, #181818);
+    border-radius: 20px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.esports-whatsapp-card:hover {
+    border-color: #25D366;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.15);
+}
+
+.wa-icon i {
+    font-size: 2.5rem;
+    color: #25D366;
+}
+
+.wa-content h4 {
+    color: #FFE600;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.wa-content p {
+    color: #b0b0b0;
+    font-size: 0.8rem;
+}
+
+.wa-button {
+    background: #25D366;
+    color: #121212;
+    padding: 0.7rem 1.5rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.wa-button:hover {
+    background: #128C7E;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Games Grid */
+.esports-games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.esports-game-card-premium {
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+    border: 1px solid rgba(255, 230, 0, 0.15);
+    border-radius: 24px;
+    padding: 1.8rem;
+    position: relative;
+    transition: all 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+}
+
+.esports-game-card-premium:hover {
+    transform: translateY(-8px);
+    border-color: #FFE600;
+    box-shadow: 0 20px 40px rgba(255, 230, 0, 0.15);
+}
+
+.game-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 230, 0, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.esports-game-card-premium:hover .game-glow {
+    opacity: 1;
+}
+
+.game-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.game-icon i {
+    font-size: 2.5rem;
+    color: #FF6D00;
+}
+
+.game-badge {
+    background: rgba(255, 109, 0, 0.2);
+    color: #FF6D00;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.esports-game-card-premium h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FFE600;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.game-time-slot {
+    background: rgba(255, 230, 0, 0.1);
+    border-radius: 40px;
+    padding: 0.5rem;
+    margin-bottom: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: auto;
+    justify-content: center;
+}
+
+.game-time-slot i {
+    color: #FFE600;
+    font-size: 0.9rem;
+}
+
+.game-time-slot span {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.game-details-premium {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    color: #b0b0b0;
+    font-size: 0.85rem;
+}
+
+.detail-item i {
+    color: #FF6D00;
+    width: 20px;
+}
+
+.detail-item.prize {
+    color: #FFE600;
+    font-weight: 600;
+}
+
+.detail-item.prize i {
+    color: #FFE600;
+}
+
+/* Info Note */
+.esports-info-note {
+    background: rgba(255, 230, 0, 0.05);
+    border-radius: 16px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    border: 1px solid rgba(255, 230, 0, 0.15);
+}
+
+.esports-info-note i {
+    color: #FF6D00;
+    font-size: 1rem;
+}
+
+.esports-info-note span {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .esports-premium-container {
+        padding: 1.2rem;
+    }
+    
+    .esports-games-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .esports-whatsapp-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .esports-game-card-premium {
+        padding: 1.2rem;
+    }
+    
+    .esports-game-card-premium h3 {
+        font-size: 1.3rem;
+    }
+    
+    .game-icon i {
+        font-size: 2rem;
+    }
+    
+    .esports-header-content {
+        gap: 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .wa-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
