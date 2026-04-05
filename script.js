@@ -141,8 +141,8 @@ const eventDetails = {
         type: 'non-technical',
         rules: [
             '1v1 matches',
-            'Platform: MOBILE/PC',
-            'Game: eFootball PES',
+            'Platform: MOBILE',
+            'Game: eFootball ',
             'Tournament bracket',
             '5 minutes per half'
         ],
