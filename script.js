@@ -12,7 +12,7 @@ const eventDetails = {
             'Original research only',
             'PPT format: 16:9'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Certificate+ shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Certificate + Shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     'project-expo': {
         name: 'Project Expo',
@@ -25,7 +25,7 @@ const eventDetails = {
             'Innovation and practicality judged',
             'A0 size poster optional'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Certificate+ shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Certificate + Shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     'brain-chain': {
         name: 'Brain Chain',
@@ -38,7 +38,7 @@ const eventDetails = {
             'Finals - Buzzer round',
             'No negative marking'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Certificate+ shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Certificate + Shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     'quiz-arena': {
         name: 'Quiz Arena',
@@ -51,7 +51,7 @@ const eventDetails = {
             'Finals - Stage round',
             'Buzzer round for finalists'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Certificate + shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Certificate + Shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     
     // NON-TECHNICAL EVENTS - Cash Prize + Medal
@@ -66,7 +66,7 @@ const eventDetails = {
             'Player will guess the movie names within given time limit',
             'One player picks a chit'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Medal + certificate\n🥈 2nd Prize: Cash Prize + Medal+ certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Medal + Certificate\n🥈 2nd Prize: Cash Prize + Medal + Certificate'
     },
     'signal-scrambles': {
         name: 'Signal Scrambles',
@@ -79,7 +79,7 @@ const eventDetails = {
             'Multiple difficulty levels',
             'Time bonus for early completion'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Medal+ certificate\n🥈 2nd Prize: Cash Prize + Medal+ certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Medal + Certificate\n🥈 2nd Prize: Cash Prize + Medal + Certificate'
     },
     'fun-zone': {
         name: 'Fun Zone',
@@ -105,7 +105,7 @@ const eventDetails = {
             '3 overs per match',
             'Tennis ball used'
         ],
-        prizes: '🏆 Winners: Cash Prize + Medal+ certificate\n🥈 Runners Up: Cash Prize + Medal+ certificate'
+        prizes: '🏆 Winners: Cash Prize + Medal + Certificate\n🥈 Runners Up: Cash Prize + Medal + Certificate'
     },
     'carrom': {
         name: 'Carrom',
@@ -118,10 +118,11 @@ const eventDetails = {
             'Best of 3 games',
             'Standard international rules'
         ],
-        prizes: '🏆 Winners: Cash Prize + Medal+ certificate\n🥈 Runners Up: Cash Prize + Medal+ certificate'
-    },
-    
-   // ===== E-SPORTS EVENT DETAILS =====
+        prizes: '🏆 Winners: Cash Prize + Medal + Certificate\n🥈 Runners Up: Cash Prize + Medal + Certificate'
+    }
+};
+
+// ===== E-SPORTS EVENT DETAILS =====
 const esportsDetails = {
     'free-fire': {
         name: 'Free Fire Tournament',
@@ -130,7 +131,6 @@ const esportsDetails = {
             '📅 Date: April 09, 2026',
             '⏰ Time: 7:00 PM - 09:00 PM',
             '👥 Squad: 4 members per team',
-           
             '📍 Platform: Mobile (Android/iOS)',
             '🔑 Room ID will be shared on WhatsApp group',
             '⚠️ No hacks/cheats allowed',
@@ -147,7 +147,7 @@ const esportsDetails = {
             '⏰ Time: 8:00 PM - 9:00 PM',
             '👤 1v1 matches',
             '🎮 Platform: PS5 / PC / Mobile',
-            '⚽ Game: eFootball  FC Mobile',
+            '⚽ Game: eFootball / FC Mobile',
             '🏆 Tournament bracket format',
             '⏱️ 5 minutes per half',
             '🔑 Room ID will be shared on WhatsApp group'
@@ -156,6 +156,71 @@ const esportsDetails = {
         whatsapp: 'https://chat.whatsapp.com/IsjBvfqpKE5CrDPh04kevP?mode=gi_t'
     }
 };
+
+// ===== COUNTDOWN TIMER =====
+function updateCountdown() {
+    const eventDate = new Date('April 10, 2026 09:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+    
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+        console.log('Countdown elements not found');
+        return;
+    }
+    
+    if (distance < 0) {
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
+        return;
+    }
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    daysEl.textContent = String(days).padStart(2, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minutesEl.textContent = String(minutes).padStart(2, '0');
+    secondsEl.textContent = String(seconds).padStart(2, '0');
+}
+
+// Run countdown
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ===== EVENT CLICK HANDLER =====
+document.querySelectorAll('.event-card-luxury').forEach(card => {
+    card.addEventListener('click', function() {
+        const eventKey = this.dataset.event;
+        const event = eventDetails[eventKey];
+        
+        if (!event) return;
+        
+        const modalBody = document.getElementById('modalBody');
+        modalBody.innerHTML = `
+            <h2>⚡ ${event.name} ⚡</h2>
+            <p style="color: #e0e0e0; margin-bottom: 1.5rem;">${event.description}</p>
+            
+            <h3>📋 Rules & Guidelines</h3>
+            <ul>
+                ${event.rules.map(rule => `<li>${rule}</li>`).join('')}
+            </ul>
+            
+            <h3>🏆 Prizes</h3>
+            <p style="color: #FF6D00; white-space: pre-line; font-weight: 500;">${event.prizes}</p>
+        `;
+        
+        document.getElementById('eventModal').classList.add('show');
+    });
+});
 
 // ===== E-SPORTS CARD CLICK HANDLER =====
 document.querySelectorAll('.clickable-card').forEach(card => {
@@ -189,59 +254,7 @@ document.querySelectorAll('.clickable-card').forEach(card => {
         document.getElementById('eventModal').classList.add('show');
     });
 });
-// ===== COUNTDOWN TIMER =====
-function updateCountdown() {
-    const eventDate = new Date('April 10, 2026 09:00:00').getTime();
-    const now = new Date().getTime();
-    const distance = eventDate - now;
-    
-    if (distance < 0) {
-        document.getElementById('days').textContent = '00';
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
-        return;
-    }
-    
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-}
 
-setInterval(updateCountdown, 1000);
-updateCountdown();
-
-// ===== EVENT CLICK HANDLER =====
-document.querySelectorAll('.event-card-luxury').forEach(card => {
-    card.addEventListener('click', function() {
-        const eventKey = this.dataset.event;
-        const event = eventDetails[eventKey];
-        
-        if (!event) return;
-        
-        const modalBody = document.getElementById('modalBody');
-        modalBody.innerHTML = `
-            <h2>⚡ ${event.name} ⚡</h2>
-            <p style="color: #e0e0e0; margin-bottom: 1.5rem;">${event.description}</p>
-            
-            <h3>📋 Rules & Guidelines</h3>
-            <ul>
-                ${event.rules.map(rule => `<li>${rule}</li>`).join('')}
-            </ul>
-            
-            <h3>🏆 Prizes</h3>
-            <p style="color: #FF6D00; white-space: pre-line; font-weight: 500;">${event.prizes}</p>
-        `;
-        
-        document.getElementById('eventModal').classList.add('show');
-    });
-});
 // ===== EVENT MODAL CONTROLS =====
 const closeEventModal = document.getElementById('closeEventModal');
 const cancelEventModal = document.getElementById('cancelEventModal');
@@ -273,20 +286,15 @@ const navRegisterBtn = document.getElementById('navRegisterBtn');
 const eventModalRegisterBtn = document.getElementById('eventModalRegisterBtn');
 const closeRegModal = document.getElementById('closeRegModal');
 
-// IMPORTANT: This opens the 3-option modal, NOT direct Google Form
 if (navRegisterBtn) {
     navRegisterBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        console.log('Register clicked - opening options modal');
         if (regModal) {
             regModal.classList.add('show');
-        } else {
-            alert('Registration modal not found. Please check HTML.');
         }
     });
 }
 
-// Handle Register button inside event modal
 if (eventModalRegisterBtn) {
     eventModalRegisterBtn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -297,14 +305,12 @@ if (eventModalRegisterBtn) {
     });
 }
 
-// Close registration modal
 if (closeRegModal) {
     closeRegModal.addEventListener('click', () => {
         regModal.classList.remove('show');
     });
 }
 
-// Close when clicking outside
 if (regModal) {
     regModal.addEventListener('click', (e) => {
         if (e.target === regModal) {
@@ -313,20 +319,19 @@ if (regModal) {
     });
 }
 
-// Handle registration option selection - Opens respective Google Form
+// Handle registration option selection
 document.querySelectorAll('.reg-select-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         
         const url = btn.getAttribute('data-url');
-        console.log('Opening form:', url);
         
         if (url && url !== 'YOUR_EVENT_FORM_LINK' && url !== 'YOUR_WORKSHOP_FORM_LINK' && url !== 'YOUR_COMBO_FORM_LINK') {
             window.open(url, '_blank');
             regModal.classList.remove('show');
         } else {
-            alert('⚠️ Registration link will be added soon!\n\nPlease contact: KARTHIKEYAN R - 9080252129');
+            alert('⚠️ Please contact: KARTHIKEYAN R - 9080252129');
         }
     });
 });
@@ -374,5 +379,4 @@ if (footerYear) {
     footerYear.innerHTML = footerYear.innerHTML.replace('2026', currentYear);
 }
 
-console.log('✅ EVOLIX 2K26 loaded - Register button shows 3 options modal');
-
+console.log('✅ EVOLIX 2K26 loaded successfully!');
