@@ -2580,3 +2580,16 @@ body {
         justify-content: center;
     }
 }
+
+/* Make eSports cards clickable */
+.clickable-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clickable-card:hover {
+    transform: translateY(-8px);
+    border-color: #FFE600;
+    box-shadow: 0 20px 40px rgba(255, 230, 0, 0.2);
+    cursor: pointer;
+}
