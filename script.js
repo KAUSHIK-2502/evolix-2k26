@@ -121,34 +121,74 @@ const eventDetails = {
         prizes: '🏆 Winners: Cash Prize + Medal+ certificate\n🥈 Runners Up: Cash Prize + Medal+ certificate'
     },
     
-    // E-SPORTS
+   // ===== E-SPORTS EVENT DETAILS =====
+const esportsDetails = {
     'free-fire': {
-        name: 'Free Fire',
-        description: 'Battle it out in Free Fire. Solo and squad tournaments with exciting prizes.',
-        type: 'non-technical',
+        name: 'Free Fire Tournament',
+        description: 'Battle it out in Free Fire. Compete in both Squad and Solo categories for exciting prizes.',
         rules: [
-            'Squad: 4 members',
-            
-            'Room ID provided on spot',
-            'No hacks/cheats allowed',
-            'Banned players will be disqualified'
+            '📅 Date: April 9, 2026',
+            '⏰ Time: 7:00 PM - 8:00 PM',
+            '👥 Squad: 4 members per team',
+            '🎮 Solo category also available',
+            '📍 Platform: Mobile (Android/iOS)',
+            '🔑 Room ID will be shared on WhatsApp group',
+            '⚠️ No hacks/cheats allowed',
+            '❌ Banned players will be disqualified'
         ],
-        prizes: '🏆 Squad Winners: Cash Prize'
+        prizes: '🏆 Squad Winners: Cash Prize + Medal\n🥈 Squad Runners: Cash Prize + Medal\n🎮 Solo Winner: Cash Prize + Medal',
+        whatsapp: 'https://chat.whatsapp.com/IsjBvfqpKE5CrDPh04kevP?mode=gi_t'
     },
     'e-football': {
-        name: 'E-Football',
+        name: 'E-Football Tournament',
         description: 'Virtual football tournament. Show your gaming skills on the virtual pitch.',
-        type: 'non-technical',
         rules: [
-            '1v1 matches',
-            'Platform: MOBILE',
-            'Game: eFootball ',
-            'Tournament bracket',
-            '5 minutes per half'
+            '📅 Date: April 9, 2026',
+            '⏰ Time: 8:00 PM - 9:00 PM',
+            '👤 1v1 matches',
+            '🎮 Platform: PS5 / PC / Mobile',
+            '⚽ Game: eFootball PES / FC Mobile',
+            '🏆 Tournament bracket format',
+            '⏱️ 5 minutes per half',
+            '🔑 Room ID will be shared on WhatsApp group'
         ],
-        prizes: '🥇 Winner: Cash Prize'
+        prizes: '🥇 Winner: Cash Prize + Medal\n🥈 Runner: Cash Prize + Medal',
+        whatsapp: 'https://chat.whatsapp.com/IsjBvfqpKE5CrDPh04kevP?mode=gi_t'
     }
 };
+
+// ===== E-SPORTS CARD CLICK HANDLER =====
+document.querySelectorAll('.clickable-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const esportKey = this.dataset.esport;
+        const esport = esportsDetails[esportKey];
+        
+        if (!esport) return;
+        
+        const modalBody = document.getElementById('modalBody');
+        modalBody.innerHTML = `
+            <h2>🎮 ${esport.name} 🎮</h2>
+            <p style="color: #e0e0e0; margin-bottom: 1.5rem;">${esport.description}</p>
+            
+            <h3>📋 Rules & Guidelines</h3>
+            <ul>
+                ${esport.rules.map(rule => `<li>${rule}</li>`).join('')}
+            </ul>
+            
+            <h3>🏆 Prizes</h3>
+            <p style="color: #FF6D00; white-space: pre-line; font-weight: 500;">${esport.prizes}</p>
+            
+            <h3>📱 Join WhatsApp Group</h3>
+            <p style="color: #25D366;">
+                <i class="fab fa-whatsapp"></i> 
+                <a href="${esport.whatsapp}" target="_blank" style="color: #25D366;">Click here to join WhatsApp group</a>
+                <br>for Room ID, brackets and live updates
+            </p>
+        `;
+        
+        document.getElementById('eventModal').classList.add('show');
+    });
+});
 // ===== COUNTDOWN TIMER =====
 function updateCountdown() {
     const eventDate = new Date('April 10, 2026 09:00:00').getTime();
@@ -335,3 +375,4 @@ if (footerYear) {
 }
 
 console.log('✅ EVOLIX 2K26 loaded - Register button shows 3 options modal');
+
