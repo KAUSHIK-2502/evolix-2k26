@@ -1894,3 +1894,153 @@ body {
         padding: 0.7rem 1rem;
     }
 }
+
+/* ===== AGENDA/SCHEDULE SECTION ===== */
+.agenda-premium {
+    margin: 3rem 0;
+}
+
+.agenda-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.agenda-session {
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+    border: 1px solid rgba(255, 230, 0, 0.2);
+    border-radius: 30px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.agenda-session:hover {
+    border-color: #FFE600;
+    box-shadow: 0 10px 30px rgba(255, 230, 0, 0.1);
+}
+
+.session-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 230, 0, 0.3);
+}
+
+.session-header i {
+    font-size: 1.8rem;
+    color: #FFE600;
+}
+
+.session-header h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.agenda-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.agenda-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.agenda-item:hover {
+    background: rgba(255, 230, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.agenda-time {
+    min-width: 120px;
+    font-weight: 600;
+    color: #FF6D00;
+    font-size: 0.9rem;
+}
+
+.agenda-event {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.agenda-event i {
+    font-size: 1.1rem;
+    color: #FFE600;
+    width: 24px;
+}
+
+.agenda-event span {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.event-sub {
+    display: block;
+    width: 100%;
+    margin-left: 32px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.break-item {
+    background: rgba(255, 109, 0, 0.1);
+    border-left: 3px solid #FF6D00;
+}
+
+.workshop-session {
+    border: 2px solid #FF6D00;
+    background: linear-gradient(145deg, #1f1f1f, #171717);
+}
+
+.workshop-item {
+    background: rgba(255, 109, 0, 0.15);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .agenda-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .agenda-time {
+        min-width: auto;
+        font-size: 0.8rem;
+        background: rgba(255, 109, 0, 0.2);
+        padding: 0.2rem 0.8rem;
+        border-radius: 20px;
+    }
+    
+    .agenda-event {
+        margin-left: 0;
+    }
+    
+    .event-sub {
+        margin-left: 0;
+    }
+    
+    .session-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .session-header i {
+        font-size: 1.3rem;
+    }
+    
+    .agenda-session {
+        padding: 1rem;
+    }
+}
