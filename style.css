@@ -2121,3 +2121,175 @@ body {
         padding: 1rem;
     }
 }
+
+
+/* ===== ESPORTS SEPARATE SCHEDULE ===== */
+.esports-schedule-premium {
+    margin: 3rem 0;
+}
+
+.esports-schedule-container {
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+    border: 2px solid #25D366;
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.1);
+}
+
+.esports-date-banner {
+    background: rgba(37, 211, 102, 0.15);
+    border-radius: 60px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #25D366;
+}
+
+.esports-date-banner i {
+    font-size: 1.2rem;
+}
+
+.esports-date-banner span {
+    font-size: 1rem;
+}
+
+.esports-wa-banner {
+    background: #25D366;
+    border-radius: 60px;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.esports-wa-banner:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.esports-wa-banner i {
+    font-size: 1.5rem;
+    color: #121212;
+    margin-right: 0.5rem;
+}
+
+.esports-wa-banner a {
+    color: #121212;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.esports-tournament-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.esports-game-card {
+    background: rgba(37, 211, 102, 0.1);
+    border-radius: 24px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.esports-game-card:hover {
+    transform: translateY(-5px);
+    border-color: #25D366;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2);
+}
+
+.game-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.esports-game-card h3 {
+    font-size: 1.5rem;
+    color: #FFE600;
+    margin-bottom: 1rem;
+}
+
+.game-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.game-time, .game-format, .game-prize {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    border-radius: 20px;
+}
+
+.game-time {
+    color: #FF6D00;
+    font-weight: 600;
+}
+
+.game-format {
+    color: #b0b0b0;
+}
+
+.game-prize {
+    color: #FFE600;
+    font-weight: 600;
+}
+
+.esports-note {
+    background: rgba(255, 230, 0, 0.1);
+    border-radius: 16px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #FFE600;
+    margin-top: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .esports-schedule-container {
+        padding: 1rem;
+    }
+    
+    .esports-date-banner {
+        gap: 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .esports-date-banner span {
+        font-size: 0.8rem;
+    }
+    
+    .esports-wa-banner a {
+        font-size: 0.85rem;
+    }
+    
+    .esports-tournament-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .esports-game-card {
+        padding: 1rem;
+    }
+    
+    .esports-game-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .game-icon {
+        font-size: 2rem;
+    }
+}
