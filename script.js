@@ -125,34 +125,34 @@ const eventDetails = {
 const esportsDetails = {
     'free-fire': {
         name: 'Free Fire Tournament',
-        description: 'Battle it out in Free Fire. Compete in both Squad and Solo categories for exciting prizes.',
+        description: 'Battle it out in Free Fire. Compete in Squad for exciting prizes.',
         rules: [
-            '📅 Date: April 9, 2026',
-            '⏰ Time: 7:00 PM - 8:00 PM',
+            '📅 Date: April 09, 2026',
+            '⏰ Time: 7:00 PM - 09:00 PM',
             '👥 Squad: 4 members per team',
-            '🎮 Solo category also available',
+           
             '📍 Platform: Mobile (Android/iOS)',
             '🔑 Room ID will be shared on WhatsApp group',
             '⚠️ No hacks/cheats allowed',
             '❌ Banned players will be disqualified'
         ],
-        prizes: '🏆 Squad Winners: Cash Prize + Medal\n🥈 Squad Runners: Cash Prize + Medal\n🎮 Solo Winner: Cash Prize + Medal',
+        prizes: '🏆 Squad Winners: Cash Prize',
         whatsapp: 'https://chat.whatsapp.com/IsjBvfqpKE5CrDPh04kevP?mode=gi_t'
     },
     'e-football': {
         name: 'E-Football Tournament',
         description: 'Virtual football tournament. Show your gaming skills on the virtual pitch.',
         rules: [
-            '📅 Date: April 9, 2026',
+            '📅 Date: April 09, 2026',
             '⏰ Time: 8:00 PM - 9:00 PM',
             '👤 1v1 matches',
             '🎮 Platform: PS5 / PC / Mobile',
-            '⚽ Game: eFootball PES / FC Mobile',
+            '⚽ Game: eFootball  FC Mobile',
             '🏆 Tournament bracket format',
             '⏱️ 5 minutes per half',
             '🔑 Room ID will be shared on WhatsApp group'
         ],
-        prizes: '🥇 Winner: Cash Prize + Medal\n🥈 Runner: Cash Prize + Medal',
+        prizes: '🥇 Winner: Cash Prize',
         whatsapp: 'https://chat.whatsapp.com/IsjBvfqpKE5CrDPh04kevP?mode=gi_t'
     }
 };
