@@ -1743,3 +1743,65 @@ body {
         font-size: 1.5rem !important;
     }
 }
+
+/* ===== FIX MODAL SCROLLING ON MOBILE ===== */
+@media (max-width: 768px) {
+    /* Make modal scrollable */
+    .modal-luxury {
+        align-items: flex-start !important;
+        overflow-y: auto !important;
+        padding: 0.5rem !important;
+    }
+    
+    .modal-content-luxury.registration-modal {
+        max-height: 95vh !important;
+        overflow-y: auto !important;
+        display: block !important;
+        margin: 0.5rem auto !important;
+        padding: 1rem !important;
+    }
+    
+    /* Ensure body doesn't block scrolling */
+    body.modal-open {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100% !important;
+    }
+    
+    /* Make all cards visible */
+    .reg-options-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        margin: 0.5rem 0 1rem 0 !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
+    /* Ensure combo card is visible */
+    .reg-option-card.combo-highlight {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Fix modal body */
+    .modal-body-luxury {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+    
+    /* Make close button sticky */
+    .modal-close-luxury {
+        position: sticky !important;
+        top: 0 !important;
+        right: 0 !important;
+        float: right !important;
+        z-index: 10 !important;
+        background: rgba(18, 18, 18, 0.9) !important;
+        border-radius: 50% !important;
+        width: 30px !important;
+        height: 30px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.2rem !important;
+    }
+}
