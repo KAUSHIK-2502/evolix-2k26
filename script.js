@@ -131,10 +131,12 @@ const esportsDetails = {
             '📅 Date: April 09, 2026',
             '⏰ Time: 7:00 PM - 09:00 PM',
             '👥 Squad: 4 members per team',
+            '🎮 Match Type: Normal/OneTap Matches',
+            '🗺️ Map: Bermuda',
             '📍 Platform: Mobile (Android/iOS)',
             '🔑 Room ID will be shared on WhatsApp group',
             '⚠️ No hacks/cheats allowed',
-            '❌ Banned players will be disqualified'
+           
         ],
         prizes: '🏆 Squad Winners: Cash Prize',
         whatsapp: 'https://chat.whatsapp.com/IsjBvfqpKE5CrDPh04kevP?mode=gi_t'
