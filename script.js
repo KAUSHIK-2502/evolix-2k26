@@ -381,3 +381,29 @@ if (footerYear) {
 
 console.log('✅ EVOLIX 2K26 loaded successfully!');
 
+// ===== FIX MODAL SCROLLING ON MOBILE =====
+// Prevent body scroll when modal is open
+const modals = document.querySelectorAll('.modal-luxury');
+
+modals.forEach(modal => {
+    modal.addEventListener('show', function() {
+        document.body.style.overflow = 'hidden';
+        document.body.classList.add('modal-open');
+    });
+    
+    modal.addEventListener('hide', function() {
+        document.body.style.overflow = '';
+        document.body.classList.remove('modal-open');
+    });
+});
+
+// For registration modal
+const regModal2 = document.getElementById('registrationModal');
+if (regModal2) {
+    regModal2.addEventListener('click', function(e) {
+        if (e.target === regModal2) {
+            document.body.style.overflow = '';
+            document.body.classList.remove('modal-open');
+        }
+    });
+}
