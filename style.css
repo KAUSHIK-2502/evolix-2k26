@@ -1805,3 +1805,49 @@ body {
         font-size: 1.2rem !important;
     }
 }
+
+/* ===== E-SPORTS REGISTRATION OPTION ===== */
+.reg-option-card.esports-option {
+    border: 2px solid #25D366;
+    background: linear-gradient(145deg, #1a2a1a, #0f1a0f);
+    position: relative;
+}
+
+.reg-option-card.esports-option:hover {
+    border-color: #FFE600;
+    transform: translateY(-5px);
+}
+
+.reg-esports-badge {
+    display: inline-block;
+    background: #25D366;
+    color: #121212;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.esports-reg-btn {
+    border-color: #25D366 !important;
+    color: #25D366 !important;
+}
+
+.esports-reg-btn:hover {
+    background: #25D366 !important;
+    color: #121212 !important;
+    border-color: transparent !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .reg-option-card.esports-option {
+        margin-bottom: 0.5rem;
+    }
+    
+    .reg-esports-badge {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.6rem;
+    }
+}
