@@ -12,7 +12,7 @@ const eventDetails = {
             'Original research only',
             'PPT format: 16:9'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Certificate + Shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Certificate\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     'project-expo': {
         name: 'Project Expo',
@@ -25,7 +25,7 @@ const eventDetails = {
             'Innovation and practicality judged',
             'A0 size poster optional'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Certificate + Shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Certificate\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     'brain-chain': {
         name: 'Brain Chain',
@@ -38,7 +38,7 @@ const eventDetails = {
             'Finals - Buzzer round',
             'No negative marking'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Certificate + Shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Certificate\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     'quiz-arena': {
         name: 'Quiz Arena',
@@ -51,7 +51,7 @@ const eventDetails = {
             'Finals - Stage round',
             'Buzzer round for finalists'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Certificate + Shield\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Certificate\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
     
     // NON-TECHNICAL EVENTS - Cash Prize + Medal
@@ -66,7 +66,7 @@ const eventDetails = {
             'Player will guess the movie names within given time limit',
             'One player picks a chit'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Medal + Certificate\n🥈 2nd Prize: Cash Prize + Medal + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Shield + Certificate\n🥈 2nd Prize: Cash Prize + Certificate'
     },
     'signal-scrambles': {
         name: 'Signal Scrambles',
@@ -79,7 +79,7 @@ const eventDetails = {
             'Multiple difficulty levels',
             'Time bonus for early completion'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Medal + Certificate\n🥈 2nd Prize: Cash Prize + Medal + Certificate'
+        prizes: '🥇 1st Prize: Cash Prize + Shield + Certificate\n🥈 2nd Prize: Cash Prize + Shield + Certificate'
     },
     'fun-zone': {
         name: 'Fun Zone',
@@ -105,7 +105,7 @@ const eventDetails = {
             '3 overs per match',
             'Tennis ball used'
         ],
-        prizes: '🏆 Winners: Cash Prize + Medal + Certificate\n🥈 Runners Up: Cash Prize + Medal + Certificate'
+        prizes: '🏆 Winners: Cash Prize + Shield + Certificate\n🥈 Runners Up: Cash Prize + Shield + Certificate'
     },
     'carrom': {
         name: 'Carrom',
@@ -118,7 +118,7 @@ const eventDetails = {
             'Best of 3 games',
             'Standard international rules'
         ],
-        prizes: '🏆 Winners: Cash Prize + Medal + Certificate\n🥈 Runners Up: Cash Prize + Medal + Certificate'
+        prizes: '🏆 Winners: Cash Prize + Shield + Certificate\n🥈 Runners Up: Cash Prize + Shield + Certificate'
     }
 };
 
@@ -138,7 +138,7 @@ const esportsDetails = {
             '⚠️ No hacks/cheats allowed',
            
         ],
-        prizes: '🏆 Squad Winners: Cash Prize',
+        prizes: '🏆 Squad Winners: Cash Prize-800₹',
         whatsapp: 'https://chat.whatsapp.com/IsjBvfqpKE5CrDPh04kevP?mode=gi_t'
     },
     'e-football': {
