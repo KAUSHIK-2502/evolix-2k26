@@ -84,7 +84,7 @@ const eventDetails = {
             'Sender → Relay → Receiver communication flow',
             'Time bonus for early and accurate completion',
         ],
-        prizes: '🥇 1st Prize: Shield + Certificate\n🥈 2nd Prize:  Shield + Certificate'
+        prizes: '🥇 1st Prize: Shield + Certificate\n🥈 2nd Prize:  Certificate'
     },
     'fun-zone': {
         name: 'Fun Zone',
