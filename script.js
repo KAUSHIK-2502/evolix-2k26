@@ -3,14 +3,15 @@ const eventDetails = {
     // TECHNICAL EVENTS - Cash Prize + Certificate
     'paper-vista': {
         name: 'Paper Vista',
-        description: 'Present your research papers and innovative ideas. Compete with brightest minds from across the country.',
+        description: 'Present your research papers and innovative ideas. “Paper is more patient than man.”',
         type: 'technical',
         rules: [
             'Team size: 1-3 members',
-            'Abstract submission required by March 30, 2026',
             '10 minutes presentation + 5 minutes Q&A',
-            'Original research only',
-            'PPT format: 16:9'
+            'Explain ideas very clearly',
+            'End with stronger conclusion',
+          
+           
         ],
         prizes: '🥇 1st Prize: Cash Prize + Certificate\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
