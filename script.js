@@ -32,7 +32,7 @@ const eventDetails = {
         description: 'Connect the dots! A challenging event that tests your logical thinking and problem-solving skills.',
         type: 'technical',
         rules: [
-            'Team size: 2 members',
+            'Team size: 3 members',
             'Multiple rounds',
             'Prelims - Written test',
             'Finals - Buzzer round',
