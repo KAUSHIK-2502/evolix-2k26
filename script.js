@@ -20,11 +20,10 @@ const eventDetails = {
         description: 'Showcase your innovative projects. Get feedback from industry experts and compete for recognition.',
         type: 'technical',
         rules: [
-            'Team size: 1-4 members',
-            'Working model/prototype required',
-            'Project report must be submitted',
-            'Innovation and practicality judged',
-            'A0 size poster optional'
+            'Team size: 2-4 members',
+             'The project must be original and innovative.',
+              'Presentation time 5-10 minutes 7-10 PPT slides.',
+             'All team members must be able to explain the project. (Avoid reading directly from the PPT.)',
         ],
         prizes: '🥇 1st Prize: Cash Prize + Certificate\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
