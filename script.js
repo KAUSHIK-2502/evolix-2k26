@@ -60,13 +60,13 @@ const eventDetails = {
         description: 'Act it out! Fun-filled game of gestures and guessing. Team event that guarantees laughter.',
         type: 'non-technical',
         rules: [
-            'Team size: 3 members',
+            'Team size: (2-4) members',
             'Act silently (No speaking or lip movement)',
-            'Time limit: 2 minutes per team',
+            'Time limit: 5 minutes per team',
             'Player will guess the movie names within given time limit',
             'One player picks a chit'
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Shield + Certificate\n🥈 2nd Prize: Cash Prize + Certificate'
+        prizes: '🥇 1st Prize: Shield + Certificate\n🥈 2nd Prize: Certificate'
     },
     'signal-scrambles': {
         name: 'Signal Scrambles',
@@ -105,7 +105,7 @@ const eventDetails = {
             '3 overs per match',
             'Tennis ball used'
         ],
-        prizes: '🏆 Winners: Cash Prize + Shield + Certificate\n🥈 Runners Up: Cash Prize + Shield + Certificate'
+        prizes: '🏆 Winners: Cash Prize -800\n🥈 Runners Up: Cash Prize -500'
     },
     'carrom': {
         name: 'Carrom',
@@ -115,10 +115,10 @@ const eventDetails = {
             'Team size: 2 members (doubles)',
             'Tournament format',
             'Knockout rounds',
-            'Best of 3 games',
+           
             'Standard international rules'
         ],
-        prizes: '🏆 Winners: Cash Prize + Shield + Certificate\n🥈 Runners Up: Cash Prize + Shield + Certificate'
+        prizes: '🏆 Winners: Cash Prize -500\n🥈 Runners Up: Cash Prize -300'
     }
 };
 
@@ -131,7 +131,7 @@ const esportsDetails = {
             '📅 Date: April 09, 2026',
             '⏰ Time: 7:00 PM - 09:00 PM',
             '👥 Squad: 4 members per team',
-            '🎮 Match Type: Normal/OneTap Matches',
+            '🎮 Match Type: Normal/OneTap BR Matches',
             '🗺️ Map: Bermuda',
             '📍 Platform: Mobile (Android/iOS)',
             '🔑 Room ID will be shared on WhatsApp group',
