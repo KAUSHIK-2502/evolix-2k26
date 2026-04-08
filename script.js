@@ -105,7 +105,7 @@ const eventDetails = {
             '3 overs per match',
             'Tennis ball used'
         ],
-        prizes: '🏆 Winners: Cash Prize -800\n🥈 Runners Up: Cash Prize -500'
+        prizes: '🥇 Winners: Cash Prize -800\n🥈 Runners Up: Cash Prize -500'
     },
     'carrom': {
         name: 'Carrom',
@@ -118,7 +118,7 @@ const eventDetails = {
            
             'Standard international rules'
         ],
-        prizes: '🏆 Winners: Cash Prize -500\n🥈 Runners Up: Cash Prize -300'
+        prizes: '🥇 Winners: Cash Prize -500\n🥈 Runners Up: Cash Prize -300'
     }
 };
 
