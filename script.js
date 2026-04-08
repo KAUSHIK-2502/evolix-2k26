@@ -46,11 +46,16 @@ const eventDetails = {
         description: 'Test your technical knowledge. Multiple rounds covering various domains of engineering.',
         type: 'technical',
         rules: [
-            'Team size: 2 members',
-            'Topics: Core EEE, Aptitude, Current affairs',
-            'Prelims - Online test',
-            'Finals - Stage round',
-            'Buzzer round for finalists'
+            'Team Size: 2 members per team',
+             'Round 1: Preliminary Total 50 Questions',
+             'Questions will be displayed via projector',
+             '30 seconds per question',
+             'Participants must answer within the given time',
+             'Evaluation will be done immediately after completion',
+             'Top 10 teams will be shortlisted for Round 2',
+             'Round 2: Final  Total 15 Questions',
+             'Same answering pattern will be followed',
+            ' Based on performance, Top 3 teams will be selected',
         ],
         prizes: '🥇 1st Prize: Cash Prize + Certificate\n🥈 2nd Prize: Cash Prize + Certificate\n🥉 3rd Prize: Cash Prize + Certificate'
     },
@@ -71,16 +76,16 @@ const eventDetails = {
     },
     'signal-scrambles': {
         name: 'Signal Scrambles',
-        description: 'Decode the signals! Test your communication skills in this exciting and challenging game.',
+        description: 'No direct communication. Only signals and relay.Pass the message through your team.Think fast, act smart, and win!',
         type: 'non-technical',
         rules: [
-            'Team size: 2 members',
-            'One sender, one receiver',
-            'No verbal communication',
-            'Multiple difficulty levels',
-            'Time bonus for early completion'
+            'Team size: 3 members',
+            'One sender, one relay, one receiver',  
+            'No verbal communication (only gestures/signs allowed)',  
+            'Sender → Relay → Receiver communication flow',
+            'Time bonus for early and accurate completion',
         ],
-        prizes: '🥇 1st Prize: Cash Prize + Shield + Certificate\n🥈 2nd Prize: Cash Prize + Shield + Certificate'
+        prizes: '🥇 1st Prize: Shield + Certificate\n🥈 2nd Prize:  Shield + Certificate'
     },
     'fun-zone': {
         name: 'Fun Zone',
