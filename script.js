@@ -136,7 +136,7 @@ const esportsDetails = {
             '📅 Date: April 09, 2026',
             '⏰ Time: 7:00 PM - 09:00 PM',
             '👥 Squad: 4 members per team',
-            '🎮 Match Type: Normal/OneTap BR Matches',
+            '🎮 Match Type: Normal/OneTap CS Matches',
             '🗺️ Map: Bermuda',
             '📍 Platform: Mobile (Android/iOS)',
             '🔑 Room ID will be shared on WhatsApp group',
