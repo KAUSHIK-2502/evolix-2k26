@@ -166,7 +166,7 @@ const esportsDetails = {
 
 // ===== COUNTDOWN TIMER =====
 function updateCountdown() {
-    const eventDate = new Date('April 10, 2026 09:00:00').getTime();
+    const eventDate = new Date('April 01, 2027 09:00:00').getTime();
     const now = new Date().getTime();
     const distance = eventDate - now;
     
